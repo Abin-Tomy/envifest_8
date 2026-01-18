@@ -1,73 +1,117 @@
-# Welcome to your Lovable project
+# ENVIFEST 8 - Doomsday
 
-## Project info
+National Level Tech Fest featuring cutting-edge technology events, workshops, and competitions.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## About
 
-## How can I edit this code?
+ENVIFEST 8 is a premier technology festival organized by St. Joseph's College (Autonomous), Devagiri, Calicut. The event features a Doomsday theme and brings together students, innovators, and tech enthusiasts from across the nation.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- 🎮 **15+ Events** - Hackathons, Ideathons, Gaming, Robotics, and more
+- 👥 **1000+ Participants** - Students from colleges nationwide
+- 💰 **₹50K+ Prize Pool** - Exciting rewards for winners
+- 🎨 **Modern UI** - Sleek Doomsday-themed design with Valorant-inspired elements
+- 📱 **Fully Responsive** - Optimized for all devices
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+This project is built with modern web technologies:
 
-**Use your preferred IDE**
+- **Vite** - Fast build tool and dev server
+- **React 18** - UI library with hooks
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling
+- **Framer Motion** - Smooth animations
+- **React Router** - Client-side routing
+- **shadcn/ui** - Beautiful UI components
+- **Lucide React** - Icon library
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
 
-Follow these steps:
+- Node.js (v18 or higher)
+- npm or yarn
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+# Clone the repository
+git clone <repository-url>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Navigate to project directory
+cd envifest_8
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+# Create production build
+npm run build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Preview production build
+npm run preview
+```
 
-## What technologies are used for this project?
+## Project Structure
 
-This project is built with:
+```
+envifest_8/
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/          # Page components
+│   ├── data/           # Event data and configurations
+│   ├── lib/            # Utility functions
+│   └── main.tsx        # Application entry point
+├── public/             # Static assets
+└── index.html          # HTML template
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Key Features
 
-## How can I deploy this project?
+### Events
+- Hackathon (24-hour coding marathon)
+- Ideathon (Innovation pitching)
+- Tech Quiz (Knowledge competition)
+- Debate (Oratory skills)
+- Vibe Coding (Music + coding)
+- Robo Race (Robotics competition)
+- E-Football (Gaming tournament)
+- And many more...
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Design Elements
+- Doomsday-themed dark UI
+- Valorant-inspired geometric overlays
+- Smooth scroll animations
+- Interactive event cards
+- Responsive navigation
+- Dynamic countdown timer
 
-## Can I connect a custom domain to my Lovable project?
+## Contributing
 
-Yes, you can!
+This is a college fest website. For any issues or suggestions, please contact the development team.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Event Information
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- **Date**: March 15-16, 2026
+- **Venue**: St. Joseph's College (Autonomous), Devagiri, Calicut
+- **Registration**: Available on the website
+
+## Developers
+
+**Developed by:**
+- **Abin Tomy** - [Portfolio](https://abin-tomy.web.app/)
+- **Nehal Noby** - [Portfolio](https://nehalnoby-17.web.app/)
+
+## License
+
+© 2026 ENVIFEST 8 - St. Joseph's College (Autonomous), Devagiri
