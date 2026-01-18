@@ -1,37 +1,47 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const AboutSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  // Sample media items - replace with your actual images/videos
+  const mediaItems = [
+    { type: 'image', src: '/envipr1.jpeg', alt: 'Event 1' },
+    { type: 'image', src: '/envipr2.jpeg', alt: 'Event 2' },
+    { type: 'video', src: '/envipr7.mp4', alt: 'Event Video 1' },
+    { type: 'image', src: '/envipr3.jpeg', alt: 'Event 3' },
+    { type: 'image', src: '/envipr4.jpeg', alt: 'Event 4' },
+    { type: 'video', src: '/envipr8.mp4', alt: 'Event Video 2' },
+    { type: 'image', src: '/envipr5.jpeg', alt: 'Event 5' },
+    { type: 'image', src: '/envipr6.jpeg', alt: 'Event 6' },
+    { type: 'image', src: '/envipr1.jpeg', alt: 'Event 7' },
+    { type: 'image', src: '/envipr2.jpeg', alt: 'Event 8' },
+    { type: 'video', src: '/envipr9.mp4', alt: 'Event Video 3' },
+    { type: 'image', src: '/envipr3.jpeg', alt: 'Event 9' },
+    { type: 'image', src: '/envipr4.jpeg', alt: 'Event 10' },
+    { type: 'image', src: '/envipr5.jpeg', alt: 'Event 11' },
+    { type: 'image', src: '/envipr6.jpeg', alt: 'Event 12' },
+    { type: 'image', src: '/envipr1.jpeg', alt: 'Event 13' },
+  ];
+
   return (
     <section ref={ref} className="relative py-16 sm:py-24 md:py-32 px-4 overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-doom-void via-card/20 to-doom-void" />
+      {/* Background with forest green theme */}
+      <div className="absolute inset-0 bg-gradient-to-b from-doom-void via-emerald-950/30 to-doom-void" />
 
-      {/* Floating mask silhouette */}
+      {/* Animated background glow */}
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={isInView ? { opacity: 0.1, x: 0 } : {}}
-        transition={{ duration: 1.5 }}
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px]"
-      >
-        <svg viewBox="0 0 100 100" className="w-full h-full fill-primary/20">
-          {/* Doom mask silhouette */}
-          <path d="M50 10 L80 30 L80 60 L70 75 L65 90 L50 95 L35 90 L30 75 L20 60 L20 30 Z" />
-          <ellipse cx="35" cy="45" rx="8" ry="10" className="fill-doom-void" />
-          <ellipse cx="65" cy="45" rx="8" ry="10" className="fill-doom-void" />
-          <path d="M40 70 L50 75 L60 70" strokeWidth="2" className="stroke-doom-void fill-none" />
-        </svg>
-
-        {/* Glow effect */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.2)_0%,transparent_70%)]" />
-      </motion.div>
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 0.3 } : {}}
+        transition={{ duration: 2 }}
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.15)_0%,transparent_70%)]"
+      />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
-          {/* Text content - asymmetrical layout */}
+          {/* Left Content Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -39,27 +49,37 @@ const AboutSection = () => {
             className="lg:pr-16"
           >
             {/* Section tag */}
-            <div className="flex items-center gap-4 mb-8">
+            <motion.div
+              initial={{ opacity: 0, width: 0 }}
+              animate={isInView ? { opacity: 1, width: "auto" } : {}}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="flex items-center gap-4 mb-8"
+            >
               <div className="h-px w-16 bg-gradient-to-r from-primary to-transparent" />
               <span className="font-mono text-xs tracking-[0.4em] text-primary uppercase">
                 // About the Event
               </span>
-            </div>
+            </motion.div>
 
-            {/* Main heading - condensed cinematic style */}
-            <h2 className="font-orbitron text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-none mb-6 sm:mb-8">
+            {/* Main heading */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="font-orbitron text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-none mb-6 sm:mb-8"
+            >
               <span className="block text-doom-silver">GET READY FOR</span>
               <span className="block bg-gradient-to-r from-primary via-doom-neon to-primary bg-clip-text text-transparent">
                 ENVI
               </span>
               <span className="block text-doom-silver">2026</span>
-            </h2>
+            </motion.h2>
 
             {/* Description */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.3, duration: 0.6 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
               className="font-rajdhani text-lg sm:text-xl md:text-2xl text-doom-silver/80 leading-relaxed max-w-lg"
             >
               Tech fest filled with workshops, hackathons, and an electrifying concert!
@@ -68,94 +88,121 @@ const AboutSection = () => {
               </span>
             </motion.p>
 
-            {/* Stats bar */}
+            {/* Navigation Arrows */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="mt-8 sm:mt-12 flex gap-6 sm:gap-8 flex-wrap"
+              transition={{ delay: 0.7, duration: 0.6 }}
+              className="flex items-center gap-4 mt-8"
             >
-              {[
-                { value: "15+", label: "EVENTS" },
-                { value: "1000+", label: "PARTICIPANTS" },
-                { value: "₹50K+", label: "PRIZES" },
-              ].map((stat, index) => (
-                <div key={stat.label} className="relative group">
-                  <div className="font-orbitron text-3xl sm:text-4xl font-bold text-primary">
-                    {stat.value}
-                  </div>
-                  <div className="font-mono text-xs tracking-widest text-doom-silver/50 mt-1">
-                    {stat.label}
-                  </div>
-                  <div className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-primary/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform" />
-                </div>
-              ))}
+              <button className="w-12 h-12 border-2 border-primary/30 rounded flex items-center justify-center hover:border-primary hover:bg-primary/10 transition-all duration-300 group">
+                <ChevronLeft className="w-5 h-5 text-primary/70 group-hover:text-primary transition-colors" />
+              </button>
+              <button className="w-12 h-12 border-2 border-primary/30 rounded flex items-center justify-center hover:border-primary hover:bg-primary/10 transition-all duration-300 group">
+                <ChevronRight className="w-5 h-5 text-primary/70 group-hover:text-primary transition-colors" />
+              </button>
+            </motion.div>
+
+            {/* Event branding */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 0.9, duration: 0.6 }}
+              className="mt-8"
+            >
+              <div className="bg-gradient-to-r from-primary to-doom-neon px-4 py-2 inline-block">
+                <span className="text-doom-void font-bold text-xs tracking-wider">ENVIFEST 2026</span>
+              </div>
             </motion.div>
           </motion.div>
 
-          {/* Visual element - floating 3D-ish element */}
+          {/* Right Image Grid Section */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.4, duration: 1 }}
             className="relative hidden lg:block"
           >
-            <div className="relative w-full aspect-square float-animation">
-              {/* Hexagonal frame */}
-              <svg viewBox="0 0 200 200" className="w-full h-full">
-                <defs>
-                  <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.8" />
-                    <stop offset="50%" stopColor="hsl(var(--doom-neon))" stopOpacity="0.4" />
-                    <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.2" />
-                  </linearGradient>
-                </defs>
-
-                {/* Outer hex */}
-                <polygon
-                  points="100,10 180,55 180,145 100,190 20,145 20,55"
-                  fill="none"
-                  stroke="url(#hexGrad)"
-                  strokeWidth="1"
-                  className="opacity-60"
-                />
-
-                {/* Inner hex */}
-                <polygon
-                  points="100,30 160,65 160,135 100,170 40,135 40,65"
-                  fill="none"
-                  stroke="url(#hexGrad)"
-                  strokeWidth="0.5"
-                  className="opacity-40"
-                />
-
-                {/* Core */}
-                <circle cx="100" cy="100" r="40" fill="none" stroke="url(#hexGrad)" strokeWidth="1" className="opacity-80" />
-
-                {/* Inner circle glow */}
-                <circle cx="100" cy="100" r="30" fill="hsl(var(--primary))" fillOpacity="0.1" />
-
-                {/* 8 symbol in center */}
-                <text x="100" y="115" textAnchor="middle" className="fill-primary font-orbitron text-[40px] font-bold">
-                  8
-                </text>
-              </svg>
-
-              {/* Orbiting elements */}
+            <div className="relative w-full max-w-lg mx-auto">
+              {/* Page Counter */}
               <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0"
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ delay: 1.2 }}
+                className="absolute -top-8 right-0 z-20 text-primary/60 text-sm font-mono"
               >
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-primary rounded-full shadow-[0_0_20px_hsl(var(--primary))]" />
+                16 / 16 MEDIA
               </motion.div>
 
+              {/* Diagonal Grid Container */}
+              <div className="relative overflow-hidden rounded-lg">
+                <motion.div
+                  className="relative w-full h-full"
+                  initial={{ rotate: -15, scale: 1.4 }}
+                  animate={isInView ? { rotate: -15, scale: 1.4 } : {}}
+                  transition={{ delay: 0.6, duration: 1.2, ease: "easeOut" }}
+                  style={{
+                    transformOrigin: 'center center'
+                  }}
+                >
+                  <div className="grid grid-cols-4 gap-3 w-full h-full p-8">
+                    {mediaItems.map((item, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                        transition={{
+                          delay: 0.7 + (index * 0.05),
+                          duration: 0.5,
+                          ease: "easeOut"
+                        }}
+                        className="relative group cursor-pointer overflow-hidden rounded-lg border-2 border-primary/20 hover:border-primary/60 transition-all duration-300 aspect-square"
+                      >
+                        {item.type === 'video' ? (
+                          <video
+                            src={item.src}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                          />
+                        ) : (
+                          <img
+                            src={item.src}
+                            alt={item.alt}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          />
+                        )}
+
+                        {/* Hover overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-doom-void/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                        {/* Media type indicator */}
+                        {item.type === 'video' && (
+                          <div className="absolute top-1 right-1 bg-primary/80 px-1.5 py-0.5 rounded text-[10px] font-mono text-doom-void">
+                            VID
+                          </div>
+                        )}
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+
+                {/* Overlay gradient for depth */}
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-doom-void/40 pointer-events-none" />
+              </div>
+
+              {/* Info text */}
               <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-8"
+                initial={{ opacity: 0, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 1.5 }}
+                className="mt-6 text-center"
               >
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-doom-neon rounded-full shadow-[0_0_15px_hsl(var(--doom-neon))]" />
+                <p className="font-mono text-xs text-doom-silver/50">
+                  <span className="text-primary">PAST EVENTS</span> // HOVER TO PREVIEW
+                </p>
               </motion.div>
             </div>
           </motion.div>
