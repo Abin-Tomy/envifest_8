@@ -53,28 +53,105 @@ const AboutSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="lg:pr-16"
+            className="lg:pr-8 xl:pr-16"
           >
             {/* Section tag */}
             <motion.div
               initial={{ opacity: 0, width: 0 }}
               animate={isInView ? { opacity: 1, width: "auto" } : {}}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="flex items-center gap-4 mb-8"
+              className="flex items-center gap-2 sm:gap-4 mb-6 sm:mb-8"
             >
-              <div className="h-px w-16 bg-gradient-to-r from-primary to-transparent" />
-              <span className="font-mono text-xs tracking-[0.4em] text-primary uppercase">
-                // About the Event
+              <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-primary to-transparent" />
+              <span className="font-mono text-[0.6rem] sm:text-xs tracking-[0.2em] sm:tracking-[0.4em] text-primary uppercase">
+                // The Convergence Begins
               </span>
             </motion.div>
 
             {/* Main heading */}
-            <h2 className="font-poppins text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-none mb-6 sm:mb-8">
-              <span className="block text-doom-silver">GET READY FOR</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-b from-primary to-primary/40">
-                ENVI
+            <h2 className="font-orbitron text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black leading-tight mb-4 sm:mb-6 md:mb-8">
+              <span className="block text-doom-silver">THE FINAL</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-b from-primary via-primary to-primary/40">
+                COUNTDOWN
               </span>
-              <span className="block text-doom-silver">2026</span>
+              <div className="relative">
+                {/* Green smoky effect layers */}
+                <motion.div
+                  className="absolute inset-0 -z-10"
+                  initial={{ opacity: 0 }}
+                  animate={isInView ? {
+                    opacity: [0.3, 0.6, 0.3],
+                    scale: [1, 1.2, 1],
+                  } : {}}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[150%] bg-gradient-radial from-primary/40 via-primary/20 to-transparent blur-3xl" />
+                </motion.div>
+
+                <motion.div
+                  className="absolute inset-0 -z-10"
+                  initial={{ opacity: 0 }}
+                  animate={isInView ? {
+                    opacity: [0.4, 0.7, 0.4],
+                    x: [-20, 20, -20],
+                    y: [-10, 10, -10],
+                  } : {}}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5
+                  }}
+                >
+                  <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-primary/30 rounded-full blur-[100px]" />
+                </motion.div>
+
+                <motion.div
+                  className="absolute inset-0 -z-10"
+                  initial={{ opacity: 0 }}
+                  animate={isInView ? {
+                    opacity: [0.5, 0.8, 0.5],
+                    x: [20, -20, 20],
+                    y: [10, -10, 10],
+                  } : {}}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1
+                  }}
+                >
+                  <div className="absolute top-1/2 right-1/4 w-72 h-72 bg-emerald-500/25 rounded-full blur-[120px]" />
+                </motion.div>
+
+                {/* ENVI 8 Text */}
+                <div className="flex items-center gap-2 sm:gap-3 md:gap-4 relative z-10">
+                  <span
+                    className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-none select-none"
+                    style={{
+                      backgroundImage: 'url(/doom3.jpg)',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      color: 'transparent',
+                      textShadow: 'none'
+                    }}
+                  >
+                    ENVI
+                  </span>
+                  <img
+                    src="/e8.png"
+                    alt="8"
+                    className="h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32 w-auto object-contain"
+                  />
+                </div>
+              </div>
             </h2>
 
             {/* Description */}
@@ -82,11 +159,11 @@ const AboutSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="font-rajdhani text-lg sm:text-xl md:text-2xl text-doom-silver/80 leading-relaxed max-w-lg"
+              className="font-rajdhani text-base sm:text-lg md:text-xl lg:text-2xl text-doom-silver/90 leading-relaxed max-w-lg"
             >
-              Tech fest filled with workshops, hackathons, and an electrifying concert!
-              <span className="block mt-4 text-primary/80">
-                Don't miss the excitement!
+              When timelines collide and reality fractures, only the brightest minds can prevent the collapse.
+              <span className="block mt-4 text-primary/90 font-medium">
+                Assemble. Innovate. Survive the convergence.
               </span>
             </motion.p>
 
@@ -95,18 +172,18 @@ const AboutSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.7, duration: 0.6 }}
-              className="flex items-center gap-8 sm:gap-12 mt-8"
+              className="flex flex-wrap items-center gap-6 sm:gap-8 md:gap-12 mt-6 sm:mt-8"
             >
               {[
-                { value: "15+", label: "EVENTS" },
-                { value: "1000+", label: "PARTICIPANTS" },
-                { value: "₹50K+", label: "PRIZES" },
+                { value: "15+", label: "MISSIONS" },
+                { value: "1000+", label: "HEROES" },
+                { value: "₹50K+", label: "INFINITY REWARDS" },
               ].map((stat, index) => (
                 <div key={stat.label} className="relative group">
-                  <div className="font-poppins text-3xl sm:text-4xl font-bold text-primary">
+                  <div className="font-orbitron text-2xl sm:text-3xl md:text-4xl font-black text-primary drop-shadow-[0_0_10px_rgba(42,154,88,0.5)]">
                     {stat.value}
                   </div>
-                  <div className="font-mono text-xs tracking-widest text-doom-silver/50 mt-1">
+                  <div className="font-mono text-[0.65rem] sm:text-xs tracking-wider sm:tracking-widest text-doom-silver/60 mt-1 uppercase">
                     {stat.label}
                   </div>
                   <div className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-primary/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform" />
@@ -120,18 +197,10 @@ const AboutSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.4, duration: 1 }}
-            className="relative hidden lg:block"
+            className="relative mt-12 lg:mt-0"
           >
             <div className="relative w-full max-w-lg mx-auto">
-              {/* Page Counter */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 1 } : {}}
-                transition={{ delay: 1.2 }}
-                className="absolute -top-8 right-0 z-20 text-primary/60 text-sm font-mono"
-              >
-                16 / 16 MEDIA
-              </motion.div>
+
 
               {/* Diagonal Grid Container */}
               <div className="relative overflow-hidden rounded-lg">
@@ -144,7 +213,7 @@ const AboutSection = () => {
                     transformOrigin: 'center center'
                   }}
                 >
-                  <div className="grid grid-cols-4 gap-3 w-full h-full p-8">
+                  <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-3 w-full h-full p-4 sm:p-6 md:p-8">
                     {mediaItems.map((item, index) => (
                       <motion.div
                         key={index}
@@ -155,7 +224,7 @@ const AboutSection = () => {
                           duration: 0.5,
                           ease: "easeOut"
                         }}
-                        className="relative group cursor-pointer overflow-hidden rounded-lg border-2 border-primary/20 hover:border-primary/60 transition-all duration-300 aspect-square"
+                        className="relative group cursor-pointer overflow-hidden rounded-md sm:rounded-lg border border-primary/20 sm:border-2 hover:border-primary/60 transition-all duration-300 aspect-square"
                       >
                         {item.type === 'video' ? (
                           <video
@@ -190,10 +259,10 @@ const AboutSection = () => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 1.5 }}
-                className="mt-6 text-center"
+                className="mt-4 sm:mt-6 text-center"
               >
-                <p className="font-mono text-xs text-doom-silver/50">
-                  <span className="text-primary">PAST EVENTS</span> // HOVER TO PREVIEW
+                <p className="font-mono text-[0.65rem] sm:text-xs text-doom-silver/50">
+                  <span className="text-primary">PAST EVENTS</span>
                 </p>
               </motion.div>
             </div>

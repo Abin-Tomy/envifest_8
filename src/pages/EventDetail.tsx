@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import RegistrationModal from "@/components/RegistrationModal";
 import { getEventById } from "@/data/events";
 import { ArrowLeft, Clock, MapPin, Users, Trophy, Phone, Image } from "lucide-react";
+import DoomBackground from "@/components/DoomBackground";
 
 const EventDetail = () => {
   const { eventId } = useParams();
@@ -51,8 +52,10 @@ const EventDetail = () => {
   const IconComponent = event.icon;
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <main className="pt-20 pb-20 px-4">
+    <div className="min-h-screen bg-background text-foreground relative">
+      {/* Animated Matrix Background */}
+      <DoomBackground opacity={0.08} />
+      <main className="pt-20 pb-20 px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Back button */}
           <motion.button

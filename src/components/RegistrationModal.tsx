@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, Shield, AlertTriangle } from "lucide-react";
+import DoomBackground from "./DoomBackground";
 
 interface RegistrationModalProps {
   isOpen: boolean;
@@ -34,7 +35,7 @@ const RegistrationModal = ({ isOpen, onClose, eventName }: RegistrationModalProp
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call - replace with actual Django backend endpoint
     // const response = await fetch('/api/register', {
     //   method: 'POST',
@@ -43,10 +44,10 @@ const RegistrationModal = ({ isOpen, onClose, eventName }: RegistrationModalProp
     // });
 
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
+
     setIsSubmitting(false);
     setSubmitted(true);
-    
+
     setTimeout(() => {
       setSubmitted(false);
       setFormData({ name: "", college: "", year: "", phone: "", email: "" });
@@ -70,7 +71,9 @@ const RegistrationModal = ({ isOpen, onClose, eventName }: RegistrationModalProp
             exit={{ opacity: 0 }}
             onClick={onClose}
             className="absolute inset-0 bg-doom-void/90 backdrop-blur-sm"
-          />
+          >
+            <DoomBackground opacity={0.15} />
+          </motion.div>
 
           {/* Modal */}
           <motion.div
