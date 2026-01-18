@@ -1,15 +1,18 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import ValorantOverlay from "./ValorantOverlay";
 
 const HeroSection = () => {
   const ref = useRef<HTMLDivElement>(null);
+  const location = useLocation();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   const [isHovered, setIsHovered] = useState(false);
   const [showEyes, setShowEyes] = useState(false);
@@ -29,12 +32,83 @@ const HeroSection = () => {
     };
   });
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // Glitch text effect
+  const glitchTextStyle = {
+    textShadow: "2px 0px 0px rgba(255,0,0,0.5), -2px 0px 0px rgba(0,255,255,0.5)",
+  };
+
   return (
     <section
       ref={ref}
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
+      {/* ENVI Logo - Top Left - Hidden on mobile/tablet */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="hidden lg:block absolute top-4 left-4 sm:top-6 sm:left-8 md:left-12 lg:left-16 z-20"
+      >
+        <Link to="/">
+          <img
+            src="/envi-logo.png"
+            alt="ENVI Logo"
+            className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto hover:scale-105 transition-transform duration-300"
+          />
+        </Link>
+      </motion.div>
+
+      {/* Navigation Bar - Top Center */}
+      <motion.nav
+        initial={{ y: -100, opacity: 0, x: "-50%" }}
+        animate={{ y: 0, opacity: 1, x: "-50%" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="absolute top-4 sm:top-6 left-1/2 z-20 -translate-x-1/2"
+      >
+        <div className="px-4 sm:px-8 md:px-14 lg:px-18 xl:px-24 py-2 sm:py-4 md:py-5 lg:py-6 rounded-full">
+          <ul className="flex items-center justify-center gap-4 sm:gap-8 md:gap-12 lg:gap-20 xl:gap-24">
+            {[
+              { label: "HOME", path: "/", isLink: true },
+              { label: "EVENTS", path: "/events", isLink: true },
+              { label: "CONTACT", id: "contact", isLink: false },
+            ].map((item, index) => (
+              <motion.li
+                key={item.label}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 + index * 0.1 }}
+              >
+                {item.isLink ? (
+                  <Link
+                    to={item.path!}
+                    className="relative font-poppins text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold tracking-[0.1em] sm:tracking-[0.15em] text-white hover:text-primary transition-all duration-300 group"
+                  >
+                    <span className="relative z-10">{item.label}</span>
+                    <span className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 rounded transition-all duration-300"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                  </Link>
+                ) : (
+                  <button
+                    onClick={() => scrollToSection(item.id!)}
+                    className="relative font-poppins text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold tracking-[0.1em] sm:tracking-[0.15em] text-white hover:text-primary transition-all duration-300 group"
+                  >
+                    <span className="relative z-10">{item.label}</span>
+                    <span className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 rounded transition-all duration-300"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                  </button>
+                )}
+              </motion.li>
+            ))}
+          </ul>
+        </div>
+      </motion.nav>
+
       {/* Background */}
       <motion.div style={{ y }} className="absolute inset-0">
         <div className="absolute inset-0 bg-doom-void" />
@@ -44,12 +118,16 @@ const HeroSection = () => {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-[0.08]"
+          preload="none"
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.12]"
         >
           <source src="/hero-vedio.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--doom-green-dark)/0.15)_0%,transparent_60%)]" />
       </motion.div>
+
+      {/* Valorant-style geometric overlay */}
+      <ValorantOverlay variant="both" />
 
       <motion.div style={{ opacity }} className="relative z-10 text-center px-4">
         {/* ENVI HERO Image */}
@@ -62,7 +140,7 @@ const HeroSection = () => {
           <img
             src="/hero-image.png"
             alt="ENVI 8"
-            className="w-[400px] xs:w-[550px] sm:w-[680px] md:w-[830px] lg:w-[1010px] xl:w-[1130px] h-auto select-none"
+            className="w-[320px] xs:w-[440px] sm:w-[540px] md:w-[660px] lg:w-[800px] xl:w-[900px] h-auto select-none"
             style={{
               filter: "drop-shadow(0 0 40px rgba(16, 185, 129, 0.15))",
             }}
@@ -77,13 +155,7 @@ const HeroSection = () => {
           className="mb-16"
         >
           <motion.span
-            className="font-mono text-base sm:text-lg md:text-xl tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.4em] uppercase"
-            animate={{
-              color: showEyes || isHovered
-                ? "hsl(var(--doom-neon))"
-                : "hsl(var(--doom-silver)/0.5)",
-            }}
-            transition={{ duration: 0.5 }}
+            className="font-mono text-base sm:text-lg md:text-xl tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.4em] uppercase text-primary"
           >
             National Level Tech Fest
           </motion.span>

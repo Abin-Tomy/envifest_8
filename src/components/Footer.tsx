@@ -15,12 +15,12 @@ const Footer = () => {
             viewport={{ once: true }}
             className="flex items-center gap-3"
           >
-            <span className="font-orbitron text-2xl font-bold text-doom-silver">
-              ENVI<span className="text-primary text-glow">8</span>
+            <span className="font-poppins text-2xl font-bold text-doom-silver">
+              ENVI<span className="text-transparent bg-clip-text bg-gradient-to-b from-primary to-primary/40">8</span>
             </span>
             <span className="text-doom-silver/30">|</span>
             <span className="font-mono text-xs text-doom-silver/50 tracking-widest">
-              AVENGERS: DOOMSDAY
+              DOOMSDAY
             </span>
           </motion.div>
 

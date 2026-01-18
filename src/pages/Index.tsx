@@ -1,29 +1,37 @@
-import Navigation from "@/components/Navigation";
-import HeroSection from "@/components/HeroSection";
-import CountdownTimer from "@/components/CountdownTimer";
-import AboutSection from "@/components/AboutSection";
-import FeaturedEvents from "@/components/FeaturedEvents";
-import SponsorsSection from "@/components/SponsorsSection";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
+import { lazy, Suspense } from "react";
+
+// Lazy load components for better performance
+const HeroSection = lazy(() => import("@/components/HeroSection"));
+const CountdownTimer = lazy(() => import("@/components/CountdownTimer"));
+const AboutSection = lazy(() => import("@/components/AboutSection"));
+const FeaturedEvents = lazy(() => import("@/components/FeaturedEvents"));
+const SponsorsSection = lazy(() => import("@/components/SponsorsSection"));
+const ContactSection = lazy(() => import("@/components/ContactSection"));
+const Footer = lazy(() => import("@/components/Footer"));
+
+// Simple loading fallback
+const LoadingFallback = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+  </div>
+);
 
 const Index = () => {
   const eventDate = new Date("2026-02-09T09:00:00");
 
   return (
     <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
-      <Navigation />
-
-      <main>
-        <HeroSection />
-        <CountdownTimer eventDate={eventDate} />
-        <AboutSection />
-        <FeaturedEvents />
-        <SponsorsSection />
-        <ContactSection />
-      </main>
-
-      <Footer />
+      <Suspense fallback={<LoadingFallback />}>
+        <main>
+          <HeroSection />
+          <CountdownTimer eventDate={eventDate} />
+          <AboutSection />
+          <FeaturedEvents />
+          <SponsorsSection />
+          <ContactSection />
+        </main>
+        <Footer />
+      </Suspense>
     </div>
   );
 };

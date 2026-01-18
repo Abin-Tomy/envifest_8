@@ -28,6 +28,21 @@ const SponsorsSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-doom-void via-card/5 to-doom-void" />
 
       <div className="max-w-7xl mx-auto relative z-10">
+        {/* Section Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 sm:mb-16 md:mb-20"
+        >
+          <span className="font-mono text-xs tracking-[0.4em] text-primary uppercase mb-4 block">
+            // Strategic Partners
+          </span>
+          <h2 className="font-poppins text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-doom-silver">
+            ALLIED <span className="text-transparent bg-clip-text bg-gradient-to-b from-primary to-primary/40">FORCES</span>
+          </h2>
+        </motion.div>
+
         {/* Title Sponsor */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -48,7 +63,7 @@ const SponsorsSection = () => {
               <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary" />
 
               {/* Placeholder logo */}
-              <div className="font-orbitron text-4xl sm:text-5xl md:text-6xl font-black text-doom-silver group-hover:text-primary transition-colors duration-300 text-glow">
+              <div className="font-poppins text-4xl sm:text-5xl md:text-6xl font-black text-doom-silver group-hover:text-primary transition-colors duration-300 text-glow">
                 {titleSponsor.logo}
               </div>
               <div className="font-rajdhani text-sm text-doom-silver/60 mt-2 tracking-widest uppercase">
@@ -76,18 +91,18 @@ const SponsorsSection = () => {
         {/* Infinite scroll marquee */}
         <div className="relative overflow-hidden py-8">
           {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
           {/* Marquee track */}
-          <div className="flex animate-marquee">
+          <div className="flex animate-marquee" style={{ willChange: 'transform' }}>
             {[...eventSponsors, ...eventSponsors].map((sponsor, index) => (
               <div
                 key={`${sponsor.name}-${index}`}
                 className="flex-shrink-0 mx-8 group cursor-pointer"
               >
-                <div className="w-32 h-20 border border-doom-silver/20 bg-card/20 flex items-center justify-center transition-all duration-500 group-hover:border-primary/50 group-hover:bg-card/40 grayscale group-hover:grayscale-0">
-                  <span className="font-orbitron text-2xl font-bold text-doom-silver/50 group-hover:text-primary transition-colors duration-300">
+                <div className="w-32 h-20 border border-doom-silver/20 bg-card/20 flex items-center justify-center transition-all duration-300 group-hover:border-primary/50 group-hover:bg-card/40 grayscale group-hover:grayscale-0">
+                  <span className="font-poppins text-2xl font-bold text-doom-silver/50 group-hover:text-primary transition-colors duration-300">
                     {sponsor.logo}
                   </span>
                 </div>

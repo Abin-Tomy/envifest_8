@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { getFeaturedEvents } from "@/data/events";
 import { ArrowRight } from "lucide-react";
+import ValorantOverlay from "./ValorantOverlay";
 
 const FeaturedEvents = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -11,6 +12,9 @@ const FeaturedEvents = () => {
 
   return (
     <section ref={ref} id="events" className="relative py-16 sm:py-24 md:py-32 px-4 bg-black overflow-hidden">
+      {/* Valorant-style overlay */}
+      <ValorantOverlay variant="right" />
+
       {/* Cinematic Background Fog/Noise */}
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-primary/20 blur-[120px] rounded-full opacity-30 pointer-events-none" />
@@ -25,10 +29,14 @@ const FeaturedEvents = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 sm:mb-16 md:mb-20 relative"
         >
-          <span className="font-mono text-xs tracking-[0.5em] text-doom-silver uppercase block mb-6 opacity-60">
-            Priority Targets Detected
-          </span>
-          <h2 className="font-orbitron text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight uppercase relative inline-block">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="h-[1px] w-12 sm:w-16 md:w-20 bg-gradient-to-r from-transparent to-primary" />
+            <span className="font-mono text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] text-primary uppercase whitespace-nowrap">
+              Priority Targets Detected
+            </span>
+            <div className="h-[1px] w-12 sm:w-16 md:w-20 bg-gradient-to-l from-transparent to-primary" />
+          </div>
+          <h2 className="font-poppins text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white tracking-tight uppercase relative inline-block">
             Mission <span className="text-transparent bg-clip-text bg-gradient-to-b from-primary to-primary/40">Critical</span>
           </h2>
         </motion.div>
@@ -111,13 +119,26 @@ const FeaturedEvents = () => {
                       <div className="absolute inset-0 bg-primary/30 blur-[30px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
 
-                    <h3 className="font-orbitron text-xl sm:text-2xl font-bold text-white mb-3 tracking-wide text-center uppercase drop-shadow-md relative z-10">
+                    <h3 className="font-poppins text-xl sm:text-2xl font-black text-white mb-3 tracking-wide text-center uppercase drop-shadow-md relative z-10">
                       {event.name}
                     </h3>
 
-                    <p className="text-center font-rajdhani text-white/50 leading-relaxed max-w-[220px] text-xs sm:text-sm group-hover:text-white/80 transition-colors relative z-10 font-medium">
+                    <p className="text-center font-rajdhani text-white/50 leading-relaxed max-w-[220px] text-xs sm:text-sm group-hover:text-white/80 transition-colors relative z-10 font-medium mb-4">
                       {event.tagline}
                     </p>
+
+                    {/* Event Details */}
+                    <div className="flex flex-col gap-2 items-center relative z-10">
+                      <div className="flex items-center gap-2 font-mono text-sm text-primary/80 tracking-wider">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                        <span>{event.registrationFee}</span>
+                      </div>
+                      <div className="font-mono text-sm text-white/40 tracking-wider text-center">
+                        {event.timing.split('|').map((part, i) => (
+                          <div key={i}>{part.trim()}</div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
 
                   {/* === UPDATED FOOTER: REGISTER BUTTON === */}

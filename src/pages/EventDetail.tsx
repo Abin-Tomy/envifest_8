@@ -1,17 +1,39 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import Navigation from "@/components/Navigation";
+import { useState, useEffect, useRef } from "react";
 import Footer from "@/components/Footer";
 import RegistrationModal from "@/components/RegistrationModal";
 import { getEventById } from "@/data/events";
-import { ArrowLeft, Clock, MapPin, Users, Trophy, Phone } from "lucide-react";
+import { ArrowLeft, Clock, MapPin, Users, Trophy, Phone, Image } from "lucide-react";
 
 const EventDetail = () => {
   const { eventId } = useParams();
   const navigate = useNavigate();
   const event = getEventById(eventId || "");
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Refs for scroll animations
+  const headerRef = useRef(null);
+  const posterRef = useRef(null);
+  const buttonRef = useRef(null);
+  const infoRef = useRef(null);
+  const descRef = useRef(null);
+  const rulesRef = useRef(null);
+  const coordRef = useRef(null);
+
+  // InView hooks
+  const headerInView = useInView(headerRef, { once: true, margin: "-100px" });
+  const posterInView = useInView(posterRef, { once: true, margin: "-100px" });
+  const buttonInView = useInView(buttonRef, { once: true, margin: "-100px" });
+  const infoInView = useInView(infoRef, { once: true, margin: "-100px" });
+  const descInView = useInView(descRef, { once: true, margin: "-100px" });
+  const rulesInView = useInView(rulesRef, { once: true, margin: "-100px" });
+  const coordInView = useInView(coordRef, { once: true, margin: "-100px" });
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [eventId]);
 
   if (!event) {
     return (
@@ -30,9 +52,7 @@ const EventDetail = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navigation />
-
-      <main className="pt-28 pb-20 px-4">
+      <main className="pt-20 pb-20 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Back button */}
           <motion.button
@@ -47,19 +67,19 @@ const EventDetail = () => {
 
           {/* Header */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-12"
+            ref={headerRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={headerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mb-8"
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className={`p-4 bg-doom-gunmetal/50 border ${
-                event.theme === "fire" ? "border-doom-orange/30" : 
+              <div className={`p-4 bg-doom-gunmetal/50 border ${event.theme === "fire" ? "border-doom-orange/30" :
                 event.theme === "circuit" ? "border-primary/30" : "border-doom-silver/20"
-              }`}>
-                <IconComponent className={`w-8 h-8 ${
-                  event.theme === "fire" ? "text-doom-orange" : 
+                }`}>
+                <IconComponent className={`w-8 h-8 ${event.theme === "fire" ? "text-doom-orange" :
                   event.theme === "circuit" ? "text-primary" : "text-doom-silver"
-                }`} />
+                  }`} />
               </div>
               <div>
                 <h1 className="font-orbitron text-3xl md:text-5xl font-bold text-doom-silver">
@@ -70,11 +90,59 @@ const EventDetail = () => {
             </div>
           </motion.div>
 
+          {/* Event Poster Placeholder */}
+          <motion.div
+            ref={posterRef}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={posterInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mb-6 sm:mb-8 mx-auto px-4 sm:px-0"
+            style={{ maxWidth: '22rem' }}
+          >
+            <div className="relative bg-doom-gunmetal/30 border-2 border-doom-silver/20 overflow-hidden flex items-center justify-center" style={{ aspectRatio: '1080/1350' }}>
+              {/* Grid pattern background */}
+              <div className="absolute inset-0 opacity-5" style={{
+                backgroundImage: `linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)`,
+                backgroundSize: '30px 30px'
+              }} />
+
+              {/* Placeholder content */}
+              <div className="relative z-10 text-center">
+                <Image className="w-12 h-12 sm:w-16 sm:h-16 text-doom-silver/30 mx-auto mb-2 sm:mb-3" />
+                <p className="font-mono text-[10px] sm:text-xs text-doom-silver/40 uppercase tracking-wider">Event Poster</p>
+                <p className="font-mono text-[9px] sm:text-[10px] text-doom-silver/30 mt-1">1080 × 1350</p>
+              </div>
+
+              {/* Corner accents */}
+              <div className="absolute top-0 left-0 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-l-2 border-primary/30" />
+              <div className="absolute top-0 right-0 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-r-2 border-primary/30" />
+              <div className="absolute bottom-0 left-0 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-l-2 border-primary/30" />
+              <div className="absolute bottom-0 right-0 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-r-2 border-primary/30" />
+            </div>
+          </motion.div>
+
+          {/* Register button */}
+          <motion.div
+            ref={buttonRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={buttonInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="text-center mb-8 sm:mb-12 px-4"
+          >
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="w-full sm:w-auto inline-block px-8 sm:px-12 py-3 sm:py-4 font-orbitron text-xs sm:text-sm tracking-widest bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            >
+              REGISTER NOW
+            </button>
+          </motion.div>
+
           {/* Info cards */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+            ref={infoRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={infoInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, ease: "easeOut", staggerChildren: 0.1 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
           >
             <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-4">
@@ -89,21 +157,26 @@ const EventDetail = () => {
             </div>
             <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-4">
               <Users className="w-5 h-5 text-doom-silver/50 mb-2" />
-              <span className="font-mono text-[10px] text-doom-silver/40 uppercase block">Team Size</span>
-              <span className="font-rajdhani text-sm text-doom-silver">{event.teamSize}</span>
+              <span className="font-mono text-[10px] text-doom-silver/40 uppercase block">Reg Fees</span>
+              <span className="font-rajdhani text-sm text-doom-silver">{event.registrationFee}</span>
             </div>
             <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-4">
               <Trophy className="w-5 h-5 text-doom-orange/70 mb-2" />
               <span className="font-mono text-[10px] text-doom-silver/40 uppercase block">Prize Pool</span>
-              <span className="font-rajdhani text-sm text-doom-orange">{event.prize}</span>
+              <div className="font-rajdhani text-sm text-doom-orange">
+                {event.prize.split('|').map((prize, index) => (
+                  <div key={index}>{prize.trim()}</div>
+                ))}
+              </div>
             </div>
           </motion.div>
 
           {/* Description */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            ref={descRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={descInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-12"
           >
             <h2 className="font-orbitron text-lg text-doom-silver mb-4">About This Event</h2>
@@ -114,9 +187,10 @@ const EventDetail = () => {
 
           {/* Rules */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            ref={rulesRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={rulesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-12"
           >
             <h2 className="font-orbitron text-lg text-doom-silver mb-4">Rules & Guidelines</h2>
@@ -134,9 +208,10 @@ const EventDetail = () => {
 
           {/* Coordinators */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            ref={coordRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={coordInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-12"
           >
             <h2 className="font-orbitron text-lg text-doom-silver mb-4">Event Coordinators</h2>
@@ -163,21 +238,6 @@ const EventDetail = () => {
                 </div>
               ))}
             </div>
-          </motion.div>
-
-          {/* Register button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="text-center"
-          >
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="inline-block px-12 py-4 font-orbitron text-sm tracking-widest bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-            >
-              REGISTER NOW
-            </button>
           </motion.div>
         </div>
       </main>

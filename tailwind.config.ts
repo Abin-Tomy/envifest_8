@@ -17,6 +17,7 @@ export default {
         orbitron: ["Orbitron", "monospace"],
         mono: ["Share Tech Mono", "monospace"],
         rajdhani: ["Rajdhani", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

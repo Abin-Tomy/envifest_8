@@ -1,5 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import DecorativeShapes from "./DecorativeShapes";
+import ValorantOverlay from "./ValorantOverlay";
 
 const AboutSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -7,6 +9,12 @@ const AboutSection = () => {
 
   return (
     <section ref={ref} className="relative py-16 sm:py-24 md:py-32 px-4 overflow-hidden">
+      {/* Decorative corner shapes */}
+      <DecorativeShapes position="top" animate={true} />
+
+      {/* Valorant-style overlay */}
+      <ValorantOverlay variant="left" />
+
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-doom-void via-card/20 to-doom-void" />
 
@@ -47,9 +55,9 @@ const AboutSection = () => {
             </div>
 
             {/* Main heading - condensed cinematic style */}
-            <h2 className="font-orbitron text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-none mb-6 sm:mb-8">
+            <h2 className="font-poppins text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-none mb-6 sm:mb-8">
               <span className="block text-doom-silver">GET READY FOR</span>
-              <span className="block bg-gradient-to-r from-primary via-doom-neon to-primary bg-clip-text text-transparent">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-b from-primary to-primary/40">
                 ENVI
               </span>
               <span className="block text-doom-silver">2026</span>
@@ -81,7 +89,7 @@ const AboutSection = () => {
                 { value: "₹50K+", label: "PRIZES" },
               ].map((stat, index) => (
                 <div key={stat.label} className="relative group">
-                  <div className="font-orbitron text-3xl sm:text-4xl font-bold text-primary">
+                  <div className="font-poppins text-3xl sm:text-4xl font-bold text-primary">
                     {stat.value}
                   </div>
                   <div className="font-mono text-xs tracking-widest text-doom-silver/50 mt-1">
@@ -136,7 +144,7 @@ const AboutSection = () => {
                 <circle cx="100" cy="100" r="30" fill="hsl(var(--primary))" fillOpacity="0.1" />
 
                 {/* 8 symbol in center */}
-                <text x="100" y="115" textAnchor="middle" className="fill-primary font-orbitron text-[40px] font-bold">
+                <text x="100" y="115" textAnchor="middle" className="fill-primary font-poppins text-[40px] font-bold">
                   8
                 </text>
               </svg>
