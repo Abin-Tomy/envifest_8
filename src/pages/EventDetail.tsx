@@ -62,9 +62,9 @@ const EventDetail = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             onClick={() => navigate("/events")}
-            className="flex items-center gap-2 text-doom-silver/60 hover:text-primary transition-colors mb-8 font-mono text-sm"
+            className="flex items-center gap-2 px-4 py-2 bg-doom-gunmetal/30 border border-doom-silver/20 text-doom-silver hover:border-primary hover:text-primary transition-all mb-8 font-mono text-sm group"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Events
           </motion.button>
 

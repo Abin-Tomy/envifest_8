@@ -81,7 +81,7 @@ envifest_8/
 ### Events
 - Hackathon (24-hour coding marathon)
 - Ideathon (Innovation pitching)
-- Tech Quiz (Knowledge competition)
+- QuizBit (Knowledge competition)
 - Debate (Oratory skills)
 - Vibe Coding (Music + coding)
 - Robo Race (Robotics competition)

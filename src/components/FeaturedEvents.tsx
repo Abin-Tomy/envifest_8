@@ -75,7 +75,7 @@ const FeaturedEvents = () => {
                     />
                   )}
 
-                  {/* Background Image for Tech Quiz Card */}
+                  {/* Background Image for QuizBit Card */}
                   {event.id === "techquiz" && (
                     <div
                       className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
@@ -177,9 +177,9 @@ const FeaturedEvents = () => {
           animate={isInView ? { opacity: 1 } : {}}
           className="mt-20 text-center"
         >
-          <Link to="/events" className="inline-block relative px-8 py-4 bg-white/[0.03] hover:bg-white/[0.08] transition-colors border border-white/10 backdrop-blur-sm group overflow-hidden">
-            <span className="font-orbitron text-sm tracking-[0.2em] text-white uppercase relative z-10 flex items-center gap-4">
-              Access Global Protocol <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          <Link to="/events" className="inline-block relative px-8 py-4 bg-primary border border-primary">
+            <span className="font-orbitron text-sm tracking-[0.2em] text-black uppercase relative z-10 flex items-center gap-4 font-bold">
+              View All Events <ArrowRight className="w-4 h-4" />
             </span>
           </Link>
         </motion.div>
