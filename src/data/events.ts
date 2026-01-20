@@ -71,8 +71,8 @@ export const events: EventData[] = [
     prize: "1st: ₹20,000 | 2nd: ₹10,000",
     registrationFee: "₹250 per head",
     coordinators: [
-      { name: "Rahul Sharma", phone: "+91 98765 43210", role: "Lead Coordinator" },
-      { name: "Priya Patel", phone: "+91 98765 43211", role: "Technical Head" }
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Lead Coordinator" },
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Technical Head" }
     ]
   },
   {
@@ -97,8 +97,8 @@ export const events: EventData[] = [
     prize: "1st: ₹3,000 | 2nd: ₹2,000",
     registrationFee: "₹200",
     coordinators: [
-      { name: "Amit Kumar", phone: "+91 98765 43212", role: "Lead Coordinator" },
-      { name: "Sneha Reddy", phone: "+91 98765 43213", role: "Event Manager" }
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Lead Coordinator" },
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Event Manager" }
     ]
   },
   {
@@ -129,8 +129,8 @@ export const events: EventData[] = [
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹20",
     coordinators: [
-      { name: "Vikram Singh", phone: "+91 98765 43214", role: "Quiz Master" },
-      { name: "Anjali Gupta", phone: "+91 98765 43215", role: "Coordinator" }
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Quiz Master" },
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Coordinator" }
     ]
   },
   {
@@ -155,7 +155,7 @@ export const events: EventData[] = [
     prize: "1st: ₹4,000 | 2nd: ₹2,000",
     registrationFee: "₹20",
     coordinators: [
-      { name: "Kavitha Nair", phone: "+91 98765 43216", role: "Lead Coordinator" }
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Lead Coordinator" }
     ]
   },
   {
@@ -180,7 +180,7 @@ export const events: EventData[] = [
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹150",
     coordinators: [
-      { name: "Arjun Menon", phone: "+91 98765 43217", role: "Creative Director" }
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Creative Director" }
     ]
   },
   {
@@ -205,7 +205,7 @@ export const events: EventData[] = [
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹100",
     coordinators: [
-      { name: "Rohan Das", phone: "+91 98765 43218", role: "Technical Coordinator" }
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Technical Coordinator" }
     ]
   },
   {
@@ -230,7 +230,7 @@ export const events: EventData[] = [
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹150",
     coordinators: [
-      { name: "Karthik Iyer", phone: "+91 98765 43219", role: "Game Master" }
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Game Master" }
     ]
   },
   {
@@ -260,8 +260,8 @@ export const events: EventData[] = [
     prize: "To be announced",
     registrationFee: "₹100",
     coordinators: [
-      { name: "Sanjay Verma", phone: "+91 98765 43220", role: "Technical Head" },
-      { name: "Meera Joshi", phone: "+91 98765 43221", role: "Arena Manager" }
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Technical Head" },
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Arena Manager" }
     ]
   },
   {
@@ -293,7 +293,7 @@ export const events: EventData[] = [
     prize: "1st: ₹3,000 | 2nd: ₹1,000",
     registrationFee: "₹300",
     coordinators: [
-      { name: "Divya Sharma", phone: "+91 98765 43222", role: "Coordinator" }
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Coordinator" }
     ]
   },
   {
@@ -326,7 +326,7 @@ export const events: EventData[] = [
     prize: "1st: ₹10,000",
     registrationFee: "₹250",
     coordinators: [
-      { name: "Riya Kapoor", phone: "+91 98765 43224", role: "Event Head" }
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Event Head" }
     ]
   },
   {
@@ -354,7 +354,7 @@ export const events: EventData[] = [
     prize: "₹7,000",
     registrationFee: "Free",
     coordinators: [
-      { name: "Priya Menon", phone: "+91 98765 43226", role: "Design Head" }
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Design Head" }
     ]
   },
   {
@@ -386,7 +386,7 @@ export const events: EventData[] = [
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹50",
     coordinators: [
-      { name: "Aakash Mehta", phone: "+91 98765 43225", role: "Tournament Manager" }
+      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Tournament Manager" }
     ]
   }
 ];
