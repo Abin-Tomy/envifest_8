@@ -74,82 +74,51 @@ const AboutSection = () => {
               <span className="block text-transparent bg-clip-text bg-gradient-to-b from-primary via-primary to-primary/40">
                 COUNTDOWN
               </span>
-              <div className="relative">
-                {/* Green smoky effect layers */}
-                <motion.div
-                  className="absolute inset-0 -z-10"
-                  initial={{ opacity: 0 }}
-                  animate={isInView ? {
-                    opacity: [0.3, 0.6, 0.3],
-                    scale: [1, 1.2, 1],
-                  } : {}}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                >
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[150%] bg-gradient-radial from-primary/40 via-primary/20 to-transparent blur-3xl" />
-                </motion.div>
+              {/* ENVI 8 - Avengers Doomsday Style */}
+              <div className="relative mb-8">
+                {/* Glow effect behind text */}
+                <div className="absolute inset-0 blur-3xl opacity-60">
+                  <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none text-center">
+                    <span className="text-emerald-500">ENVI 8</span>
+                  </h1>
+                </div>
 
-                <motion.div
-                  className="absolute inset-0 -z-10"
-                  initial={{ opacity: 0 }}
-                  animate={isInView ? {
-                    opacity: [0.4, 0.7, 0.4],
-                    x: [-20, 20, -20],
-                    y: [-10, 10, -10],
-                  } : {}}
-                  transition={{
-                    duration: 6,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 0.5
-                  }}
-                >
-                  <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-primary/30 rounded-full blur-[100px]" />
-                </motion.div>
-
-                <motion.div
-                  className="absolute inset-0 -z-10"
-                  initial={{ opacity: 0 }}
-                  animate={isInView ? {
-                    opacity: [0.5, 0.8, 0.5],
-                    x: [20, -20, 20],
-                    y: [10, -10, 10],
-                  } : {}}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1
-                  }}
-                >
-                  <div className="absolute top-1/2 right-1/4 w-72 h-72 bg-emerald-500/25 rounded-full blur-[120px]" />
-                </motion.div>
-
-                {/* ENVI 8 Text */}
-                <div className="flex items-center gap-2 sm:gap-3 md:gap-4 relative z-10">
+                {/* Main text with gradients */}
+                <h1 className="relative text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none text-center">
                   <span
-                    className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-none select-none"
+                    className="inline-block"
                     style={{
-                      backgroundImage: 'url(/doom3.jpg)',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
+                      background: 'linear-gradient(180deg, #f0f0f0 0%, #d4d4d4 25%, #a8a8a8 50%, #7a7a7a 75%, #4a4a4a 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
-                      color: 'transparent',
-                      textShadow: 'none'
+                      filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.8)) drop-shadow(0 0 20px rgba(255,255,255,0.3))',
+                      textShadow: '0 1px 0 rgba(255,255,255,0.4), 0 -1px 0 rgba(0,0,0,0.6)'
                     }}
                   >
-                    ENVI
+                    ENVI{' '}
                   </span>
-                  <img
-                    src="/e8.png"
-                    alt="8"
-                    className="h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32 w-auto object-contain"
-                  />
+                  <span
+                    className="inline-block"
+                    style={{
+                      background: 'linear-gradient(180deg, #6ee7b7 0%, #34d399 15%, #10b981 30%, #059669 50%, #047857 70%, #065f46 85%, #064e3b 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.9)) drop-shadow(0 0 30px rgba(16,185,129,0.6)) drop-shadow(0 0 60px rgba(16,185,129,0.4))',
+                      textShadow: '0 1px 0 rgba(110,231,183,0.5), 0 -1px 0 rgba(0,0,0,0.8)'
+                    }}
+                  >
+                    8
+                  </span>
+                </h1>
+
+                {/* Subtle reflection effect */}
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-full opacity-20 blur-sm">
+                  <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none text-center transform scale-y-[-0.3] origin-top">
+                    <span className="text-gray-400">ENVI</span>
+                    <span className="text-emerald-600">8</span>
+                  </h1>
                 </div>
               </div>
             </h2>
