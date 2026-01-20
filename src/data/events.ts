@@ -243,11 +243,16 @@ export const events: EventData[] = [
     tagline: "Build. Program. Race.",
     description: "Build and race your robot through challenging obstacle courses. Speed and precision will determine the champion.",
     rules: [
-      "Team of 3-4 members",
-      "Robot must be self-built",
-      "Maximum dimensions: 30x30x30 cm",
-      "Wired or wireless control allowed",
-      "Multiple rounds with increasing difficulty"
+      "Participants must bring an already designed and built autonomous line follower robot strictly as per the given specifications",
+      "The robot must be Arduino-based, use IR sensors, and follow a black line made using black insulation tape",
+      "No remote control or external power supply is allowed",
+      "The robot must complete the given track accurately and in the least possible time",
+      "The robot must be fully autonomous during the run",
+      "Participation is open to Schools and Colleges",
+      "Individual participation and team participation (up to 3 members) are allowed",
+      "The track layout will be revealed only on the event day",
+      "Touching the robot or complete deviation from the line will terminate the run",
+      "Judging will be based on time and precision"
     ],
     timing: "March 16, 2026 | 10:00 AM - 4:00 PM",
     venue: "Robotics Arena, Block H",
