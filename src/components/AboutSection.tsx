@@ -179,7 +179,8 @@ const AboutSection = () => {
                   animate={isInView ? { rotate: -15, scale: 1.4 } : {}}
                   transition={{ delay: 0.6, duration: 1.2, ease: "easeOut" }}
                   style={{
-                    transformOrigin: 'center center'
+                    transformOrigin: 'center center',
+                    willChange: 'transform'
                   }}
                 >
                   <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-3 w-full h-full p-4 sm:p-6 md:p-8">
@@ -194,6 +195,7 @@ const AboutSection = () => {
                           ease: "easeOut"
                         }}
                         className="relative group cursor-pointer overflow-hidden rounded-md sm:rounded-lg border border-primary/20 sm:border-2 hover:border-primary/60 transition-all duration-300 aspect-square"
+                        style={{ willChange: 'transform' }}
                       >
                         {item.type === 'video' ? (
                           <video
@@ -203,12 +205,16 @@ const AboutSection = () => {
                             loop
                             muted
                             playsInline
+                            preload="none"
+                            style={{ willChange: 'transform' }}
                           />
                         ) : (
                           <img
                             src={item.src}
                             alt={item.alt}
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy"
+                            style={{ willChange: 'transform' }}
                           />
                         )}
 

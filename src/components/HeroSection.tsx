@@ -11,8 +11,8 @@ const HeroSection = () => {
     offset: ["start start", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "8%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const [isHovered, setIsHovered] = useState(false);
   const [showEyes, setShowEyes] = useState(false);
@@ -110,8 +110,11 @@ const HeroSection = () => {
       </motion.nav>
 
       {/* Background */}
-      <motion.div style={{ y }} className="absolute inset-0">
-        <div className="absolute inset-0 bg-doom-void" />
+      <motion.div
+        style={{ y }}
+        className="absolute inset-0"
+      >
+        <div className="absolute inset-0 bg-doom-void" style={{ willChange: 'transform' }} />
         {/* Background Video with reduced opacity */}
         <video
           autoPlay
@@ -120,10 +123,11 @@ const HeroSection = () => {
           playsInline
           preload="none"
           className="absolute inset-0 w-full h-full object-cover opacity-[0.12]"
+          style={{ willChange: 'transform' }}
         >
           <source src="/hero-vedio.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--doom-green-dark)/0.15)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--doom-green-dark)/0.15)_0%,transparent_60%)]" style={{ willChange: 'transform' }} />
       </motion.div>
 
       {/* Valorant-style geometric overlay */}

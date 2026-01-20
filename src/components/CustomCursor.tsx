@@ -40,7 +40,8 @@ const CustomCursor = () => {
         <>
             {/* Center dot */}
             <motion.div
-                className="fixed top-0 left-0 w-1.5 h-1.5 bg-primary rounded-full pointer-events-none z-[9999]"
+                className="fixed top-0 left-0 w-1.5 h-1.5 bg-white rounded-full pointer-events-none z-[9999]"
+                style={{ mixBlendMode: 'difference' }}
                 animate={{
                     x: mousePosition.x - 3,
                     y: mousePosition.y - 3,
@@ -55,7 +56,8 @@ const CustomCursor = () => {
 
             {/* Crosshair - Horizontal line */}
             <motion.div
-                className="fixed top-0 left-0 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent pointer-events-none z-[9998]"
+                className="fixed top-0 left-0 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent pointer-events-none z-[9998]"
+                style={{ mixBlendMode: 'difference' }}
                 animate={{
                     x: mousePosition.x - (isHovering ? 20 : 12),
                     y: mousePosition.y,
@@ -71,7 +73,8 @@ const CustomCursor = () => {
 
             {/* Crosshair - Vertical line */}
             <motion.div
-                className="fixed top-0 left-0 w-[1px] bg-gradient-to-b from-transparent via-primary to-transparent pointer-events-none z-[9998]"
+                className="fixed top-0 left-0 w-[1px] bg-gradient-to-b from-transparent via-white to-transparent pointer-events-none z-[9998]"
+                style={{ mixBlendMode: 'difference' }}
                 animate={{
                     x: mousePosition.x,
                     y: mousePosition.y - (isHovering ? 20 : 12),
@@ -88,6 +91,7 @@ const CustomCursor = () => {
             {/* Corner brackets - Top Left */}
             <motion.div
                 className="fixed top-0 left-0 pointer-events-none z-[9997]"
+                style={{ mixBlendMode: 'difference' }}
                 animate={{
                     x: mousePosition.x - (isHovering ? 24 : 0),
                     y: mousePosition.y - (isHovering ? 24 : 0),
@@ -99,12 +103,13 @@ const CustomCursor = () => {
                     damping: 20,
                 }}
             >
-                <div className="w-3 h-3 border-l-2 border-t-2 border-primary" />
+                <div className="w-3 h-3 border-l-2 border-t-2 border-white" />
             </motion.div>
 
             {/* Corner brackets - Top Right */}
             <motion.div
                 className="fixed top-0 left-0 pointer-events-none z-[9997]"
+                style={{ mixBlendMode: 'difference' }}
                 animate={{
                     x: mousePosition.x + (isHovering ? 21 : 0),
                     y: mousePosition.y - (isHovering ? 24 : 0),
@@ -116,12 +121,13 @@ const CustomCursor = () => {
                     damping: 20,
                 }}
             >
-                <div className="w-3 h-3 border-r-2 border-t-2 border-primary" />
+                <div className="w-3 h-3 border-r-2 border-t-2 border-white" />
             </motion.div>
 
             {/* Corner brackets - Bottom Left */}
             <motion.div
                 className="fixed top-0 left-0 pointer-events-none z-[9997]"
+                style={{ mixBlendMode: 'difference' }}
                 animate={{
                     x: mousePosition.x - (isHovering ? 24 : 0),
                     y: mousePosition.y + (isHovering ? 21 : 0),
@@ -133,12 +139,13 @@ const CustomCursor = () => {
                     damping: 20,
                 }}
             >
-                <div className="w-3 h-3 border-l-2 border-b-2 border-primary" />
+                <div className="w-3 h-3 border-l-2 border-b-2 border-white" />
             </motion.div>
 
             {/* Corner brackets - Bottom Right */}
             <motion.div
                 className="fixed top-0 left-0 pointer-events-none z-[9997]"
+                style={{ mixBlendMode: 'difference' }}
                 animate={{
                     x: mousePosition.x + (isHovering ? 21 : 0),
                     y: mousePosition.y + (isHovering ? 21 : 0),
@@ -150,7 +157,7 @@ const CustomCursor = () => {
                     damping: 20,
                 }}
             >
-                <div className="w-3 h-3 border-r-2 border-b-2 border-primary" />
+                <div className="w-3 h-3 border-r-2 border-b-2 border-white" />
             </motion.div>
 
             {/* Outer scanning ring on hover */}
