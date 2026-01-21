@@ -144,9 +144,9 @@ const AboutSection = () => {
               className="flex flex-wrap items-center gap-6 sm:gap-8 md:gap-12 mt-6 sm:mt-8"
             >
               {[
-                { value: "15+", label: "MISSIONS" },
+                { value: "12+", label: "MISSIONS" },
                 { value: "1000+", label: "HEROES" },
-                { value: "₹50K+", label: "INFINITY REWARDS" },
+                { value: "₹1.5 Lakh+", label: "INFINITY REWARDS" },
               ].map((stat, index) => (
                 <div key={stat.label} className="relative group">
                   <div className="font-orbitron text-2xl sm:text-3xl md:text-4xl font-black text-primary drop-shadow-[0_0_10px_rgba(42,154,88,0.5)]">
