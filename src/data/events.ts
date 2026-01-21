@@ -334,7 +334,7 @@ export const events: EventData[] = [
     theme: "standard",
     eventType: "main",
     tagline: "Shine Brightest",
-    description: "The Star of ENVI is an individual multi-round competition where participants are evaluated on aptitude, coding, communication, logic, and personality to win the ultimate title.",
+    description: "The Star of ENVI is the ultimate individual challenge designed to test versatility across aptitude, coding, logic, and communication. In this multi-round elimination competition, participants accumulate points as they advance through several rigorous stages: an Aptitude Test, a Written Coding Exam, speaking challenge, and a deep-dive Logical Test. The journey culminates in a Final Panel Interview, where the top contenders face off to be crowned \"The Star of ENVI.\"",
     rules: [
       "Individual participation only",
       "Registration is open for all college students (UG and PG)",
@@ -342,12 +342,7 @@ export const events: EventData[] = [
       "Points are awarded in each qualifying round",
       "The number of rounds may vary based on total registrations",
       "Use of unfair means or AI tools (where prohibited) will result in disqualification",
-      "Decisions of the judges and event coordinators are final",
-      "Round 1 – Aptitude Test: Online test, 20 questions in 20 minutes, no negative marking, cutoff: 12 (may increase to 13), qualifiers earn 10 points + bonus",
-      "Round 2 – Written Coding Exam: Offline written coding, 2 questions in 45 minutes, solve at least one to qualify, 10 points + 10 bonus for both correct, any programming language allowed",
-      "Round 3 – Switch: Speaking round with technical & non-technical topic, 5 min prep + 5 min presentation, switch meanings on judges' command, qualifiers earn 10 points",
-      "Round 4 – Logical Test: Technical coding round, 1 problem in 2 hours, no internet or AI tools, any programming language allowed, qualifiers earn 10 points",
-      "Round 5 – Final Panel Interview: Top 3–5 candidates qualify, technical + HR interview, panel decision is final, winner is crowned The Star of ENVI"
+      "Decisions of the judges and event coordinators are final"
     ],
     timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
     venue: "To be announced",
@@ -356,7 +351,7 @@ export const events: EventData[] = [
     registrationFee: "₹250",
     registrationLink: "https://airtable.com/appPf7sTJjJDeDIJ8/pagiKgDtzZFfaGJoZ/form",
     coordinators: [
-      { name: "Sian Juilian", phone: "+91 9778473889", role: "Student Coordinator" },
+      { name: "Fausteena Joshy", phone: "+91 7907399049", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   },
