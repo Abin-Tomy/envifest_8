@@ -35,6 +35,7 @@ export interface EventData {
   teamSize: string;
   prize: string;
   registrationFee: string;
+  registrationLink?: string;
   coordinators: EventCoordinator[];
 }
 
@@ -65,8 +66,8 @@ export const events: EventData[] = [
       "The judge's decision will be considered final",
       "Facilities: Evening Snacks, Dinner, Breakfast, Lunch, 24-hour coffee and light snacks"
     ],
-    timing: "March 15-16, 2026 | 24 Hours",
-    venue: "Main Auditorium, Block A",
+    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
+    venue: "To be announced",
     teamSize: "2-4 Members",
     prize: "1st: ₹20,000 | 2nd: ₹10,000",
     registrationFee: "₹250 per head",
@@ -83,22 +84,26 @@ export const events: EventData[] = [
     theme: "standard",
     eventType: "main",
     tagline: "Think Beyond Limits",
-    description: "Your idea could be the next big thing. Present your innovative solutions to real-world problems and get a chance to turn your vision into reality.",
+    description: "ENVI Ideathon 2026 is a student-focused innovation and idea-pitching event that encourages problem-solving, creativity, and practical thinking. Teams submit their ideas in advance, and shortlisted teams get the opportunity to pitch their solutions on stage before an industry expert.",
     rules: [
-      "Team of 2-3 members required",
-      "Ideas must be original and innovative",
-      "Presentation time: 10 minutes + 5 minutes Q&A",
-      "Use of visual aids encouraged",
-      "Business viability will be considered"
+      "Team size can range from 1 to 4 students. Cross-college teams are allowed",
+      "The event is open to students from all colleges",
+      "Online registration is mandatory, and idea submission is part of the registration process",
+      "Based on pre-event evaluation, the Top 12 teams will be shortlisted for stage pitching",
+      "Each shortlisted team will get 10 minutes (pitch + Q&A) for their presentation",
+      "Presentations must be limited to a maximum of 6 slides",
+      "Winners are selected based on innovation, feasibility, impact, and presentation quality",
+      "Plagiarized ideas or misconduct will lead to disqualification",
+      "The decisions of the judge and organizing committee are final and binding"
     ],
-    timing: "March 15, 2026 | 10:00 AM - 4:00 PM",
-    venue: "Seminar Hall, Block B",
-    teamSize: "2-3 Members",
+    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
+    venue: "To be announced",
+    teamSize: "1-4 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000",
     registrationFee: "₹200",
     coordinators: [
-      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Lead Coordinator" },
-      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Event Manager" }
+      { name: "Ayush VP", phone: "+91 9911366704", role: "Student Coordinator" },
+      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   },
   {
@@ -123,19 +128,20 @@ export const events: EventData[] = [
       "The Quiz Master's / Judges' decision shall be final and binding",
       "Any violation of the rules may result in immediate disqualification"
     ],
-    timing: "March 15, 2026 | 2:00 PM - 5:00 PM",
+    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
     venue: "Quiz Hall, Block C",
     teamSize: "2 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
-    registrationFee: "₹20",
+    registrationFee: "₹20/team",
+    registrationLink: "https://airtable.com/app46TuuqN1ySWWrN/pagrt453Lb3u4qZpT/form",
     coordinators: [
-      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Quiz Master" },
-      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Coordinator" }
+      { name: "Asher Vargheese K", phone: "+91 9497265177", role: "Student Coordinator" },
+      { name: "Ms. Anjana T K", phone: "+91 8248962887", role: "Staff Coordinator" }
     ]
   },
   {
     id: "debate",
-    name: "Debate",
+    name: "CrossFire",
     icon: MessageSquare,
     category: "other",
     theme: "standard",
@@ -143,44 +149,58 @@ export const events: EventData[] = [
     tagline: "Words Are Weapons",
     description: "Clash of perspectives in the arena of ideas. Articulate your stance, counter your opponents, and emerge as the champion of rhetoric.",
     rules: [
-      "Individual participation",
-      "Topics revealed 30 minutes before",
-      "Speaking time: 5 minutes per speaker",
-      "Rebuttals: 2 minutes each",
-      "Judged on content, delivery, and rebuttal"
+      "All participants must carry a valid school ID card",
+      "The debate will be conducted in English / Malayalam",
+      "The debate will be conducted in two stages: Prelims and Finals",
+      "Prelims consists of 4 rounds, each of 45 minutes Final round duration: 20 minutes",
+      "Topics will be allotted on the spot",
+      "All the team members must voice their opinions and respect opposing views at all times",
+      "Participants are expected to maintain discipline, fairness, and sportsmanship throughout the event",
+      "Mobile phones, smart devices, notes, or any external assistance are strictly prohibited during the competition",
+      "The judges' decision shall be final and binding",
+      "Any violation of the rules may result in immediate disqualification"
     ],
-    timing: "March 15, 2026 | 11:00 AM - 2:00 PM",
-    venue: "Debate Hall, Block D",
-    teamSize: "Individual",
+    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
+    venue: "PTA hall",
+    teamSize: "2 Members",
     prize: "1st: ₹4,000 | 2nd: ₹2,000",
-    registrationFee: "₹20",
+    registrationFee: "₹20/team",
+    registrationLink: "https://airtable.com/appcM1QasQkCsgMkO/pagle4VXD1g1HoNKp/form",
     coordinators: [
-      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Lead Coordinator" }
+      { name: "Bhadra", phone: "+91 8921543780", role: "Student Coordinator" },
+      { name: "Ms. Anjana T K", phone: "+91 8248962887", role: "Staff Coordinator" }
     ]
   },
   {
     id: "ad-making",
-    name: "Ad Making",
+    name: "ADBYTE",
     icon: Video,
     category: "other",
     theme: "standard",
     eventType: "main",
     tagline: "Create. Captivate. Convert.",
-    description: "Showcase your creative genius by crafting compelling advertisements. From concept to execution, let your imagination run wild.",
+    description: "This is an advertisement video making competition where participants showcase their creative genius by crafting compelling advertisements.",
     rules: [
-      "Team of 2-3 members",
-      "Video duration: 60-90 seconds",
-      "Theme announced on spot",
-      "Must be created during event hours",
-      "Original content only"
+      "Event Mode: Offline",
+      "Participation: Team of two members",
+      "Eligibility: Open to all UG & PG college students",
+      "The topic will be revealed on the spot before the event begins",
+      "The video duration should be between 20 seconds and 90 seconds",
+      "Participants are allowed to shoot the video using mobile phones",
+      "All ideas and content must be original",
+      "The video may be in English or Malayalam",
+      "Judging Criteria: Creativity & Originality, Clarity of Message, Relevance to the Given Topic, Presentation & Visual Appeal, Overall Impact",
+      "The judge's decision will be final and binding"
     ],
-    timing: "March 15, 2026 | 9:00 AM - 3:00 PM",
-    venue: "Media Lab, Block E",
-    teamSize: "2-3 Members",
+    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
+    venue: "To be announced",
+    teamSize: "2 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹150",
+    registrationLink: "https://airtable.com/appRCCsgg329Gzk2r/pagrt453Lb3u4qZpT/form",
     coordinators: [
-      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Creative Director" }
+      { name: "Nehal Noby", phone: "+91 8547691686", role: "Student Coordinator" },
+      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   },
   {
@@ -199,13 +219,14 @@ export const events: EventData[] = [
       "Time-based scoring",
       "Headphones mandatory"
     ],
-    timing: "March 15, 2026 | 10:00 AM - 1:00 PM",
-    venue: "Computer Lab 1, Block F",
+    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
+    venue: "To be announced",
     teamSize: "Individual",
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹100",
     coordinators: [
-      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Technical Coordinator" }
+      { name: "Athul Raj", phone: "+91 8590983075", role: "Student Coordinator" },
+      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   },
   {
@@ -216,21 +237,29 @@ export const events: EventData[] = [
     theme: "circuit",
     eventType: "main",
     tagline: "Hack Your Way Out",
-    description: "A cybersecurity-themed escape challenge. Decode, decrypt, and defeat the system before time runs out.",
+    description: "Escape the System is an intercollegiate, story-based digital escape challenge where teams must solve a sequence of logical, visual, and reasoning-based questions to break a simulated system lockdown within a limited time. The event emphasizes critical thinking, calm decision-making, and teamwork.",
     rules: [
-      "Team of 2-3 members",
-      "Time limit: 60 minutes",
-      "Hints available with time penalty",
-      "No external devices",
-      "All puzzles must be solved in sequence"
+      "Each team must consist of exactly 2 students",
+      "The total event duration is 3 hours",
+      "Teams must use only the allotted lab PC",
+      "Internet is not provided. Use of electronic devices inside the lab is strictly prohibited",
+      "No collaboration or answer sharing between teams is allowed",
+      "The challenge consists of 15 locked questions solved sequentially",
+      "Clues are provided only for selected high-difficulty questions",
+      "Any attempt to manipulate, bypass, or tamper with the system will result in immediate disqualification",
+      "Winners are decided based on the fastest completion time",
+      "In case of a tie, a tie-breaker round will be conducted",
+      "The decisions of the judges and organizing committee are final and binding"
     ],
-    timing: "March 15, 2026 | Continuous slots",
-    venue: "Escape Room, Block G",
-    teamSize: "2-3 Members",
+    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
+    venue: "To be announced",
+    teamSize: "2 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹150",
+    registrationLink: "https://airtable.com/app2MRa0YoaGP5PqN/pagrt453Lb3u4qZpT/form",
     coordinators: [
-      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Game Master" }
+      { name: "Abin Tomy", phone: "+91 7907693769", role: "Student Coordinator" },
+      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   },
   {
@@ -254,14 +283,15 @@ export const events: EventData[] = [
       "Touching the robot or complete deviation from the line will terminate the run",
       "Judging will be based on time and precision"
     ],
-    timing: "March 16, 2026 | 10:00 AM - 4:00 PM",
-    venue: "Robotics Arena, Block H",
-    teamSize: "3-4 Members",
+    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
+    venue: "To be announced",
+    teamSize: "1-3 Members",
     prize: "To be announced",
     registrationFee: "₹100",
+    registrationLink: "https://airtable.com/appqGgTlMVGAJ584n/pagrt453Lb3u4qZpT/form",
     coordinators: [
-      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Technical Head" },
-      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Arena Manager" }
+      { name: "Gautham", phone: "+91 9995817077", role: "Student Coordinator" },
+      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   },
   {
@@ -287,13 +317,15 @@ export const events: EventData[] = [
       "Participants must report to the venue at least 20 minutes before the starting time",
       "Any more details will be provided before the event"
     ],
-    timing: "March 15, 2026 | 3:00 PM - 5:00 PM",
-    venue: "Computer Lab 2, Block F",
+    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
+    venue: "To be announced",
     teamSize: "2 Members",
     prize: "1st: ₹3,000 | 2nd: ₹1,000",
     registrationFee: "₹300",
+    registrationLink: "https://airtable.com/app4mJjvZgKAqcgo2/pagrt453Lb3u4qZpT/form",
     coordinators: [
-      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Coordinator" }
+      { name: "Adith Jai", phone: "+91 9207009201", role: "Student Coordinator" },
+      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   },
   {
@@ -304,29 +336,30 @@ export const events: EventData[] = [
     theme: "standard",
     eventType: "main",
     tagline: "Shine Brightest",
-    description: "The 'Star of Envi' is a solo competition where participants showcase their creativity and skills across three challenging rounds. The goal is to outperform others and win the title of the ultimate star.",
+    description: "The Star of ENVI is an individual multi-round competition where participants are evaluated on aptitude, coding, communication, logic, and personality to win the ultimate title.",
     rules: [
-      "The event will take place from 9:00 AM to 1:00 PM",
-      "Only individual participation is allowed",
+      "Individual participation only",
       "Registration is open for all college students (UG and PG)",
-      "College ID cards/ID proof are compulsory",
-      "Individuals will be asked to perform a specific task in each round",
-      "The contest will include three rounds, with specific tasks assigned in each round",
-      "Eliminations will take place at the end of each round",
-      "Each round will have a strict time limit for task completion",
-      "The decision of judges will be final",
-      "Personal laptop is not necessary",
-      "Participants must report to the venue at least 30 minutes before the starting time",
-      "Any more details will be provided before the event",
-      "Any kind of malpractice would be considered as disqualified"
+      "The event consists of multiple elimination rounds",
+      "Points are awarded in each qualifying round",
+      "The number of rounds may vary based on total registrations",
+      "Use of unfair means or AI tools (where prohibited) will result in disqualification",
+      "Decisions of the judges and event coordinators are final",
+      "Round 1 – Aptitude Test: Online test, 20 questions in 20 minutes, no negative marking, cutoff: 12 (may increase to 13), qualifiers earn 10 points + bonus",
+      "Round 2 – Written Coding Exam: Offline written coding, 2 questions in 45 minutes, solve at least one to qualify, 10 points + 10 bonus for both correct, any programming language allowed",
+      "Round 3 – Switch: Speaking round with technical & non-technical topic, 5 min prep + 5 min presentation, switch meanings on judges' command, qualifiers earn 10 points",
+      "Round 4 – Logical Test: Technical coding round, 1 problem in 2 hours, no internet or AI tools, any programming language allowed, qualifiers earn 10 points",
+      "Round 5 – Final Panel Interview: Top 3–5 candidates qualify, technical + HR interview, panel decision is final, winner is crowned The Star of ENVI"
     ],
-    timing: "March 16, 2026 | 2:00 PM - 6:00 PM",
-    venue: "Main Stage, Central Plaza",
+    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
+    venue: "To be announced",
     teamSize: "Individual",
     prize: "1st: ₹10,000",
     registrationFee: "₹250",
+    registrationLink: "https://airtable.com/appPf7sTJjJDeDIJ8/pagiKgDtzZFfaGJoZ/form",
     coordinators: [
-      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Event Head" }
+      { name: "Sian Juilian", phone: "+91 9778473889", role: "Student Coordinator" },
+      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   },
   {
@@ -348,13 +381,13 @@ export const events: EventData[] = [
       "Plagiarism, offensive content, or late submissions will lead to disqualification",
       "The judge's decision will be final"
     ],
-    timing: "Online | Feb 1-3, 2026",
+    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
     venue: "Online Submission",
     teamSize: "Individual",
     prize: "₹7,000",
     registrationFee: "Free",
     coordinators: [
-      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Design Head" }
+      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   },
   {
@@ -380,13 +413,14 @@ export const events: EventData[] = [
       "Players can decide who will create the match room",
       "Participants must report at the match venue within the specified timeline"
     ],
-    timing: "March 15-16, 2026 | 10:00 AM - 8:00 PM",
+    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
     venue: "Gaming Zone, Block J",
     teamSize: "Individual",
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹50",
+    registrationLink: "https://airtable.com/appQmJg90WUHqJ3K2/paggg242glNhVS8dN/form",
     coordinators: [
-      { name: "Coordinator", phone: "+91 XXXXX XXXXX", role: "Tournament Manager" }
+      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   }
 ];

@@ -132,12 +132,23 @@ const EventDetail = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-center mb-8 sm:mb-12 px-4"
           >
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="w-full sm:w-auto inline-block px-8 sm:px-12 py-3 sm:py-4 font-orbitron text-xs sm:text-sm tracking-widest bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-            >
-              REGISTER NOW
-            </button>
+            {event.registrationLink ? (
+              <a
+                href={event.registrationLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-block px-8 sm:px-12 py-3 sm:py-4 font-orbitron text-xs sm:text-sm tracking-widest bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              >
+                REGISTER NOW
+              </a>
+            ) : (
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="w-full sm:w-auto inline-block px-8 sm:px-12 py-3 sm:py-4 font-orbitron text-xs sm:text-sm tracking-widest bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              >
+                REGISTER NOW
+              </button>
+            )}
           </motion.div>
 
           {/* Info cards */}
