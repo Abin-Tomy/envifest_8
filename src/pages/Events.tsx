@@ -14,107 +14,119 @@ const Events = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const EventCard = ({ event, index }: { event: any; index: number }) => (
-    <motion.div
-      key={event.id}
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1, duration: 0.7, ease: "easeOut" }}
-      className="group relative"
-    >
-      <Link to={`/events/${event.id}`} className="block h-full relative z-10">
-        {/* 1. The Glowing Backlight (Ambient) */}
-        <div className="absolute -inset-0.5 bg-gradient-to-b from-primary/20 to-transparent opacity-0 group-hover:opacity-40 transition-opacity duration-700 blur-md" />
+  const EventCard = ({ event, index }: { event: any; index: number }) => {
+    const isFireTheme = event.theme === "fire";
 
-        {/* 2. CARD CHASSIS */}
-        <div className="relative h-[380px] sm:h-[420px] md:h-[450px] bg-[#050505] border border-white/10 overflow-hidden transition-all duration-500 flex flex-col">
-          {/* Texture Overlay */}
-          <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/hexellence.png')] pointer-events-none mix-blend-screen" />
+    return (
+      <motion.div
+        key={event.id}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.1, duration: 0.7, ease: "easeOut" }}
+        className="group relative"
+      >
+        <Link to={`/events/${event.id}`} className="block h-full relative z-10">
+          {/* 1. The Glowing Backlight (Ambient) */}
+          <div className="absolute -inset-0.5 bg-gradient-to-b from-primary/20 to-transparent opacity-0 group-hover:opacity-40 transition-opacity duration-700 blur-md" />
 
-          {/* Gradient Overlay to fade texture at edges */}
-          <div className="absolute inset-0 bg-radial-gradient from-transparent to-[#050505]/90 pointer-events-none" />
+          {/* 2. CARD CHASSIS */}
+          <div className="relative h-[380px] sm:h-[420px] md:h-[450px] bg-[#050505] border border-white/10 overflow-hidden transition-all duration-500 flex flex-col">
+            {/* Texture Overlay */}
+            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/hexellence.png')] pointer-events-none mix-blend-screen" />
 
-          {/* Top "Status" Bar */}
-          <div className="h-12 border-b border-white/5 flex justify-between items-center px-4 bg-white/[0.02] relative z-10 backdrop-blur-sm">
-            <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(var(--primary-rgb),0.8)]" />
-              <span className="font-mono text-[9px] tracking-widest text-white/60 uppercase">Live Feed</span>
-            </div>
-            <span className="font-orbitron text-[10px] text-white/30 group-hover:text-primary/50 transition-colors">
-              {event.category === "featured" ? "FEATURED" : "ACTIVE"}
-            </span>
-          </div>
+            {/* Gradient Overlay to fade texture at edges */}
+            <div className="absolute inset-0 bg-radial-gradient from-transparent to-[#050505]/90 pointer-events-none" />
 
-          {/* Main Visual Area */}
-          <div className="flex-1 relative flex flex-col items-center justify-center p-6 group-hover:-translate-y-1 transition-transform duration-500 z-10">
-            {/* The "Arc Reactor" Icon Wrapper */}
-            <div className="relative w-20 h-20 mb-8 flex items-center justify-center">
-              {/* Outer Static Ring */}
-              <div className="absolute inset-0 border border-white/10 rounded-full scale-100 group-hover:scale-110 transition-transform duration-500" />
-
-              {/* Rotating Data Ring */}
-              <div className="absolute inset-0 border border-dashed border-white/20 rounded-full animate-[spin_20s_linear_infinite] group-hover:border-primary/30" />
-
-              {/* Inner Active Ring (Fast Spin on Hover) */}
-              <div className="absolute inset-1 border-t-2 border-primary rounded-full animate-spin transition-opacity opacity-0 group-hover:opacity-100" style={{ animationDuration: '2s' }} />
-
-              {/* Icon Itself */}
-              <event.icon className="w-8 h-8 text-doom-silver group-hover:text-white transition-colors relative z-10 drop-shadow-[0_0_10px_rgba(0,0,0,0.5)]" />
-
-              {/* Core Glow */}
-              <div className="absolute inset-0 bg-primary/30 blur-[30px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </div>
-
-            <h3 className="font-orbitron text-xl sm:text-2xl font-bold text-white mb-3 tracking-wide text-center uppercase drop-shadow-md relative z-10">
-              {event.name}
-            </h3>
-
-            <p className="text-center font-rajdhani text-white/50 leading-relaxed max-w-[220px] text-xs sm:text-sm group-hover:text-white/80 transition-colors relative z-10 font-medium mb-4">
-              {event.tagline}
-            </p>
-
-            {/* Event Details */}
-            <div className="flex flex-col gap-2 items-center relative z-10">
-              <div className="flex items-center gap-2 font-mono text-sm text-primary/80 tracking-wider">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                <span>{event.registrationFee}</span>
+            {/* Top "Status" Bar */}
+            <div className="h-12 border-b border-white/5 flex justify-between items-center px-4 bg-white/[0.02] relative z-10 backdrop-blur-sm">
+              <div className="flex items-center gap-2">
+                <div className={`w-1.5 h-1.5 rounded-full transition-colors ${isFireTheme
+                    ? 'bg-primary group-hover:bg-[#FF6B35] group-hover:shadow-[0_0_5px_#FF6B35]'
+                    : 'bg-primary shadow-[0_0_5px_rgba(var(--primary-rgb),0.8)]'
+                  }`} />
+                <span className="font-mono text-[9px] tracking-widest text-white/60 uppercase">Live Feed</span>
               </div>
-              <div className="font-mono text-sm text-white/40 tracking-wider text-center">
-                {event.timing.split('|').map((part, i) => (
-                  <div key={i}>{part.trim()}</div>
-                ))}
+              <span className="font-orbitron text-[10px] text-white/30 group-hover:text-primary/50 transition-colors">
+                {event.category === "featured" ? "FEATURED" : "ACTIVE"}
+              </span>
+            </div>
+
+            {/* Main Visual Area */}
+            <div className="flex-1 relative flex flex-col items-center justify-center p-6 group-hover:-translate-y-1 transition-transform duration-500 z-10">
+              {/* The "Arc Reactor" Icon Wrapper */}
+              <div className="relative w-20 h-20 mb-8 flex items-center justify-center">
+                {/* Outer Static Ring */}
+                <div className="absolute inset-0 border border-white/10 rounded-full scale-100 group-hover:scale-110 transition-transform duration-500" />
+
+                {/* Rotating Data Ring */}
+                <div className="absolute inset-0 border border-dashed border-white/20 rounded-full animate-[spin_20s_linear_infinite] group-hover:border-primary/30" />
+
+                {/* Inner Active Ring (Fast Spin on Hover) */}
+                <div className={`absolute inset-1 border-t-2 rounded-full animate-spin transition-opacity opacity-0 group-hover:opacity-100 ${isFireTheme ? 'border-[#FF6B35]' : 'border-primary'
+                  }`} style={{ animationDuration: '2s' }} />
+
+                {/* Icon Itself */}
+                <event.icon className={`w-8 h-8 text-doom-silver transition-colors relative z-10 drop-shadow-[0_0_10px_rgba(0,0,0,0.5)] ${isFireTheme ? 'group-hover:text-[#FF6B35]' : 'group-hover:text-white'
+                  }`} />
+
+                {/* Core Glow */}
+                <div className={`absolute inset-0 blur-[30px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${isFireTheme ? 'bg-[#FF6B35]/30' : 'bg-primary/30'
+                  }`} />
+              </div>
+
+              <h3 className="font-orbitron text-xl sm:text-2xl font-bold text-white mb-3 tracking-wide text-center uppercase drop-shadow-md relative z-10">
+                {event.name}
+              </h3>
+
+              <p className="text-center font-rajdhani text-white/50 leading-relaxed max-w-[220px] text-xs sm:text-sm group-hover:text-white/80 transition-colors relative z-10 font-medium mb-4">
+                {event.tagline}
+              </p>
+
+              {/* Event Details */}
+              <div className="flex flex-col gap-2 items-center relative z-10">
+                <div className="flex items-center gap-2 font-mono text-sm text-primary/80 tracking-wider">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  <span>{event.registrationFee}</span>
+                </div>
+                <div className="font-mono text-sm text-white/40 tracking-wider text-center">
+                  {event.timing.split('|').map((part, i) => (
+                    <div key={i}>{part.trim()}</div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Footer with Details */}
-          <div className="relative mt-auto z-10">
-            <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-50" />
+            {/* Footer with Details */}
+            <div className="relative mt-auto z-10">
+              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-50" />
 
-            <div className="p-4 relative z-10 bg-black/40 backdrop-blur-sm">
-              <button className="w-full group/btn relative overflow-hidden bg-white/5 hover:bg-primary border border-white/10 hover:border-primary/50 transition-all duration-300 py-3 px-4">
-                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:animate-[shimmer_1s_infinite]" />
-                <span className="font-orbitron text-xs tracking-[0.2em] uppercase text-white group-hover/btn:text-black font-bold flex items-center justify-center gap-2">
-                  View Details <ArrowRight className="w-4 h-4" />
-                </span>
-              </button>
+              <div className="p-4 relative z-10 bg-black/40 backdrop-blur-sm">
+                <button className="w-full group/btn relative overflow-hidden bg-white/5 hover:bg-primary border border-white/10 hover:border-primary/50 transition-all duration-300 py-3 px-4">
+                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:animate-[shimmer_1s_infinite]" />
+                  <span className="font-orbitron text-xs tracking-[0.2em] uppercase text-white group-hover/btn:text-black font-bold flex items-center justify-center gap-2">
+                    View Details <ArrowRight className="w-4 h-4" />
+                  </span>
+                </button>
+              </div>
+
+              {/* Footer background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </div>
 
-            {/* Footer background gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            {/* Interactive Tech Corners - Rectangular */}
+            <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-20">
+              {/* Top Left Bracket */}
+              <div className={`absolute top-0 left-0 w-4 h-4 border-t border-l border-white/20 transition-all duration-300 group-hover:w-6 group-hover:h-6 ${isFireTheme ? 'group-hover:border-[#FF6B35]/60' : 'group-hover:border-primary/60'
+                }`} />
+              {/* Bottom Right Bracket */}
+              <div className={`absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white/20 transition-all duration-300 group-hover:w-6 group-hover:h-6 ${isFireTheme ? 'group-hover:border-[#FF6B35]/60' : 'group-hover:border-primary/60'
+                }`} />
+            </div>
           </div>
-
-          {/* Interactive Tech Corners - Rectangular */}
-          <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-20">
-            {/* Top Left Bracket */}
-            <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-white/20 transition-all duration-300 group-hover:border-primary/60 group-hover:w-6 group-hover:h-6" />
-            {/* Bottom Right Bracket */}
-            <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white/20 transition-all duration-300 group-hover:border-primary/60 group-hover:w-6 group-hover:h-6" />
-          </div>
-        </div>
-      </Link>
-    </motion.div>
-  );
+        </Link>
+      </motion.div>
+    );
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
