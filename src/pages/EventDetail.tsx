@@ -157,24 +157,29 @@ const EventDetail = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={infoInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, ease: "easeOut", staggerChildren: 0.1 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
+            className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-12"
           >
-            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-4">
+            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-3">
               <Clock className="w-5 h-5 text-doom-silver/50 mb-2" />
               <span className="font-mono text-[10px] text-doom-silver/40 uppercase block">Timing</span>
               <span className="font-rajdhani text-sm text-doom-silver">{event.timing}</span>
             </div>
-            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-4">
+            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-3">
               <MapPin className="w-5 h-5 text-doom-silver/50 mb-2" />
               <span className="font-mono text-[10px] text-doom-silver/40 uppercase block">Venue</span>
               <span className="font-rajdhani text-sm text-doom-silver">{event.venue}</span>
             </div>
-            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-4">
+            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-3">
+              <Users className="w-5 h-5 text-doom-silver/50 mb-2" />
+              <span className="font-mono text-[10px] text-doom-silver/40 uppercase block">Team Size</span>
+              <span className="font-rajdhani text-sm text-doom-silver">{event.teamSize}</span>
+            </div>
+            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-3">
               <Users className="w-5 h-5 text-doom-silver/50 mb-2" />
               <span className="font-mono text-[10px] text-doom-silver/40 uppercase block">Reg Fees</span>
               <span className="font-rajdhani text-sm text-doom-silver">{event.registrationFee}</span>
             </div>
-            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-4">
+            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-3">
               <Trophy className="w-5 h-5 text-doom-orange/70 mb-2" />
               <span className="font-mono text-[10px] text-doom-silver/40 uppercase block">Prize Pool</span>
               <div className="font-rajdhani text-sm text-doom-orange">
