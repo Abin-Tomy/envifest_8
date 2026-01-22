@@ -213,7 +213,7 @@ export const events: EventData[] = [
   },
   {
     id: "vibe-coding",
-    name: "Vibe Coding",
+    name: "JARVIS",
     icon: Terminal,
     category: "other",
     theme: "circuit",
@@ -235,6 +235,7 @@ export const events: EventData[] = [
     teamSize: "Individual or 2 Members",
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹100",
+    registrationLink: "https://airtable.com/appQFQdu9WO2Edn4w/pagbD0HI1WmwtZ8I3/form",
     coordinators: [
       { name: "Athul Raj", phone: "+91 8590983075", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
