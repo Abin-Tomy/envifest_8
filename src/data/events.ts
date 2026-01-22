@@ -66,15 +66,15 @@ export const events: EventData[] = [
       "Student Coordinators reserve the right to make final decisions",
       "The judge's decision will be considered final"
     ],
-    timing: "7th February 2026, 9:00 AM - 8th February 2026, 9:00 AM",
+    timing: "7th - 8th February 2026 | 9:00 AM - 9:00 AM",
     venue: "To be announced",
     teamSize: "1-4 Members",
     prize: "1st: ₹20,000 | 2nd: ₹10,000",
-    registrationFee: "₹250 per participant",
+    registrationFee: "₹250/participant",
     registrationLink: "https://airtable.com/appwQh8I3EOu4GYXV/pagAI5h7ghFO4kp0i/form",
     coordinators: [
       { name: "Nandakiran R", phone: "+91 7594824490", role: "Student Coordinator" },
-      { name: "Staff Coordinator Name", phone: "+91 XXXXX XXXXX", role: "Staff Coordinator" }
+      { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
     ]
   },
   {
@@ -107,11 +107,11 @@ export const events: EventData[] = [
     venue: "Jubilee Hall",
     teamSize: "1-4 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000",
-    registrationFee: "₹300 per team",
+    registrationFee: "₹300/team",
     registrationLink: "https://airtable.com/apprqTh8yWjJlXxvb/pagbD0HI1WmwtZ8I3/form",
     coordinators: [
       { name: "Ayush VP", phone: "+91 9911366704", role: "Student Coordinator" },
-      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
+      { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
     ]
   },
   {
@@ -204,11 +204,11 @@ export const events: EventData[] = [
     venue: "To be announced",
     teamSize: "2 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
-    registrationFee: "₹150",
+    registrationFee: "₹150/team",
     registrationLink: "https://airtable.com/appRCCsgg329Gzk2r/pagrt453Lb3u4qZpT/form",
     coordinators: [
       { name: "Nehal Noby", phone: "+91 8547691686", role: "Student Coordinator" },
-      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
+      { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
     ]
   },
   {
@@ -234,11 +234,11 @@ export const events: EventData[] = [
     venue: "To be announced",
     teamSize: "Individual or 2 Members",
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
-    registrationFee: "₹100",
+    registrationFee: "₹100/participant",
     registrationLink: "https://airtable.com/appQFQdu9WO2Edn4w/pagbD0HI1WmwtZ8I3/form",
     coordinators: [
       { name: "Athul Raj", phone: "+91 8590983075", role: "Student Coordinator" },
-      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
+      { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
     ]
   },
   {
@@ -249,15 +249,13 @@ export const events: EventData[] = [
     theme: "circuit",
     eventType: "main",
     tagline: "Hack Your Way Out",
-    description: "Escape the System is an intercollegiate, story-based digital escape challenge where teams must solve a sequence of logical, visual, and reasoning-based questions to break a simulated system lockdown within a limited time. The event emphasizes critical thinking, calm decision-making, and teamwork.",
+    description: "Escape the System is an intercollegiate, story-based digital escape challenge where teams must solve 15 locked questions sequentially, using logical, visual, and reasoning skills to break a simulated system lockdown within a limited time. Clues will be provided only for selected high-difficulty questions. The event emphasizes critical thinking, calm decision-making, and teamwork, and does not require prior technical knowledge.",
     rules: [
       "Each team must consist of exactly 2 students",
       "The total event duration is 3 hours",
       "Teams must use only the allotted lab PC",
       "Internet is not provided. Use of electronic devices inside the lab is strictly prohibited",
       "No collaboration or answer sharing between teams is allowed",
-      "The challenge consists of 15 locked questions solved sequentially",
-      "Clues are provided only for selected high-difficulty questions",
       "Any attempt to manipulate, bypass, or tamper with the system will result in immediate disqualification",
       "Winners are decided based on the fastest completion time",
       "In case of a tie, a tie-breaker round will be conducted",
@@ -267,8 +265,8 @@ export const events: EventData[] = [
     venue: "To be announced",
     teamSize: "2 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
-    registrationFee: "₹150",
-    registrationLink: "https://airtable.com/app2MRa0YoaGP5PqN/pagrt453Lb3u4qZpT/form",
+    registrationFee: "₹150/team",
+    registrationLink: "https://airtable.com/appfdi22NpkDWQ0uC/pagbD0HI1WmwtZ8I3/form",
     coordinators: [
       { name: "Abin Tomy", phone: "+91 7907693769", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
@@ -299,7 +297,7 @@ export const events: EventData[] = [
     venue: "To be announced",
     teamSize: "1-3 Members",
     prize: "To be announced",
-    registrationFee: "₹100",
+    registrationFee: "₹100/participant",
     registrationLink: "https://airtable.com/apphjUk2Fe4wL1v6X/pagfBFgMcO6usAhCo/form",
     coordinators: [
       { name: "Gautham", phone: "+91 9995817077", role: "Student Coordinator" },
@@ -331,7 +329,7 @@ export const events: EventData[] = [
     venue: "To be announced",
     teamSize: "3 Members",
     prize: "1st: ₹3,000 | 2nd: ₹1,000",
-    registrationFee: "₹300",
+    registrationFee: "₹300/team",
     registrationLink: "https://airtable.com/app4mJjvZgKAqcgo2/pagrt453Lb3u4qZpT/form",
     coordinators: [
       { name: "Adith Jai", phone: "+91 9207009201", role: "Student Coordinator" },
@@ -360,7 +358,7 @@ export const events: EventData[] = [
     venue: "To be announced",
     teamSize: "Individual",
     prize: "1st: ₹10,000",
-    registrationFee: "₹250",
+    registrationFee: "₹250/participant",
     registrationLink: "https://airtable.com/appPf7sTJjJDeDIJ8/pagiKgDtzZFfaGJoZ/form",
     coordinators: [
       { name: "Fausteena Joshy", phone: "+91 7907399049", role: "Student Coordinator" },
@@ -418,9 +416,10 @@ export const events: EventData[] = [
     venue: "Online",
     teamSize: "Individual",
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
-    registrationFee: "₹30",
+    registrationFee: "₹30/participant",
     registrationLink: "https://airtable.com/appQmJg90WUHqJ3K2/paggg242glNhVS8dN/form",
     coordinators: [
+      { name: "Fadil", phone: "+91 8129520528", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   }
