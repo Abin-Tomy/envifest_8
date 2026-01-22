@@ -41,8 +41,8 @@ const Events = () => {
             <div className="h-12 border-b border-white/5 flex justify-between items-center px-4 bg-white/[0.02] relative z-10 backdrop-blur-sm">
               <div className="flex items-center gap-2">
                 <div className={`w-1.5 h-1.5 rounded-full transition-colors ${isFireTheme
-                    ? 'bg-primary group-hover:bg-[#FF6B35] group-hover:shadow-[0_0_5px_#FF6B35]'
-                    : 'bg-primary shadow-[0_0_5px_rgba(var(--primary-rgb),0.8)]'
+                  ? 'bg-primary group-hover:bg-[#FF6B35] group-hover:shadow-[0_0_5px_#FF6B35]'
+                  : 'bg-primary shadow-[0_0_5px_rgba(var(--primary-rgb),0.8)]'
                   }`} />
                 <span className="font-mono text-[9px] tracking-widest text-white/60 uppercase">Live Feed</span>
               </div>
@@ -89,9 +89,7 @@ const Events = () => {
                   <span>{event.registrationFee}</span>
                 </div>
                 <div className="font-mono text-sm text-white/40 tracking-wider text-center">
-                  {event.timing.split('|').map((part, i) => (
-                    <div key={i}>{part.trim()}</div>
-                  ))}
+                  {event.timing.split('|')[0].trim()}
                 </div>
               </div>
             </div>

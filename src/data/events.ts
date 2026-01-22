@@ -300,7 +300,7 @@ export const events: EventData[] = [
     teamSize: "1-3 Members",
     prize: "To be announced",
     registrationFee: "₹100",
-    registrationLink: "https://airtable.com/appqGgTlMVGAJ584n/pagrt453Lb3u4qZpT/form",
+    registrationLink: "https://airtable.com/apphjUk2Fe4wL1v6X/pagfBFgMcO6usAhCo/form",
     coordinators: [
       { name: "Gautham", phone: "+91 9995817077", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
@@ -405,24 +405,20 @@ export const events: EventData[] = [
     tagline: "Virtual Glory Awaits",
     description: "A high-energy virtual tournament where players compete in knockout rounds.",
     rules: [
-      "The event will take place from 8:00 PM onwards",
-      "You will be added to a WhatsApp group where further details about the event will be shared",
-      "Knockout match rules",
-      "5-substitutions allowed",
-      "Card types: All allowed",
-      "Squad strength limitations: None",
-      "Proceed to penalties if the match ends in a draw",
-      "If a player is found cheating during the game, provide video proof for an auto-win to the opposition",
-      "If a player disconnects during the match, the opposition will be deemed victorious",
-      "Every player must play the game on their own device",
-      "Players can decide who will create the match room",
-      "Participants must report at the match venue within the specified timeline"
+      "Event Mode: Online",
+      "Game Mode: Random",
+      "Only individual participation is allowed",
+      "Registration is open for all students",
+      "8 minute knockout",
+      "If a player is found cheating in games, send a video proof will give an auto win",
+      "WhatsApp group will be created after registration process where further details will be provided",
+      "After every match the player who won should send a screenshot to the group with the caption 'won vs @mention(opposite player)'"
     ],
-    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
-    venue: "Gaming Zone, Block J",
+    timing: "January 31 - February 01, 2026 | Online",
+    venue: "Online",
     teamSize: "Individual",
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
-    registrationFee: "₹50",
+    registrationFee: "₹30",
     registrationLink: "https://airtable.com/appQmJg90WUHqJ3K2/paggg242glNhVS8dN/form",
     coordinators: [
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
