@@ -76,19 +76,19 @@ const EventDetail = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-8"
           >
-            <div className="flex items-center gap-4 mb-4">
-              <div className={`p-4 bg-doom-gunmetal/50 border ${event.theme === "fire" ? "border-doom-orange/30" :
+            <div className="flex items-center gap-3 sm:gap-4 mb-4">
+              <div className={`p-2 sm:p-3 md:p-4 bg-doom-gunmetal/50 border ${event.theme === "fire" ? "border-doom-orange/30" :
                 event.theme === "circuit" ? "border-primary/30" : "border-doom-silver/20"
                 }`}>
-                <IconComponent className={`w-8 h-8 ${event.theme === "fire" ? "text-doom-orange" :
+                <IconComponent className={`w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 ${event.theme === "fire" ? "text-doom-orange" :
                   event.theme === "circuit" ? "text-primary" : "text-doom-silver"
                   }`} />
               </div>
-              <div>
-                <h1 className="font-orbitron text-3xl md:text-5xl font-bold text-doom-silver">
+              <div className="flex-1 min-w-0">
+                <h1 className="font-orbitron text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-doom-silver break-words">
                   {event.name}
                 </h1>
-                <p className="font-rajdhani text-lg text-primary mt-1">{event.tagline}</p>
+                <p className="font-rajdhani text-sm sm:text-base md:text-lg text-primary mt-1">{event.tagline}</p>
               </div>
             </div>
           </motion.div>
@@ -157,34 +157,34 @@ const EventDetail = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={infoInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, ease: "easeOut", staggerChildren: 0.1 }}
-            className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-12"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3 mb-12"
           >
-            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-3">
-              <Clock className="w-5 h-5 text-doom-silver/50 mb-2" />
-              <span className="font-mono text-[10px] text-doom-silver/40 uppercase block">Timing</span>
-              <span className="font-rajdhani text-sm text-doom-silver">{event.timing}</span>
+            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-2 sm:p-3">
+              <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-doom-silver/50 mb-1 sm:mb-2" />
+              <span className="font-mono text-[9px] sm:text-[10px] text-doom-silver/40 uppercase block">Timing</span>
+              <span className="font-rajdhani text-xs sm:text-sm text-doom-silver break-words">{event.timing}</span>
             </div>
-            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-3">
-              <MapPin className="w-5 h-5 text-doom-silver/50 mb-2" />
-              <span className="font-mono text-[10px] text-doom-silver/40 uppercase block">Venue</span>
-              <span className="font-rajdhani text-sm text-doom-silver">{event.venue}</span>
+            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-2 sm:p-3">
+              <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-doom-silver/50 mb-1 sm:mb-2" />
+              <span className="font-mono text-[9px] sm:text-[10px] text-doom-silver/40 uppercase block">Venue</span>
+              <span className="font-rajdhani text-xs sm:text-sm text-doom-silver break-words">{event.venue}</span>
             </div>
-            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-3">
-              <Users className="w-5 h-5 text-doom-silver/50 mb-2" />
-              <span className="font-mono text-[10px] text-doom-silver/40 uppercase block">Team Size</span>
-              <span className="font-rajdhani text-sm text-doom-silver">{event.teamSize}</span>
+            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-2 sm:p-3 col-span-2 sm:col-span-1">
+              <Users className="w-4 h-4 sm:w-5 sm:h-5 text-doom-silver/50 mb-1 sm:mb-2" />
+              <span className="font-mono text-[9px] sm:text-[10px] text-doom-silver/40 uppercase block">Team Size</span>
+              <span className="font-rajdhani text-xs sm:text-sm text-doom-silver">{event.teamSize}</span>
             </div>
-            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-3">
-              <Users className="w-5 h-5 text-doom-silver/50 mb-2" />
-              <span className="font-mono text-[10px] text-doom-silver/40 uppercase block">Reg Fees</span>
-              <span className="font-rajdhani text-sm text-doom-silver">{event.registrationFee}</span>
+            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-2 sm:p-3">
+              <Users className="w-4 h-4 sm:w-5 sm:h-5 text-doom-silver/50 mb-1 sm:mb-2" />
+              <span className="font-mono text-[9px] sm:text-[10px] text-doom-silver/40 uppercase block">Reg Fees</span>
+              <span className="font-rajdhani text-xs sm:text-sm text-doom-silver break-words">{event.registrationFee}</span>
             </div>
-            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-3">
-              <Trophy className="w-5 h-5 text-doom-orange/70 mb-2" />
-              <span className="font-mono text-[10px] text-doom-silver/40 uppercase block">Prize Pool</span>
-              <div className="font-rajdhani text-sm text-doom-orange">
+            <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-2 sm:p-3">
+              <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-doom-orange/70 mb-1 sm:mb-2" />
+              <span className="font-mono text-[9px] sm:text-[10px] text-doom-silver/40 uppercase block">Prize Pool</span>
+              <div className="font-rajdhani text-xs sm:text-sm text-doom-orange">
                 {event.prize.split('|').map((prize, index) => (
-                  <div key={index}>{prize.trim()}</div>
+                  <div key={index} className="break-words">{prize.trim()}</div>
                 ))}
               </div>
             </div>
@@ -198,8 +198,8 @@ const EventDetail = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-12"
           >
-            <h2 className="font-orbitron text-lg text-doom-silver mb-4">About This Event</h2>
-            <p className="font-rajdhani text-doom-silver/70 leading-relaxed">
+            <h2 className="font-orbitron text-base sm:text-lg md:text-xl text-doom-silver mb-3 sm:mb-4">About This Event</h2>
+            <p className="font-rajdhani text-sm sm:text-base text-doom-silver/70 leading-relaxed">
               {event.description}
             </p>
           </motion.div>
@@ -212,14 +212,14 @@ const EventDetail = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-12"
           >
-            <h2 className="font-orbitron text-lg text-doom-silver mb-4">Rules & Guidelines</h2>
-            <ul className="space-y-2">
+            <h2 className="font-orbitron text-base sm:text-lg md:text-xl text-doom-silver mb-3 sm:mb-4">Rules & Guidelines</h2>
+            <ul className="space-y-2 sm:space-y-3">
               {event.rules.map((rule, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <span className="font-mono text-xs text-primary mt-1">
+                <li key={index} className="flex items-start gap-2 sm:gap-3">
+                  <span className="font-mono text-[10px] sm:text-xs text-primary mt-0.5 sm:mt-1 flex-shrink-0">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="font-rajdhani text-doom-silver/70">{rule}</span>
+                  <span className="font-rajdhani text-sm sm:text-base text-doom-silver/70">{rule}</span>
                 </li>
               ))}
             </ul>
@@ -233,25 +233,25 @@ const EventDetail = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-12"
           >
-            <h2 className="font-orbitron text-lg text-doom-silver mb-4">Event Coordinators</h2>
-            <div className="grid md:grid-cols-2 gap-4">
+            <h2 className="font-orbitron text-base sm:text-lg md:text-xl text-doom-silver mb-3 sm:mb-4">Event Coordinators</h2>
+            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
               {event.coordinators.map((coordinator, index) => (
                 <div
                   key={index}
-                  className="bg-doom-gunmetal/30 border border-doom-silver/10 p-4 flex items-center gap-4"
+                  className="bg-doom-gunmetal/30 border border-doom-silver/10 p-3 sm:p-4 flex items-center gap-3 sm:gap-4"
                 >
-                  <div className="w-12 h-12 bg-doom-gunmetal border border-doom-silver/20 flex items-center justify-center font-orbitron text-primary text-lg">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-doom-gunmetal border border-doom-silver/20 flex items-center justify-center font-orbitron text-primary text-base sm:text-lg flex-shrink-0">
                     {coordinator.name.charAt(0)}
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-orbitron text-sm text-doom-silver">{coordinator.name}</h3>
-                    <p className="font-mono text-[10px] text-doom-silver/40 uppercase">{coordinator.role}</p>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-orbitron text-xs sm:text-sm text-doom-silver truncate">{coordinator.name}</h3>
+                    <p className="font-mono text-[9px] sm:text-[10px] text-doom-silver/40 uppercase">{coordinator.role}</p>
                     <a
                       href={`tel:${coordinator.phone}`}
                       className="flex items-center gap-1 text-primary/70 hover:text-primary transition-colors mt-1"
                     >
-                      <Phone className="w-3 h-3" />
-                      <span className="font-mono text-xs">{coordinator.phone}</span>
+                      <Phone className="w-3 h-3 flex-shrink-0" />
+                      <span className="font-mono text-[10px] sm:text-xs">{coordinator.phone}</span>
                     </a>
                   </div>
                 </div>

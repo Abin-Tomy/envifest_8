@@ -104,7 +104,7 @@ export const events: EventData[] = [
       "Decision of the judge is final and binding"
     ],
     timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
-    venue: "St. Joseph's College (Autonomous), Devagiri",
+    venue: "Jubilee Hall",
     teamSize: "1-4 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000",
     registrationFee: "₹300 per team",
@@ -221,15 +221,18 @@ export const events: EventData[] = [
     tagline: "Code to the Beat",
     description: "A unique coding competition where you solve problems while vibing to music. Speed, accuracy, and rhythm combine in this one-of-a-kind challenge.",
     rules: [
-      "Individual participation",
-      "Multiple coding rounds",
-      "Languages: C, C++, Java, Python",
-      "Time-based scoring",
-      "Headphones mandatory"
+      "Participants may compete individually or in teams of 2",
+      "Registration open for all University/College students (UG and PG)",
+      "College ID cards/ID proof are compulsory",
+      "Event runs from 9:00 AM to 12:00 PM (3-hour session)",
+      "Only laptops allowed - Mobile phones, smartwatches & external devices strictly prohibited",
+      "Allowed AI tools: GPT, Gemini, DeepSeek",
+      "No code sharing between teams - Plagiarism leads to immediate disqualification",
+      "All code must be created during the event - Pre-written templates not allowed"
     ],
-    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
+    timing: "February 09, 2026 | 9:00 AM - 12:00 PM",
     venue: "To be announced",
-    teamSize: "Individual",
+    teamSize: "Individual or 2 Members",
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹100",
     coordinators: [
