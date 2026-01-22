@@ -57,7 +57,7 @@ const FeaturedEvents = () => {
                 <div className="absolute -inset-0.5 bg-gradient-to-b from-primary/20 to-transparent opacity-0 group-hover:opacity-40 transition-opacity duration-700 blur-md" />
 
                 {/* 2. CARD CHASSIS */}
-                <div className="relative h-[380px] sm:h-[420px] md:h-[450px] bg-[#050505] border border-white/10 overflow-hidden transition-all duration-500 flex flex-col">
+                <div className="relative h-[300px] sm:h-[380px] md:h-[420px] bg-[#050505] border border-white/10 overflow-hidden transition-all duration-500 flex flex-col">
 
                   {/* Background Image for Hackathon Card */}
                   {event.id === "hackathon" && (
@@ -90,19 +90,19 @@ const FeaturedEvents = () => {
                   <div className="absolute inset-0 bg-radial-gradient from-transparent to-[#050505]/90 pointer-events-none" />
 
                   {/* Top "Status" Bar */}
-                  <div className="h-12 border-b border-white/5 flex justify-between items-center px-4 bg-white/[0.02] relative z-10 backdrop-blur-sm">
-                    <div className="flex items-center gap-2">
+                  <div className="h-10 sm:h-12 border-b border-white/5 flex justify-between items-center px-3 sm:px-4 bg-white/[0.02] relative z-10 backdrop-blur-sm">
+                    <div className="flex items-center gap-1.5 sm:gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(var(--primary-rgb),0.8)]" />
-                      <span className="font-mono text-[9px] tracking-widest text-white/60 uppercase">Live Feed</span>
+                      <span className="font-mono text-[8px] sm:text-[9px] tracking-widest text-white/60 uppercase">Live Feed</span>
                     </div>
-                    <span className="font-orbitron text-[10px] text-white/30 group-hover:text-primary/50 transition-colors">MK-{index + 1}0</span>
+                    <span className="font-orbitron text-[9px] sm:text-[10px] text-white/30 group-hover:text-primary/50 transition-colors uppercase truncate max-w-[120px] sm:max-w-none">{event.teamSize}</span>
                   </div>
 
                   {/* Main Visual Area */}
-                  <div className="flex-1 relative flex flex-col items-center justify-center p-6 group-hover:-translate-y-1 transition-transform duration-500 z-10">
+                  <div className="flex-1 relative flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 group-hover:-translate-y-1 transition-transform duration-500 z-10">
 
                     {/* The "Arc Reactor" Icon Wrapper */}
-                    <div className="relative w-20 h-20 mb-8 flex items-center justify-center">
+                    <div className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 mb-4 sm:mb-6 md:mb-8 flex items-center justify-center flex-shrink-0">
                       {/* Outer Static Ring */}
                       <div className="absolute inset-0 border border-white/10 rounded-full scale-100 group-hover:scale-110 transition-transform duration-500" />
 
@@ -113,30 +113,28 @@ const FeaturedEvents = () => {
                       <div className="absolute inset-1 border-t-2 border-primary rounded-full animate-spin transition-opacity opacity-0 group-hover:opacity-100" style={{ animationDuration: '2s' }} />
 
                       {/* Icon Itself */}
-                      <event.icon className="w-8 h-8 text-doom-silver group-hover:text-white transition-colors relative z-10 drop-shadow-[0_0_10px_rgba(0,0,0,0.5)]" />
+                      <event.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-doom-silver group-hover:text-white transition-colors relative z-10 drop-shadow-[0_0_10px_rgba(0,0,0,0.5)]" />
 
                       {/* Core Glow */}
                       <div className="absolute inset-0 bg-primary/30 blur-[30px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
 
-                    <h3 className="font-poppins text-xl sm:text-2xl font-black text-white mb-3 tracking-wide text-center uppercase drop-shadow-md relative z-10">
+                    <h3 className="font-orbitron text-[17px] sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-2.5 md:mb-3 tracking-wide text-center uppercase drop-shadow-md relative z-10 px-2 break-words w-full leading-tight">
                       {event.name}
                     </h3>
 
-                    <p className="text-center font-rajdhani text-white/50 leading-relaxed max-w-[220px] text-xs sm:text-sm group-hover:text-white/80 transition-colors relative z-10 font-medium mb-4">
+                    <p className="text-center font-rajdhani text-white/50 leading-relaxed max-w-[200px] sm:max-w-[240px] text-xs sm:text-xs md:text-sm group-hover:text-white/80 transition-colors relative z-10 font-medium mb-3 sm:mb-3 md:mb-4 px-2">
                       {event.tagline}
                     </p>
 
                     {/* Event Details */}
-                    <div className="flex flex-col gap-2 items-center relative z-10">
-                      <div className="flex items-center gap-2 font-mono text-sm text-primary/80 tracking-wider">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                        <span>{event.registrationFee}</span>
+                    <div className="flex flex-col gap-1 sm:gap-1.5 md:gap-2 items-center relative z-10 w-full px-2">
+                      <div className="flex items-center gap-1.5 sm:gap-2 font-mono text-xs sm:text-xs md:text-sm text-primary/80 tracking-wider">
+                        <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-primary"></span>
+                        <span className="break-words text-center">{event.registrationFee}</span>
                       </div>
-                      <div className="font-mono text-sm text-white/40 tracking-wider text-center">
-                        {event.timing.split('|').map((part, i) => (
-                          <div key={i}>{part.trim()}</div>
-                        ))}
+                      <div className="font-mono text-[11px] sm:text-xs md:text-sm text-white/40 tracking-wider text-center break-words leading-tight">
+                        {event.timing.split('|')[0].trim()}
                       </div>
                     </div>
                   </div>
@@ -145,11 +143,11 @@ const FeaturedEvents = () => {
                   <div className="relative mt-auto z-10">
                     <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-50" />
 
-                    <div className="p-4 relative z-10 bg-black/40 backdrop-blur-sm">
-                      <button className="w-full group/btn relative overflow-hidden bg-white/5 hover:bg-primary border border-white/10 hover:border-primary/50 transition-all duration-300 py-3 px-4">
+                    <div className="p-2.5 sm:p-3 md:p-4 relative z-10 bg-black/40 backdrop-blur-sm">
+                      <button className="w-full group/btn relative overflow-hidden bg-white/5 hover:bg-primary border border-white/10 hover:border-primary/50 transition-all duration-300 py-2 sm:py-2.5 md:py-3 px-3 sm:px-4">
                         <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:animate-[shimmer_1s_infinite]" />
-                        <span className="font-orbitron text-xs tracking-[0.2em] uppercase text-white group-hover/btn:text-black font-bold flex items-center justify-center gap-2">
-                          Register Protocol <ArrowRight className="w-4 h-4" />
+                        <span className="font-orbitron text-[11px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-white group-hover/btn:text-black font-bold flex items-center justify-center gap-1.5 sm:gap-2">
+                          View Details <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
                         </span>
                       </button>
                     </div>
@@ -161,9 +159,9 @@ const FeaturedEvents = () => {
                   {/* Interactive Tech Corners - Rectangular */}
                   <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-20">
                     {/* Top Left Bracket */}
-                    <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-white/20 transition-all duration-300 group-hover:border-primary/60 group-hover:w-6 group-hover:h-6" />
+                    <div className="absolute top-0 left-0 w-3 h-3 sm:w-4 sm:h-4 border-t border-l border-white/20 transition-all duration-300 group-hover:border-primary/60 group-hover:w-5 group-hover:h-5 sm:group-hover:w-6 sm:group-hover:h-6" />
                     {/* Bottom Right Bracket */}
-                    <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white/20 transition-all duration-300 group-hover:border-primary/60 group-hover:w-6 group-hover:h-6" />
+                    <div className="absolute bottom-0 right-0 w-3 h-3 sm:w-4 sm:h-4 border-b border-r border-white/20 transition-all duration-300 group-hover:border-primary/60 group-hover:w-5 group-hover:h-5 sm:group-hover:w-6 sm:group-hover:h-6" />
                   </div>
                 </div>
               </Link>

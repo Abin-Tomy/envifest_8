@@ -6,19 +6,19 @@ import ValorantOverlay from "./ValorantOverlay";
 
 const coordinators = [
   {
-    name: "Dattan",
+    name: "Pruthwee Dattan",
     role: "Coordinator",
     phone: "+91 94004 47688",
     clearanceLevel: "ALPHA",
   },
   {
-    name: "Nahashal",
+    name: "Nahashal Naushad",
     role: "Coordinator",
     phone: "+91 73560 95410",
     clearanceLevel: "BETA",
   },
   {
-    name: "Akshath",
+    name: "Akshath OK",
     role: "Coordinator",
     phone: "+91 70348 76060",
     clearanceLevel: "BETA",

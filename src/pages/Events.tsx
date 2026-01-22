@@ -30,7 +30,7 @@ const Events = () => {
           <div className="absolute -inset-0.5 bg-gradient-to-b from-primary/20 to-transparent opacity-0 group-hover:opacity-40 transition-opacity duration-700 blur-md" />
 
           {/* 2. CARD CHASSIS */}
-          <div className="relative h-[340px] sm:h-[380px] md:h-[420px] bg-[#050505] border border-white/10 overflow-hidden transition-all duration-500 flex flex-col">
+          <div className="relative h-[300px] sm:h-[380px] md:h-[420px] bg-[#050505] border border-white/10 overflow-hidden transition-all duration-500 flex flex-col">
             {/* Texture Overlay */}
             <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/hexellence.png')] pointer-events-none mix-blend-screen" />
 
@@ -172,7 +172,7 @@ const Events = () => {
                 <Link to="/arcade" className="block h-full relative z-10">
                   <div className="absolute -inset-0.5 bg-gradient-to-b from-primary/30 to-transparent opacity-40 blur-md" />
 
-                  <div className="relative h-[340px] sm:h-[380px] md:h-[420px] bg-gradient-to-br from-primary/10 to-[#050505] border-2 border-primary/40 overflow-hidden flex flex-col hover:border-primary/60 transition-all duration-300">
+                  <div className="relative h-[300px] sm:h-[380px] md:h-[420px] bg-gradient-to-br from-primary/10 to-[#050505] border-2 border-primary/40 overflow-hidden flex flex-col hover:border-primary/60 transition-all duration-300">
                     <div className="absolute inset-0 opacity-5" style={{
                       backgroundImage: `linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)`,
                       backgroundSize: '20px 20px'
