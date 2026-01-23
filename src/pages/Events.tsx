@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Footer from "@/components/Footer";
 import { getMainEvents, getOnlineEvents } from "@/data/events";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 
 const Events = () => {
   const mainEvents = getMainEvents();
@@ -130,6 +130,24 @@ const Events = () => {
     <div className="min-h-screen bg-background text-foreground">
       <main className="pt-20 pb-20 px-4">
         <div className="max-w-6xl mx-auto">
+          {/* Back Button */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-8"
+          >
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white/5 hover:bg-primary border border-white/10 hover:border-primary/50 transition-all duration-300 group"
+            >
+              <ArrowLeft className="w-4 h-4 text-white group-hover:text-black transition-colors" />
+              <span className="font-orbitron text-xs sm:text-sm tracking-[0.15em] uppercase text-white group-hover:text-black font-bold transition-colors">
+                Back to Home
+              </span>
+            </Link>
+          </motion.div>
+
           {/* Main Header - Large, Centered, All Caps */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
