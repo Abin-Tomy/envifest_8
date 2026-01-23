@@ -71,8 +71,16 @@ const HeroSection = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="absolute top-16 sm:top-6 left-1/2 z-20 -translate-x-1/2"
       >
-        <div className="px-4 sm:px-8 md:px-14 lg:px-18 xl:px-24 py-2 sm:py-4 md:py-5 lg:py-6 rounded-full">
-          <ul className="flex items-center justify-center gap-4 sm:gap-8 md:gap-12 lg:gap-20 xl:gap-24">
+        <div
+          className="relative px-6 sm:px-10 md:px-16 lg:px-20 py-2 sm:py-3 md:py-3.5 lg:py-4 backdrop-blur-md shadow-lg shadow-primary/20"
+          style={{
+            clipPath: 'polygon(10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px), 0 10px)',
+            background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.25) 100%)',
+            border: '2px solid rgba(16, 185, 129, 0.5)',
+            boxShadow: 'inset 0 1px 2px rgba(16, 185, 129, 0.3), 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(16, 185, 129, 0.15)',
+          }}
+        >
+          <ul className="flex items-center justify-center gap-4 sm:gap-10 md:gap-16 lg:gap-20">
             {[
               { label: "HOME", path: "/", isLink: true },
               { label: "EVENTS", path: "/events", isLink: true },
