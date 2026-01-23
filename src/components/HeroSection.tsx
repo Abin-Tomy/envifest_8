@@ -69,7 +69,7 @@ const HeroSection = () => {
         initial={{ y: -100, opacity: 0, x: "-50%" }}
         animate={{ y: 0, opacity: 1, x: "-50%" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="absolute top-4 sm:top-6 left-1/2 z-20 -translate-x-1/2"
+        className="absolute top-16 sm:top-6 left-1/2 z-20 -translate-x-1/2"
       >
         <div className="px-4 sm:px-8 md:px-14 lg:px-18 xl:px-24 py-2 sm:py-4 md:py-5 lg:py-6 rounded-full">
           <ul className="flex items-center justify-center gap-4 sm:gap-8 md:gap-12 lg:gap-20 xl:gap-24">
@@ -134,17 +134,34 @@ const HeroSection = () => {
       <ValorantOverlay variant="both" />
 
       <motion.div style={{ opacity }} className="relative z-10 text-center px-4">
+        {/* ENVI Logo - Between Nav and Hero Image */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          className="lg:hidden mt-32 sm:mt-44 md:mt-48 mb-8 sm:mb-10 md:mb-12"
+        >
+          <img
+            src="/envi-logo.png"
+            alt="ENVI Logo"
+            className="mx-auto h-16 sm:h-20 md:h-24 lg:h-28 w-auto hover:scale-105 transition-transform duration-300"
+            style={{
+              filter: "drop-shadow(0 0 20px rgba(16, 185, 129, 0.3))",
+            }}
+          />
+        </motion.div>
+
         {/* ENVI HERO Image */}
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-4 mt-40 relative inline-block"
+          className="mb-4 relative inline-block lg:mt-40"
         >
           <img
             src="/hero-image.png"
             alt="ENVI 8"
-            className="w-[320px] xs:w-[440px] sm:w-[540px] md:w-[660px] lg:w-[800px] xl:w-[900px] h-auto select-none"
+            className="w-[320px] xs:w-[420px] sm:w-[520px] md:w-[640px] lg:w-[760px] xl:w-[860px] h-auto select-none"
             style={{
               filter: "drop-shadow(0 0 40px rgba(16, 185, 129, 0.15))",
             }}
