@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import Preloader from "@/components/Preloader";
 
 // Lazy load components for better performance
 const HeroSection = lazy(() => import("@/components/HeroSection"));
@@ -11,9 +12,7 @@ const Footer = lazy(() => import("@/components/Footer"));
 
 // Simple loading fallback
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
-  </div>
+  <Preloader compact message="Deploying ENVI 8 surface" />
 );
 
 const Index = () => {

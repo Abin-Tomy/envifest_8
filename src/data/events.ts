@@ -417,7 +417,7 @@ export const events: EventData[] = [
     teamSize: "Individual",
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹30/participant",
-    registrationLink: "https://airtable.com/appQmJg90WUHqJ3K2/paggg242glNhVS8dN/form",
+    registrationLink: "https://airtable.com/appQmJg90WUHqJ3K2/pagx7t4uvJRe3uiVA/form",
     coordinators: [
       { name: "Fadil", phone: "+91 8129520528", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
