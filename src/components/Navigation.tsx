@@ -46,7 +46,7 @@ const Navigation = () => {
                 initial={{ y: -100, opacity: 0, x: "-50%" }}
                 animate={{ y: 0, opacity: 1, x: "-50%" }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="fixed top-6 left-1/2 z-50 -translate-x-1/2"
+                className="fixed top-16 sm:top-6 left-1/2 z-50 -translate-x-1/2"
             >
                 {/* Crescent shape created using inset shadows on left/right only */}
                 <div className="px-6 sm:px-12 md:px-16 lg:px-20 py-3 sm:py-4 md:py-5 bg-black/30 backdrop-blur-md rounded-full shadow-[inset_3px_0_0_#10b981,inset_-3px_0_0_#10b981]">
