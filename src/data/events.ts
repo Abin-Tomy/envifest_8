@@ -79,7 +79,7 @@ export const events: EventData[] = [
   },
   {
     id: "ideathon",
-    name: "ENVI Ideathon 2026",
+    name: "Ideathon",
     icon: Lightbulb,
     category: "featured",
     theme: "standard",
