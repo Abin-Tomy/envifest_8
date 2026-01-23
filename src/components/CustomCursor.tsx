@@ -4,8 +4,27 @@ import { motion } from 'framer-motion';
 const CustomCursor = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
+    const [hasPointer, setHasPointer] = useState(false);
 
     useEffect(() => {
+        // Check if device has a fine pointer (mouse/trackpad) vs coarse pointer (touch)
+        const checkPointerCapability = () => {
+            const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
+            setHasPointer(hasFinePointer);
+        };
+
+        checkPointerCapability();
+
+        // Listen for changes in pointer capability (e.g., connecting/disconnecting mouse)
+        const pointerQuery = window.matchMedia('(pointer: fine)');
+        const handlePointerChange = (e: MediaQueryListEvent) => {
+            setHasPointer(e.matches);
+        };
+
+        if (pointerQuery.addEventListener) {
+            pointerQuery.addEventListener('change', handlePointerChange);
+        }
+
         const updateMousePosition = (e: MouseEvent) => {
             setMousePosition({ x: e.clientX, y: e.clientY });
         };
@@ -33,8 +52,16 @@ const CustomCursor = () => {
         return () => {
             window.removeEventListener('mousemove', updateMousePosition);
             window.removeEventListener('mouseover', handleMouseOver);
+            if (pointerQuery.removeEventListener) {
+                pointerQuery.removeEventListener('change', handlePointerChange);
+            }
         };
     }, []);
+
+    // Don't render custom cursor on touch devices
+    if (!hasPointer) {
+        return null;
+    }
 
     return (
         <>
