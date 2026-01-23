@@ -141,7 +141,7 @@ export const events: EventData[] = [
     teamSize: "2 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹20/team",
-    registrationLink: "https://airtable.com/app46TuuqN1ySWWrN/pagrt453Lb3u4qZpT/form",
+    registrationLink: "https://airtable.com/app46TuuqN1ySWWrN/pagqno28NDLoBfyft/form",
     coordinators: [
       { name: "Asher Vargheese K", phone: "+91 9497265177", role: "Student Coordinator" },
       { name: "Ms. Anjana T K", phone: "+91 8248962887", role: "Staff Coordinator" }
@@ -205,7 +205,7 @@ export const events: EventData[] = [
     teamSize: "2 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹150/team",
-    registrationLink: "https://airtable.com/appRCCsgg329Gzk2r/pagrt453Lb3u4qZpT/form",
+    registrationLink: "https://airtable.com/appRCCsgg329Gzk2r/pagbeLJXK1Zyl6lmD/form",
     coordinators: [
       { name: "Nehal Noby", phone: "+91 8547691686", role: "Student Coordinator" },
       { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
@@ -330,7 +330,7 @@ export const events: EventData[] = [
     teamSize: "3 Members",
     prize: "1st: ₹3,000 | 2nd: ₹1,000",
     registrationFee: "₹300/team",
-    registrationLink: "https://airtable.com/app4mJjvZgKAqcgo2/pagrt453Lb3u4qZpT/form",
+    registrationLink: "https://airtable.com/app4mJjvZgKAqcgo2/pag9bIqpIaFPlMVwO/form",
     coordinators: [
       { name: "Adith Jai", phone: "+91 9207009201", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
@@ -359,7 +359,7 @@ export const events: EventData[] = [
     teamSize: "Individual",
     prize: "1st: ₹10,000",
     registrationFee: "₹250/participant",
-    registrationLink: "https://airtable.com/appPf7sTJjJDeDIJ8/pagiKgDtzZFfaGJoZ/form",
+    registrationLink: "https://airtable.com/appPf7sTJjJDeDIJ8/pagpLJqcX3X624BRr/form",
     coordinators: [
       { name: "Fausteena Joshy", phone: "+91 7907399049", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
