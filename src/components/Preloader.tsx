@@ -87,7 +87,7 @@ const ENVI8Preloader = () => {
                             <div
                                 className="font-black text-green-500 relative z-10"
                                 style={{
-                                    fontSize: '12rem',
+                                    fontSize: 'clamp(4rem, 15vw, 12rem)',
                                     fontWeight: 900,
                                     letterSpacing: '0.05em',
                                     transform: animate
@@ -95,7 +95,7 @@ const ENVI8Preloader = () => {
                                         : `${item.from} scale(0.4)`,
                                     opacity: animate ? 1 : 0,
                                     transition: `all 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 0.35}s`,
-                                    textShadow: '6px 6px 0px rgba(0, 0, 0, 0.6)'
+                                    textShadow: 'clamp(2px, 0.5vw, 6px) clamp(2px, 0.5vw, 6px) 0px rgba(0, 0, 0, 0.6)'
                                 }}
                             >
                                 {item.letter}
