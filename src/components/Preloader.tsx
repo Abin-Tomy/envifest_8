@@ -132,13 +132,14 @@ const ENVI8Preloader = () => {
 
                 {/* Loading text */}
                 <div
-                    className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-center"
+                    className="absolute left-1/2 transform -translate-x-1/2 text-center px-4"
                     style={{
+                        bottom: 'clamp(1rem, 3vw, 1.5rem)',
                         opacity: animate ? 1 : 0,
                         transition: 'opacity 0.8s 1.2s'
                     }}
                 >
-                    <div className="text-lg tracking-wide text-green-400 font-mono overflow-hidden whitespace-nowrap">
+                    <div className="text-xs sm:text-sm md:text-base lg:text-lg tracking-wide text-green-400 font-mono overflow-hidden whitespace-nowrap">
                         <span
                             style={{
                                 display: 'inline-block',
