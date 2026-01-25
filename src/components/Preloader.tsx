@@ -132,7 +132,7 @@ const ENVI8Preloader = () => {
 
                 {/* Loading text */}
                 <div
-                    className="absolute left-1/2 transform -translate-x-1/2 text-center px-4"
+                    className="absolute left-1/2 transform -translate-x-1/2 text-center px-4 z-20"
                     style={{
                         bottom: 'clamp(1rem, 3vw, 1.5rem)',
                         opacity: animate ? 1 : 0,
