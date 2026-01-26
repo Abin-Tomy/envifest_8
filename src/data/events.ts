@@ -67,7 +67,7 @@ export const events: EventData[] = [
       "The judge's decision will be considered final"
     ],
     timing: "7th - 8th February 2026 | 9:00 AM - 9:00 AM",
-    venue: "To be announced",
+    venue: "Exam Hall (APJ Hall)",
     teamSize: "1-4 Members",
     prize: "1st: ₹20,000 | 2nd: ₹10,000",
     registrationFee: "₹250/participant",
@@ -136,8 +136,8 @@ export const events: EventData[] = [
       "The Quiz Master's / Judges' decision shall be final and binding",
       "Any violation of the rules may result in immediate disqualification"
     ],
-    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
-    venue: "Quiz Hall, Block C",
+    timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
+    venue: "Exam Hall",
     teamSize: "2 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹20/team",
@@ -168,8 +168,8 @@ export const events: EventData[] = [
       "The judges' decision shall be final and binding",
       "Any violation of the rules may result in immediate disqualification"
     ],
-    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
-    venue: "PTA hall",
+    timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
+    venue: "PTA Hall",
     teamSize: "2 Members",
     prize: "1st: ₹4,000 | 2nd: ₹2,000",
     registrationFee: "₹20/team",
@@ -200,8 +200,8 @@ export const events: EventData[] = [
       "Judging Criteria: Creativity & Originality, Clarity of Message, Relevance to the Given Topic, Presentation & Visual Appeal, Overall Impact",
       "The judge's decision will be final and binding"
     ],
-    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
-    venue: "To be announced",
+    timing: "February 09, 2026 | 12:00 PM - 2:00 PM",
+    venue: "2506",
     teamSize: "2 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹150/team",
@@ -230,8 +230,8 @@ export const events: EventData[] = [
       "No code sharing between teams - Plagiarism leads to immediate disqualification",
       "All code must be created during the event - Pre-written templates not allowed"
     ],
-    timing: "February 09, 2026 | 9:00 AM - 12:00 PM",
-    venue: "To be announced",
+    timing: "February 09, 2026 | 9:00 AM - 11:30 AM",
+    venue: "MCA Lab",
     teamSize: "Individual or 2 Members",
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹100/participant",
@@ -261,8 +261,8 @@ export const events: EventData[] = [
       "In case of a tie, a tie-breaker round will be conducted",
       "The decisions of the judges and organizing committee are final and binding"
     ],
-    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
-    venue: "To be announced",
+    timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
+    venue: "Lab 2 (Near Jubilee)",
     teamSize: "2 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹150/team",
@@ -293,8 +293,8 @@ export const events: EventData[] = [
       "Touching the robot or complete deviation from the line will terminate the run",
       "Judging will be based on time and precision"
     ],
-    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
-    venue: "To be announced",
+    timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
+    venue: "2507",
     teamSize: "1-3 Members",
     prize: "To be announced",
     registrationFee: "₹100/participant",
@@ -325,10 +325,10 @@ export const events: EventData[] = [
       "Additional instructions and details will be announced just before the event begins",
       "The decisions of the judges and organizing committee are final and binding"
     ],
-    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
-    venue: "To be announced",
+    timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
+    venue: "Yoga Hall (2608, 2609)",
     teamSize: "3 Members",
-    prize: "1st: ₹3,000 | 2nd: ₹1,000",
+    prize: "1st: ₹6,000 | 2nd: ₹3,000",
     registrationFee: "₹300/team",
     registrationLink: "https://airtable.com/app4mJjvZgKAqcgo2/pag9bIqpIaFPlMVwO/form",
     coordinators: [
@@ -354,8 +354,8 @@ export const events: EventData[] = [
       "Use of unfair means or AI tools (where prohibited) will result in disqualification",
       "Decisions of the judges and event coordinators are final"
     ],
-    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
-    venue: "To be announced",
+    timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
+    venue: "Lab 4 (Near C Block)",
     teamSize: "Individual",
     prize: "1st: ₹10,000",
     registrationFee: "₹250/participant",
@@ -384,7 +384,7 @@ export const events: EventData[] = [
       "Plagiarism, offensive content, or late submissions will lead to disqualification",
       "The judge's decision will be final"
     ],
-    timing: "February 09, 2026 | 9:00 AM - 5:00 PM",
+    timing: "January 31 - February 02, 2026",
     venue: "Online Submission",
     teamSize: "Individual",
     prize: "₹7,000",
