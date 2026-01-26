@@ -99,28 +99,37 @@ const EventDetail = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={posterInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mb-6 sm:mb-8 mx-auto px-4 sm:px-0"
-            style={{ maxWidth: '22rem' }}
+            className="mb-8 w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto px-4 sm:px-0"
           >
-            <div className="relative bg-doom-gunmetal/30 border-2 border-doom-silver/20 overflow-hidden flex items-center justify-center" style={{ aspectRatio: '1080/1350' }}>
-              {/* Grid pattern background */}
-              <div className="absolute inset-0 opacity-5" style={{
-                backgroundImage: `linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)`,
-                backgroundSize: '30px 30px'
-              }} />
+            <div className={`relative bg-doom-gunmetal/30 border-2 border-doom-silver/20 overflow-hidden flex items-center justify-center ${event.poster ? 'bg-black' : ''}`} style={event.poster ? {} : { aspectRatio: '1080/1350' }}>
+              {event.poster ? (
+                <img
+                  src={event.poster}
+                  alt={event.name}
+                  className="w-full h-auto object-contain relative z-10"
+                />
+              ) : (
+                <>
+                  {/* Grid pattern background */}
+                  <div className="absolute inset-0 opacity-5" style={{
+                    backgroundImage: `linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)`,
+                    backgroundSize: '30px 30px'
+                  }} />
 
-              {/* Placeholder content */}
-              <div className="relative z-10 text-center">
-                <Image className="w-12 h-12 sm:w-16 sm:h-16 text-doom-silver/30 mx-auto mb-2 sm:mb-3" />
-                <p className="font-mono text-[10px] sm:text-xs text-doom-silver/40 uppercase tracking-wider">Event Poster</p>
-                <p className="font-mono text-[9px] sm:text-[10px] text-doom-silver/30 mt-1">1080 × 1350</p>
-              </div>
+                  {/* Placeholder content */}
+                  <div className="relative z-10 text-center">
+                    <Image className="w-12 h-12 sm:w-16 sm:h-16 text-doom-silver/30 mx-auto mb-2 sm:mb-3" />
+                    <p className="font-mono text-[10px] sm:text-xs text-doom-silver/40 uppercase tracking-wider">Event Poster</p>
+                    <p className="font-mono text-[9px] sm:text-[10px] text-doom-silver/30 mt-1">1080 × 1350</p>
+                  </div>
+                </>
+              )}
 
               {/* Corner accents */}
-              <div className="absolute top-0 left-0 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-l-2 border-primary/30" />
-              <div className="absolute top-0 right-0 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-r-2 border-primary/30" />
-              <div className="absolute bottom-0 left-0 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-l-2 border-primary/30" />
-              <div className="absolute bottom-0 right-0 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-r-2 border-primary/30" />
+              <div className="absolute top-0 left-0 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-l-2 border-primary/30 z-20" />
+              <div className="absolute top-0 right-0 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-r-2 border-primary/30 z-20" />
+              <div className="absolute bottom-0 left-0 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-l-2 border-primary/30 z-20" />
+              <div className="absolute bottom-0 right-0 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-r-2 border-primary/30 z-20" />
             </div>
           </motion.div>
 

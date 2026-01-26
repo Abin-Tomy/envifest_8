@@ -31,6 +31,14 @@ const Events = () => {
 
           {/* 2. CARD CHASSIS */}
           <div className="relative h-[300px] sm:h-[380px] md:h-[420px] bg-[#050505] border border-white/10 overflow-hidden transition-all duration-500 flex flex-col">
+            {/* Poster Background if available */}
+            {event.poster && (
+              <div
+                className="absolute inset-0 bg-cover bg-center opacity-25 pointer-events-none transition-opacity duration-500 group-hover:opacity-40"
+                style={{ backgroundImage: `url('${event.poster}')` }}
+              />
+            )}
+
             {/* Texture Overlay */}
             <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/hexellence.png')] pointer-events-none mix-blend-screen" />
 

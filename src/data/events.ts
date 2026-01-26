@@ -37,6 +37,7 @@ export interface EventData {
   registrationFee: string;
   registrationLink?: string;
   coordinators: EventCoordinator[];
+  poster?: string;
 }
 
 export const events: EventData[] = [
@@ -265,6 +266,7 @@ export const events: EventData[] = [
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹100/participant",
     registrationLink: "https://airtable.com/appQFQdu9WO2Edn4w/pagbD0HI1WmwtZ8I3/form",
+    poster: "/vibecoding-poster.png",
     coordinators: [
       { name: "Athul Raj", phone: "+91 8590983075", role: "Student Coordinator" },
       { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
