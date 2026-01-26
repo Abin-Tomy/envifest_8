@@ -263,7 +263,7 @@ export const events: EventData[] = [
     timing: "February 09, 2026 | 9:00 AM - 11:30 AM",
     venue: "MCA Lab",
     teamSize: "Individual or 2 Members",
-    prize: "1st: ₹2,000 | 2nd: ₹1,000",
+    prize: "1st: ₹3,000 | 2nd: ₹2,000",
     registrationFee: "₹100/participant",
     registrationLink: "https://airtable.com/appQFQdu9WO2Edn4w/pagbD0HI1WmwtZ8I3/form",
     poster: "/vibecoding-poster.png",
