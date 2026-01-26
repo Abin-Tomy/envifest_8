@@ -78,6 +78,35 @@ export const events: EventData[] = [
     ]
   },
   {
+    id: "star-envi",
+    name: "Star of ENVI",
+    icon: Star,
+    category: "other",
+    theme: "standard",
+    eventType: "main",
+    tagline: "Shine Brightest",
+    description: "The Star of ENVI is the ultimate individual challenge designed to test versatility across aptitude, coding, logic, and communication. In this multi-round elimination competition, participants accumulate points as they advance through several rigorous stages: an Aptitude Test, a Written Coding Exam, speaking challenge, and a deep-dive Logical Test. The journey culminates in a Final Panel Interview, where the top contenders face off to be crowned \"The Star of ENVI.\"",
+    rules: [
+      "Individual participation only",
+      "Registration is open for all college students (UG and PG)",
+      "The event consists of multiple elimination rounds",
+      "Points are awarded in each qualifying round",
+      "The number of rounds may vary based on total registrations",
+      "Use of unfair means or AI tools (where prohibited) will result in disqualification",
+      "Decisions of the judges and event coordinators are final"
+    ],
+    timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
+    venue: "Lab 4 (Near C Block)",
+    teamSize: "Individual",
+    prize: "1st: ₹10,000",
+    registrationFee: "₹250/participant",
+    registrationLink: "https://airtable.com/appPf7sTJjJDeDIJ8/pagpLJqcX3X624BRr/form",
+    coordinators: [
+      { name: "Fausteena Joshy", phone: "+91 7907399049", role: "Student Coordinator" },
+      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
+    ]
+  },
+  {
     id: "ideathon",
     name: "Ideathon",
     icon: Lightbulb,
@@ -336,35 +365,7 @@ export const events: EventData[] = [
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   },
-  {
-    id: "star-envi",
-    name: "Star of ENVI",
-    icon: Star,
-    category: "other",
-    theme: "standard",
-    eventType: "main",
-    tagline: "Shine Brightest",
-    description: "The Star of ENVI is the ultimate individual challenge designed to test versatility across aptitude, coding, logic, and communication. In this multi-round elimination competition, participants accumulate points as they advance through several rigorous stages: an Aptitude Test, a Written Coding Exam, speaking challenge, and a deep-dive Logical Test. The journey culminates in a Final Panel Interview, where the top contenders face off to be crowned \"The Star of ENVI.\"",
-    rules: [
-      "Individual participation only",
-      "Registration is open for all college students (UG and PG)",
-      "The event consists of multiple elimination rounds",
-      "Points are awarded in each qualifying round",
-      "The number of rounds may vary based on total registrations",
-      "Use of unfair means or AI tools (where prohibited) will result in disqualification",
-      "Decisions of the judges and event coordinators are final"
-    ],
-    timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
-    venue: "Lab 4 (Near C Block)",
-    teamSize: "Individual",
-    prize: "1st: ₹10,000",
-    registrationFee: "₹250/participant",
-    registrationLink: "https://airtable.com/appPf7sTJjJDeDIJ8/pagpLJqcX3X624BRr/form",
-    coordinators: [
-      { name: "Fausteena Joshy", phone: "+91 7907399049", role: "Student Coordinator" },
-      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
-    ]
-  },
+
   {
     id: "poster-designing",
     name: "Poster Designing",
