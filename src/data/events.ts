@@ -296,7 +296,7 @@ export const events: EventData[] = [
     timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
     venue: "Room 2507",
     teamSize: "1-3 Members",
-    prize: "To be announced",
+    prize: "1st: ₹4,000 | 2nd: ₹2,000",
     registrationFee: "₹100/participant",
     registrationLink: "https://airtable.com/apphjUk2Fe4wL1v6X/pagfBFgMcO6usAhCo/form",
     coordinators: [
