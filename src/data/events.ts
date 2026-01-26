@@ -201,7 +201,7 @@ export const events: EventData[] = [
       "The judge's decision will be final and binding"
     ],
     timing: "February 09, 2026 | 12:00 PM - 2:00 PM",
-    venue: "2506",
+    venue: "Room 2506",
     teamSize: "2 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹150/team",
@@ -294,7 +294,7 @@ export const events: EventData[] = [
       "Judging will be based on time and precision"
     ],
     timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
-    venue: "2507",
+    venue: "Room 2507",
     teamSize: "1-3 Members",
     prize: "To be announced",
     registrationFee: "₹100/participant",
@@ -326,7 +326,7 @@ export const events: EventData[] = [
       "The decisions of the judges and organizing committee are final and binding"
     ],
     timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
-    venue: "Yoga Hall (2608, 2609)",
+    venue: "Yoga Hall (Room 2608, 2609)",
     teamSize: "3 Members",
     prize: "1st: ₹6,000 | 2nd: ₹3,000",
     registrationFee: "₹300/team",
