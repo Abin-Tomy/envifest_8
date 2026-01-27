@@ -59,28 +59,38 @@ const FeaturedEvents = () => {
                 {/* 2. CARD CHASSIS */}
                 <div className="relative h-[300px] sm:h-[380px] md:h-[420px] bg-[#050505] border border-white/10 overflow-hidden transition-all duration-500 flex flex-col">
 
-                  {/* Background Image for Hackathon Card */}
-                  {event.id === "hackathon" && (
+                  {/* Dynamic Poster Background */}
+                  {event.poster ? (
                     <div
-                      className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
-                      style={{ backgroundImage: "url('/wanda.jpg')" }}
+                      className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none transition-opacity duration-500 group-hover:opacity-20"
+                      style={{ backgroundImage: `url('${event.poster}')` }}
                     />
-                  )}
+                  ) : (
+                    <>
+                      {/* Background Image for Hackathon Card */}
+                      {event.id === "hackathon" && (
+                        <div
+                          className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
+                          style={{ backgroundImage: "url('/wanda.jpg')" }}
+                        />
+                      )}
 
-                  {/* Background Image for Ideathon Card */}
-                  {event.id === "ideathon" && (
-                    <div
-                      className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
-                      style={{ backgroundImage: "url('/shuri.jpg')" }}
-                    />
-                  )}
+                      {/* Background Image for Ideathon Card */}
+                      {event.id === "ideathon" && (
+                        <div
+                          className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
+                          style={{ backgroundImage: "url('/shuri.jpg')" }}
+                        />
+                      )}
 
-                  {/* Background Image for QuizBit Card */}
-                  {event.id === "techquiz" && (
-                    <div
-                      className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
-                      style={{ backgroundImage: "url('/BruceBanner.jpg')" }}
-                    />
+                      {/* Background Image for QuizBit Card */}
+                      {event.id === "techquiz" && (
+                        <div
+                          className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
+                          style={{ backgroundImage: "url('/BruceBanner.jpg')" }}
+                        />
+                      )}
+                    </>
                   )}
 
                   {/* === UPDATED: Reduced Opacity to 10% === */}

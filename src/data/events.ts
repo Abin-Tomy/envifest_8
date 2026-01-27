@@ -73,6 +73,7 @@ export const events: EventData[] = [
     prize: "1st: ₹20,000 | 2nd: ₹10,000",
     registrationFee: "₹250/participant",
     registrationLink: "https://airtable.com/appwQh8I3EOu4GYXV/pagAI5h7ghFO4kp0i/form",
+    poster: "/hackathon-poster.jpeg",
     coordinators: [
       { name: "Nandakiran R", phone: "+91 7594824490", role: "Student Coordinator" },
       { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }

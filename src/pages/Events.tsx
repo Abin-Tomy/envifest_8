@@ -34,7 +34,7 @@ const Events = () => {
             {/* Poster Background if available */}
             {event.poster && (
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-25 pointer-events-none transition-opacity duration-500 group-hover:opacity-40"
+                className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none transition-opacity duration-500 group-hover:opacity-20"
                 style={{ backgroundImage: `url('${event.poster}')` }}
               />
             )}
