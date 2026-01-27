@@ -249,7 +249,7 @@ export const events: EventData[] = [
     theme: "circuit",
     eventType: "main",
     tagline: "Code to the Beat",
-    description: "A unique coding competition where you solve problems while vibing to music. Speed, accuracy, and rhythm combine in this one-of-a-kind challenge.",
+    description: "A creative coding challenge focused on ideas, speed, and execution. Build and experiment within a limited time.",
     rules: [
       "Participants may compete individually or in teams of 2",
       "Registration open for all University/College students (UG and PG)",
