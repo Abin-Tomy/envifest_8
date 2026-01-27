@@ -260,7 +260,7 @@ export const events: EventData[] = [
       "No code sharing between teams - Plagiarism leads to immediate disqualification",
       "All code must be created during the event - Pre-written templates not allowed"
     ],
-    timing: "February 09, 2026 | 9:00 AM - 11:30 AM",
+    timing: "February 09, 2026 | 9:00 AM - 12:00 AM",
     venue: "MCA Lab",
     teamSize: "Individual or 2 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000",
