@@ -394,7 +394,7 @@ export const events: EventData[] = [
     timing: "Deadline: February 03, 2026 | 11:59 PM",
     venue: "Online Submission",
     teamSize: "Individual",
-    prize: "1st: ₹2,000 | 2nd: ₹1,000 | 3rd: ₹500",
+    prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹50/participant",
     coordinators: [
       { name: "Ebanse Jose", phone: "+91 9446404229", role: "Student Coordinator" }
