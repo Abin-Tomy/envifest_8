@@ -173,6 +173,57 @@
   .text-white {
     filter: brightness(1.15);
   }
+
+  /* Pixelated image rendering for sprites */
+  .pixelated {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+
+  /* Dr. Doom character animations */
+  .walking {
+    animation: walk 0.4s steps(4) infinite;
+  }
+
+  .idle-bounce {
+    animation: idle-bob 2s ease-in-out infinite;
+  }
+
+  @keyframes walk {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+
+    25% {
+      transform: translateY(-3px) rotate(-2deg);
+    }
+
+    50% {
+      transform: translateY(0px) rotate(0deg);
+    }
+
+    75% {
+      transform: translateY(-3px) rotate(2deg);
+    }
+
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+
+  @keyframes idle-bob {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-4px);
+    }
+  }
 }
 
 @layer components {

@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense, useState, useEffect } from "react";
 import CustomCursor from "./components/CustomCursor";
+import DoomCharacter from "./components/DoomCharacter";
 import Preloader from "./components/Preloader";
 
 // Lazy load page components for better performance
@@ -36,6 +37,7 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <CustomCursor />
+        <DoomCharacter />
         <Toaster />
         <Sonner />
         <BrowserRouter>
