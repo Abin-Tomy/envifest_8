@@ -140,6 +140,7 @@ export const events: EventData[] = [
     prize: "1st: ₹3,000 | 2nd: ₹2,000",
     registrationFee: "₹300/team",
     registrationLink: "https://airtable.com/apprqTh8yWjJlXxvb/pagbD0HI1WmwtZ8I3/form",
+    poster: "/ideathon.png",
     coordinators: [
       { name: "Ayush VP", phone: "+91 9911366704", role: "Student Coordinator" },
       { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
@@ -173,6 +174,7 @@ export const events: EventData[] = [
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹20/team",
     registrationLink: "https://airtable.com/app46TuuqN1ySWWrN/pagqno28NDLoBfyft/form",
+    poster: "/QUIZ.png",
     coordinators: [
       { name: "Asher Vargheese K", phone: "+91 9497265177", role: "Student Coordinator" },
       { name: "Ms. Anjana T K", phone: "+91 8248962887", role: "Staff Coordinator" }
@@ -205,6 +207,7 @@ export const events: EventData[] = [
     prize: "1st: ₹4,000 | 2nd: ₹2,000",
     registrationFee: "₹20/team",
     registrationLink: "https://airtable.com/appcM1QasQkCsgMkO/pagle4VXD1g1HoNKp/form",
+    poster: "/DEBATE.png",
     coordinators: [
       { name: "Bhadra", phone: "+91 8921543780", role: "Student Coordinator" },
       { name: "Ms. Anjana T K", phone: "+91 8248962887", role: "Staff Coordinator" }
@@ -423,6 +426,7 @@ export const events: EventData[] = [
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹30/participant",
     registrationLink: "https://airtable.com/appQmJg90WUHqJ3K2/pagx7t4uvJRe3uiVA/form",
+    poster: "/EFOOTBALL.png",
     coordinators: [
       { name: "Fadil", phone: "+91 8129520528", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
