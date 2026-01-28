@@ -31,9 +31,9 @@ const DoomCharacter = () => {
     const getResponsiveSize = () => {
         if (typeof window === 'undefined') return 100;
         const width = window.innerWidth;
-        if (width < 640) return 60;  // Mobile: smaller
-        if (width < 1024) return 80; // Tablet: medium
-        return 100; // Desktop: full size
+        if (width < 640) return 70;  // Mobile
+        if (width < 1024) return 90; // Tablet
+        return 120; // Desktop
     };
 
     const [size, setSize] = useState(getResponsiveSize());
@@ -53,7 +53,7 @@ const DoomCharacter = () => {
         maxX: window.innerWidth - size - 20,
         maxY: window.innerHeight - size - 20,
         minX: 20,
-        minY: 20,
+        minY: 80, // Increased top margin so speech bubble doesn't get cut off
     });
 
 

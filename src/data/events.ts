@@ -103,6 +103,7 @@ export const events: EventData[] = [
     prize: "1st: ₹10,000",
     registrationFee: "₹250/participant",
     registrationLink: "https://airtable.com/appPf7sTJjJDeDIJ8/pagpLJqcX3X624BRr/form",
+    poster: "/star-of-envi.png",
     coordinators: [
       { name: "Fausteena Joshy", phone: "+91 7907399049", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
@@ -254,7 +255,7 @@ export const events: EventData[] = [
     category: "other",
     theme: "circuit",
     eventType: "main",
-    tagline: "Code to the Beat",
+    tagline: "Vibe Coding",
     description: "A creative coding challenge focused on ideas, speed, and execution. Build and experiment within a limited time.",
     rules: [
       "Participants may compete individually or in teams of 2",
@@ -280,12 +281,12 @@ export const events: EventData[] = [
   },
   {
     id: "escape-system",
-    name: "Escape the System",
+    name: "Latveria Protocol",
     icon: KeyRound,
     category: "other",
     theme: "circuit",
     eventType: "main",
-    tagline: "Hack Your Way Out",
+    tagline: "Escape the System",
     description: "Escape the System is an intercollegiate, story-based digital escape challenge where teams must solve 15 locked questions sequentially, using logical, visual, and reasoning skills to break a simulated system lockdown within a limited time. Clues will be provided only for selected high-difficulty questions. The event emphasizes critical thinking, calm decision-making, and teamwork, and does not require prior technical knowledge.",
     rules: [
       "Each team must consist of exactly 2 students",
@@ -349,7 +350,7 @@ export const events: EventData[] = [
     category: "other",
     theme: "fire",
     eventType: "main",
-    tagline: "Debug or Perish",
+    tagline: "Escape the Room",
     description: "Groups attempt to find clues and solve a series of puzzles to escape before time runs out!",
     rules: [
       "Each team must consist of exactly three members",
