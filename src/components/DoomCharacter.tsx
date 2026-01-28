@@ -33,7 +33,7 @@ const DoomCharacter = () => {
         const width = window.innerWidth;
         if (width < 640) return 70;  // Mobile
         if (width < 1024) return 90; // Tablet
-        return 120; // Desktop
+        return 100; // Desktop
     };
 
     const [size, setSize] = useState(getResponsiveSize());
