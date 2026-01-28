@@ -37,10 +37,10 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <CustomCursor />
-        <DoomCharacter />
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <DoomCharacter />
           <Suspense fallback={<div className="min-h-screen bg-black" />}>
             <Routes>
               <Route path="/" element={<Index />} />

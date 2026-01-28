@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 type GestureType = "idle" | "wave" | "point" | "look" | "celebrate" | "thinking" | "surprise" | "dance";
 type Direction = "left" | "right";
@@ -9,7 +10,17 @@ interface Position {
     y: number;
 }
 
+// Context-aware messages based on page/section
+type MessageType = "emoji" | "text";
+
+interface ContextMessage {
+    type: MessageType;
+    content: string;
+    emoji?: string;
+}
+
 const DoomCharacter = () => {
+    const location = useLocation();
     const [position, setPosition] = useState<Position>({ x: 100, y: 100 });
     const [direction, setDirection] = useState<Direction>("right");
     const [gesture, setGesture] = useState<GestureType>("idle");
@@ -93,6 +104,68 @@ const DoomCharacter = () => {
 
         return () => clearInterval(gestureInterval);
     }, [isWalking]);
+
+    // Get context-aware message based on current page OR section
+    // Text messages ONLY on events pages or events section, emojis everywhere else
+    const getContextMessage = (): ContextMessage => {
+        const path = location.pathname;
+
+        // Check if character is hovering over the events section on home page
+        if (path === "/") {
+            // Get element at character position
+            // Use document.elementFromPoint to see if we are over the events section
+            const element = document.elementFromPoint(position.x + 50, position.y + 50);
+            const eventsSection = element?.closest("#events");
+
+            if (eventsSection) {
+                const messages = [
+                    { type: "text" as MessageType, content: "Check these out!", emoji: "👀" },
+                    { type: "text" as MessageType, content: "Join the fun!", emoji: "🎉" },
+                    { type: "text" as MessageType, content: "Pick an event!", emoji: "🎮" },
+                ];
+                return messages[Math.floor(Math.random() * messages.length)];
+            }
+        }
+
+        // Events page - show text messages
+        if (path === "/events") {
+            const messages = [
+                { type: "text" as MessageType, content: "Check these out!", emoji: "👀" },
+                { type: "text" as MessageType, content: "Join the fun!", emoji: "🎉" },
+                { type: "text" as MessageType, content: "Pick an event!", emoji: "🎮" },
+            ];
+            return messages[Math.floor(Math.random() * messages.length)];
+        }
+
+        // Event details page - show text messages
+        if (path.startsWith("/events/")) {
+            const messages = [
+                { type: "text" as MessageType, content: "Register Now!", emoji: "📝" },
+                { type: "text" as MessageType, content: "Don't miss it!", emoji: "⏰" },
+                { type: "text" as MessageType, content: "Join us!", emoji: "🚀" },
+            ];
+            return messages[Math.floor(Math.random() * messages.length)];
+        }
+
+        // All other pages - ONLY emojis, no text
+        const emojis = ["👋", "🎉", "🔥", "✨", "🎮", "🚀", "👀", "🤔", "💫", "⚡"];
+        return { type: "emoji", content: emojis[Math.floor(Math.random() * emojis.length)] };
+    };
+
+    const [contextMessage, setContextMessage] = useState<ContextMessage>(getContextMessage());
+
+    // Update context message periodically and on page change
+    useEffect(() => {
+        setContextMessage(getContextMessage());
+
+        const messageInterval = setInterval(() => {
+            if (!isWalking && gesture !== "idle") {
+                setContextMessage(getContextMessage());
+            }
+        }, 12000);
+
+        return () => clearInterval(messageInterval);
+    }, [location.pathname, isWalking, gesture]);
 
     // React to scroll with gestures (character stays in viewport)
     useEffect(() => {
@@ -194,7 +267,7 @@ const DoomCharacter = () => {
                     />
                 </div>
 
-                {/* Gesture indicators */}
+                {/* Gesture indicators - now alongside context message */}
                 {gesture === "point" && (
                     <motion.div
                         className="absolute -right-8 top-1/2 -translate-y-1/2 text-3xl"
@@ -270,6 +343,24 @@ const DoomCharacter = () => {
                     repeat: Infinity,
                 }}
             />
+
+            {/* Speech bubble - OUTSIDE mirrored div, ONLY on events pages */}
+            {!isWalking && contextMessage.type === "text" && (
+                <motion.div
+                    className="absolute -top-12 left-1/2 -translate-x-1/2 whitespace-nowrap z-10"
+                    initial={{ opacity: 0, scale: 0.5, y: 10 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.5 }}
+                    transition={{ duration: 0.3 }}
+                >
+                    <div className="relative bg-white text-black px-3 py-1.5 rounded-lg text-xs font-bold shadow-lg border border-green-500/30">
+                        <span className="mr-1">{contextMessage.emoji}</span>
+                        <span className="text-green-700">{contextMessage.content}</span>
+                        {/* Speech bubble tail */}
+                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-white" />
+                    </div>
+                </motion.div>
+            )}
         </motion.div >
     );
 };
