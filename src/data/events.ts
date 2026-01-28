@@ -374,31 +374,30 @@ export const events: EventData[] = [
   },
 
   {
-    id: "poster-designing",
-    name: "Poster Designing",
-    icon: Palette,
+    id: "reel-editing",
+    name: "Reel Editing Competition",
+    icon: Video,
     category: "other",
     theme: "standard",
     eventType: "online",
-    tagline: "Design Your Vision",
-    description: "Poster Designing (Online) is a creative competition where participants showcase their artistic and conceptual skills by designing digital posters on a given theme. It encourages innovation, visual storytelling, and effective communication, all from the comfort of their own space.",
+    tagline: "Doomsday in Devagiri",
+    description: "A reel editing competition where participants create short, impactful videos using provided raw footage. Use of AI is encouraged, and you can draw inspiration from previous Avengers movies. Raw footage will be provided once registration is completed.",
     rules: [
-      "Only individual participants are allowed",
-      "Registration is open for all college students (UG and PG)",
-      "The topic will be revealed before the event",
-      "Any tools or software can be used",
-      "Posters must be original, relevant to the topic, and visually appealing",
-      "Submit in JPEG, PNG, or PDF format within the given time frame",
-      "Plagiarism, offensive content, or late submissions will lead to disqualification",
-      "The judge's decision will be final"
+      "Video should be in 9:16 ratio",
+      "Resolution: 1080p 30fps",
+      "Video length: 20-40 seconds",
+      "Use of AI is encouraged",
+      "Can use reference from previous Avengers Movies",
+      "Raw footage will be provided once registration is completed",
+      "You will be added to a group for further instructions"
     ],
-    timing: "January 31 - February 02, 2026",
+    timing: "Deadline: February 03, 2026 | 11:59 PM",
     venue: "Online Submission",
     teamSize: "Individual",
-    prize: "₹7,000",
-    registrationFee: "Free",
+    prize: "1st: ₹2,000 | 2nd: ₹1,000 | 3rd: ₹500",
+    registrationFee: "₹50/participant",
     coordinators: [
-      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
+      { name: "Ebanse Jose", phone: "+91 9446404229", role: "Student Coordinator" }
     ]
   },
   {
