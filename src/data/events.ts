@@ -367,6 +367,7 @@ export const events: EventData[] = [
     prize: "1st: ₹6,000 | 2nd: ₹3,000",
     registrationFee: "₹300/team",
     registrationLink: "https://airtable.com/app4mJjvZgKAqcgo2/pag9bIqpIaFPlMVwO/form",
+    poster: "/burn the witch-.png",
     coordinators: [
       { name: "Adith Jai", phone: "+91 9207009201", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
