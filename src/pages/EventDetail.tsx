@@ -54,7 +54,7 @@ const EventDetail = () => {
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       {/* Animated Matrix Background */}
-      <DoomBackground opacity={0.08} />
+      <DoomBackground opacity={0.15} />
       <main className="pt-20 pb-20 px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Back button */}
@@ -207,8 +207,8 @@ const EventDetail = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-12"
           >
-            <h2 className="font-orbitron text-base sm:text-lg md:text-xl text-doom-silver mb-3 sm:mb-4">About This Event</h2>
-            <p className="font-rajdhani text-sm sm:text-base text-doom-silver/70 leading-relaxed">
+            <h2 className="font-orbitron text-base sm:text-lg md:text-xl text-doom-silver mb-3 sm:mb-4 text-center sm:text-left">About This Event</h2>
+            <p className="font-rajdhani text-sm sm:text-base text-doom-silver/70 leading-relaxed text-justify">
               {event.description}
             </p>
           </motion.div>
@@ -221,14 +221,14 @@ const EventDetail = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-12"
           >
-            <h2 className="font-orbitron text-base sm:text-lg md:text-xl text-doom-silver mb-3 sm:mb-4">Rules & Guidelines</h2>
+            <h2 className="font-orbitron text-base sm:text-lg md:text-xl text-doom-silver mb-3 sm:mb-4 text-center sm:text-left">Rules & Guidelines</h2>
             <ul className="space-y-2 sm:space-y-3">
               {event.rules.map((rule, index) => (
                 <li key={index} className="flex items-start gap-2 sm:gap-3">
                   <span className="font-mono text-[10px] sm:text-xs text-primary mt-0.5 sm:mt-1 flex-shrink-0">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="font-rajdhani text-sm sm:text-base text-doom-silver/70">{rule}</span>
+                  <span className="font-rajdhani text-sm sm:text-base text-doom-silver/70 text-justify">{rule}</span>
                 </li>
               ))}
             </ul>
@@ -242,7 +242,7 @@ const EventDetail = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-12"
           >
-            <h2 className="font-orbitron text-base sm:text-lg md:text-xl text-doom-silver mb-3 sm:mb-4">Event Coordinators</h2>
+            <h2 className="font-orbitron text-base sm:text-lg md:text-xl text-doom-silver mb-3 sm:mb-4 text-center sm:text-left">Event Coordinators</h2>
             <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
               {event.coordinators.map((coordinator, index) => (
                 <div

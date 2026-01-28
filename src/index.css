@@ -119,6 +119,60 @@
       cursor: none;
     }
   }
+
+  /* Global text size and opacity adjustments */
+  body {
+    font-size: 115%;
+    /* Increase base font size by 15% */
+  }
+
+  /* Increase opacity for text elements */
+  p,
+  span,
+  div,
+  li,
+  a,
+  label,
+  td,
+  th {
+    opacity: 1;
+  }
+
+  /* Slightly increase opacity for headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    opacity: 1;
+  }
+
+  /* Ensure interactive elements remain fully visible */
+  button,
+  input,
+  select,
+  textarea {
+    opacity: 1;
+  }
+
+  /* Improve contrast for muted/secondary text */
+  .text-doom-silver\/60,
+  .text-doom-silver\/50,
+  .text-doom-silver\/40,
+  .text-doom-silver\/30,
+  .text-white\/50,
+  .text-white\/60,
+  .text-white\/70,
+  .text-white\/80 {
+    filter: brightness(1.4) !important;
+  }
+
+  /* Improve contrast for primary text */
+  .text-doom-silver,
+  .text-white {
+    filter: brightness(1.15);
+  }
 }
 
 @layer components {

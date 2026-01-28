@@ -130,7 +130,7 @@ const HeroSection = () => {
           muted
           playsInline
           preload="none"
-          className="absolute inset-0 w-full h-full object-cover opacity-[0.12]"
+          className="absolute inset-0 w-full h-full object-cover opacity-20"
           style={{ willChange: 'transform' }}
         >
           <source src="/hero-vedio.mp4" type="video/mp4" />
@@ -185,6 +185,9 @@ const HeroSection = () => {
         >
           <motion.span
             className="font-mono text-base sm:text-lg md:text-xl tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.4em] uppercase text-primary"
+            style={{
+              textShadow: "0 0 20px rgba(16, 185, 129, 0.5), 0 0 40px rgba(16, 185, 129, 0.3)"
+            }}
           >
             National Level Tech Fest
           </motion.span>

@@ -139,18 +139,18 @@ const ENVI8Preloader = () => {
                         transition: 'opacity 0.8s 1.2s'
                     }}
                 >
-                    <div className="text-xs sm:text-sm md:text-base lg:text-lg tracking-wide text-green-400 font-mono overflow-hidden whitespace-nowrap">
+                    <div className="text-xs sm:text-sm md:text-base lg:text-lg tracking-wide text-green-400 font-orbitron overflow-hidden whitespace-nowrap">
                         <span
                             style={{
                                 display: 'inline-block',
-                                animation: 'typing 2s steps(35) 1.5s forwards, blink 0.75s step-end infinite',
+                                animation: 'typing 3s steps(35) 1.5s forwards, blink 0.75s step-end infinite',
                                 borderRight: '2px solid rgba(74, 222, 128, 0.75)',
                                 paddingRight: '2px',
                                 width: '0',
                                 overflow: 'hidden'
                             }}
                         >
-                            synchronizing ENVI 8 systems......
+                            SYNCHRONIZING ENVI 8 SYSTEMS......
                         </span>
                     </div>
                 </div>

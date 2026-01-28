@@ -43,21 +43,27 @@ const Footer = () => {
             viewport={{ once: true }}
             className="font-mono text-xs text-doom-silver/40"
           >
-            © 2025 ENVI 8. All rights reserved.
+            © 2026 ENVI 8. All rights reserved.
           </motion.div>
         </div>
 
         {/* Bottom bar */}
         <div className="mt-8 pt-6 border-t border-doom-silver/5 flex flex-col md:flex-row items-center justify-center gap-4 text-center">
-          <span className="font-mono text-[10px] text-doom-silver/30 tracking-widest uppercase">
+          <span className="font-mono text-[11px] text-primary/80 tracking-widest uppercase" style={{
+            textShadow: "0 0 10px rgba(16, 185, 129, 0.3)"
+          }}>
             [System Status: Online]
           </span>
-          <span className="hidden md:inline text-doom-silver/20">|</span>
-          <span className="font-mono text-[10px] text-doom-silver/30 tracking-widest uppercase">
+          <span className="hidden md:inline text-primary/30">|</span>
+          <span className="font-mono text-[11px] text-primary/80 tracking-widest uppercase" style={{
+            textShadow: "0 0 10px rgba(16, 185, 129, 0.3)"
+          }}>
             [Threat Level: Maximum]
           </span>
-          <span className="hidden md:inline text-doom-silver/20">|</span>
-          <span className="font-mono text-[10px] text-doom-silver/30 tracking-widest uppercase">
+          <span className="hidden md:inline text-primary/30">|</span>
+          <span className="font-mono text-[11px] text-primary/80 tracking-widest uppercase" style={{
+            textShadow: "0 0 10px rgba(16, 185, 129, 0.3)"
+          }}>
             [Protocol: Doomsday]
           </span>
         </div>

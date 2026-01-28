@@ -86,13 +86,13 @@ const Events = () => {
                 {event.name}
               </h3>
 
-              <p className="text-center font-rajdhani text-white/50 leading-relaxed max-w-[200px] sm:max-w-[240px] text-xs sm:text-xs md:text-sm group-hover:text-white/80 transition-colors relative z-10 font-medium mb-3 sm:mb-3 md:mb-4 px-2">
+              <p className="text-center font-rajdhani text-white/50 leading-relaxed max-w-[200px] sm:max-w-[240px] text-xs sm:text-xs md:text-sm group-hover:text-white/80 transition-colors relative z-10 font-medium mb-3 sm:mb-3 md:mb-4 px-2 mx-auto">
                 {event.tagline}
               </p>
 
               {/* Event Details */}
-              <div className="flex flex-col gap-1 sm:gap-1.5 md:gap-2 items-center relative z-10 w-full px-2">
-                <div className="flex items-center gap-1.5 sm:gap-2 font-mono text-xs sm:text-xs md:text-sm text-primary/80 tracking-wider">
+              <div className="flex flex-col gap-1 sm:gap-1.5 md:gap-2 items-center justify-center relative z-10 w-full px-2">
+                <div className="flex items-center justify-center gap-1.5 sm:gap-2 font-mono text-xs sm:text-xs md:text-sm text-primary/80 tracking-wider">
                   <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-primary"></span>
                   <span className="break-words text-center">{event.registrationFee}</span>
                 </div>
