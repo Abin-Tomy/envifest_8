@@ -216,7 +216,7 @@ export const events: EventData[] = [
   },
   {
     id: "ad-making",
-    name: "ADVENGERS",
+    name: "AdByte",
     icon: Video,
     category: "other",
     theme: "standard",
@@ -338,6 +338,7 @@ export const events: EventData[] = [
     prize: "1st: ₹3,000 | 2nd: ₹2,000",
     registrationFee: "₹100/participant",
     registrationLink: "https://airtable.com/apphjUk2Fe4wL1v6X/pagfBFgMcO6usAhCo/form",
+    poster: "/ROBORACE.png",
     coordinators: [
       { name: "Gautham", phone: "+91 9995817077", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
