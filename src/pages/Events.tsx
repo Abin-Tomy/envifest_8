@@ -189,80 +189,82 @@ const Events = () => {
               ))}
 
               {/* Arcade Zone Card - No Registration */}
-              <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: mainEvents.length * 0.1, duration: 0.7, ease: "easeOut" }}
-                className="group relative"
-              >
-                <Link to="/arcade" className="block h-full relative z-10">
-                  <div className="absolute -inset-0.5 bg-gradient-to-b from-primary/30 to-transparent opacity-40 blur-md" />
+              {false && (
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: mainEvents.length * 0.1, duration: 0.7, ease: "easeOut" }}
+                  className="group relative"
+                >
+                  <Link to="/arcade" className="block h-full relative z-10">
+                    <div className="absolute -inset-0.5 bg-gradient-to-b from-primary/30 to-transparent opacity-40 blur-md" />
 
-                  <div className="relative h-[300px] sm:h-[380px] md:h-[420px] bg-gradient-to-br from-primary/10 to-[#050505] border-2 border-primary/40 overflow-hidden flex flex-col hover:border-primary/60 transition-all duration-300">
-                    <div className="absolute inset-0 opacity-5" style={{
-                      backgroundImage: `linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)`,
-                      backgroundSize: '20px 20px'
-                    }} />
+                    <div className="relative h-[300px] sm:h-[380px] md:h-[420px] bg-gradient-to-br from-primary/10 to-[#050505] border-2 border-primary/40 overflow-hidden flex flex-col hover:border-primary/60 transition-all duration-300">
+                      <div className="absolute inset-0 opacity-5" style={{
+                        backgroundImage: `linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)`,
+                        backgroundSize: '20px 20px'
+                      }} />
 
-                    <div className="absolute top-3 sm:top-4 right-3 sm:right-4 z-30">
-                      <div className="px-2 sm:px-3 py-0.5 sm:py-1 bg-primary text-black font-poppins font-bold text-[10px] sm:text-xs uppercase">Free Entry</div>
-                    </div>
-
-                    <div className="h-10 sm:h-12 border-b border-primary/20 flex justify-between items-center px-3 sm:px-4 bg-primary/5 relative z-10">
-                      <div className="flex items-center gap-1.5 sm:gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(var(--primary-rgb),0.8)]" />
-                        <span className="font-mono text-[8px] sm:text-[9px] tracking-widest text-primary uppercase">No Registration</span>
-                      </div>
-                      <span className="font-orbitron text-[9px] sm:text-[10px] text-primary">ARCADE</span>
-                    </div>
-
-                    <div className="flex-1 relative flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 z-10 group-hover:-translate-y-1 transition-transform duration-500">
-                      <div className="w-14 h-14 sm:w-16 sm:h-16 border-2 border-primary bg-primary/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
-                        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                      <div className="absolute top-3 sm:top-4 right-3 sm:right-4 z-30">
+                        <div className="px-2 sm:px-3 py-0.5 sm:py-1 bg-primary text-black font-poppins font-bold text-[10px] sm:text-xs uppercase">Free Entry</div>
                       </div>
 
-                      <h3 className="font-orbitron text-[17px] sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-2.5 md:mb-3 tracking-wide text-center uppercase leading-tight">
-                        ARCADE ZONE
-                      </h3>
-
-                      <p className="text-center font-rajdhani text-white/50 leading-relaxed max-w-[200px] sm:max-w-[240px] text-xs sm:text-xs md:text-sm mb-3 sm:mb-3 md:mb-4 font-medium group-hover:text-white/80 transition-colors px-2">
-                        Free entry gaming arena. Pay per play.
-                      </p>
-
-                      <div className="flex flex-col gap-1 sm:gap-1.5 md:gap-2 items-center">
-                        <div className="flex items-center gap-1.5 sm:gap-2 font-mono text-xs sm:text-xs md:text-sm text-primary tracking-wider">
-                          <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-primary"></span>
-                          <span>Free Entry</span>
+                      <div className="h-10 sm:h-12 border-b border-primary/20 flex justify-between items-center px-3 sm:px-4 bg-primary/5 relative z-10">
+                        <div className="flex items-center gap-1.5 sm:gap-2">
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(var(--primary-rgb),0.8)]" />
+                          <span className="font-mono text-[8px] sm:text-[9px] tracking-widest text-primary uppercase">No Registration</span>
                         </div>
-                        <div className="font-mono text-[11px] sm:text-xs md:text-sm text-white/40 tracking-wider text-center leading-tight">
-                          <div>All Day Access</div>
-                          <div>Pay Per Play</div>
-                        </div>
+                        <span className="font-orbitron text-[9px] sm:text-[10px] text-primary">ARCADE</span>
                       </div>
-                    </div>
 
-                    <div className="relative mt-auto z-10">
-                      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-                      <div className="p-2.5 sm:p-3 md:p-4 relative z-10 bg-black/40 backdrop-blur-sm">
-                        <div className="w-full relative overflow-hidden bg-primary/10 hover:bg-primary border border-primary/50 hover:border-primary transition-all py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 group/btn">
-                          <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:animate-[shimmer_1s_infinite]" />
-                          <span className="font-orbitron text-[11px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-primary group-hover/btn:text-black font-bold flex items-center justify-center gap-1.5 sm:gap-2">
-                            View Details <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
-                          </span>
+                      <div className="flex-1 relative flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 z-10 group-hover:-translate-y-1 transition-transform duration-500">
+                        <div className="w-14 h-14 sm:w-16 sm:h-16 border-2 border-primary bg-primary/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                          <svg className="w-8 h-8 sm:w-10 sm:h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+
+                        <h3 className="font-orbitron text-[17px] sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-2.5 md:mb-3 tracking-wide text-center uppercase leading-tight">
+                          ARCADE ZONE
+                        </h3>
+
+                        <p className="text-center font-rajdhani text-white/50 leading-relaxed max-w-[200px] sm:max-w-[240px] text-xs sm:text-xs md:text-sm mb-3 sm:mb-3 md:mb-4 font-medium group-hover:text-white/80 transition-colors px-2">
+                          Free entry gaming arena. Pay per play.
+                        </p>
+
+                        <div className="flex flex-col gap-1 sm:gap-1.5 md:gap-2 items-center">
+                          <div className="flex items-center gap-1.5 sm:gap-2 font-mono text-xs sm:text-xs md:text-sm text-primary tracking-wider">
+                            <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-primary"></span>
+                            <span>Free Entry</span>
+                          </div>
+                          <div className="font-mono text-[11px] sm:text-xs md:text-sm text-white/40 tracking-wider text-center leading-tight">
+                            <div>All Day Access</div>
+                            <div>Pay Per Play</div>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-20">
-                      <div className="absolute top-0 left-0 w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6 border-t-2 border-l-2 border-primary transition-all duration-300 group-hover:w-5 group-hover:h-5 sm:group-hover:w-6 sm:group-hover:h-6 md:group-hover:w-8 md:group-hover:h-8" />
-                      <div className="absolute bottom-0 right-0 w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6 border-b-2 border-r-2 border-primary transition-all duration-300 group-hover:w-5 group-hover:h-5 sm:group-hover:w-6 sm:group-hover:h-6 md:group-hover:w-8 md:group-hover:h-8" />
+                      <div className="relative mt-auto z-10">
+                        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                        <div className="p-2.5 sm:p-3 md:p-4 relative z-10 bg-black/40 backdrop-blur-sm">
+                          <div className="w-full relative overflow-hidden bg-primary/10 hover:bg-primary border border-primary/50 hover:border-primary transition-all py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 group/btn">
+                            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:animate-[shimmer_1s_infinite]" />
+                            <span className="font-orbitron text-[11px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase text-primary group-hover/btn:text-black font-bold flex items-center justify-center gap-1.5 sm:gap-2">
+                              View Details <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-20">
+                        <div className="absolute top-0 left-0 w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6 border-t-2 border-l-2 border-primary transition-all duration-300 group-hover:w-5 group-hover:h-5 sm:group-hover:w-6 sm:group-hover:h-6 md:group-hover:w-8 md:group-hover:h-8" />
+                        <div className="absolute bottom-0 right-0 w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6 border-b-2 border-r-2 border-primary transition-all duration-300 group-hover:w-5 group-hover:h-5 sm:group-hover:w-6 sm:group-hover:h-6 md:group-hover:w-8 md:group-hover:h-8" />
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </motion.div>
+                  </Link>
+                </motion.div>
+              )}
             </div>
           </motion.div>
 
