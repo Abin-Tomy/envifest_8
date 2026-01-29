@@ -83,7 +83,13 @@ const Events = () => {
               </div>
 
               <h3 className="font-orbitron text-[17px] sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-2.5 md:mb-3 tracking-wide text-center uppercase drop-shadow-md relative z-10 px-2 break-words w-full leading-tight">
-                {event.name}
+                {event.name === "ADVENGERS" ? (
+                  <>
+                    <span className="text-primary">AD</span>VENGERS
+                  </>
+                ) : (
+                  event.name
+                )}
               </h3>
 
               <p className="text-center font-rajdhani text-white/50 leading-relaxed max-w-[200px] sm:max-w-[240px] text-xs sm:text-xs md:text-sm group-hover:text-white/80 transition-colors relative z-10 font-medium mb-3 sm:mb-3 md:mb-4 px-2 mx-auto">

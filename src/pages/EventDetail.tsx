@@ -86,7 +86,13 @@ const EventDetail = () => {
               </div>
               <div className="flex-1 min-w-0">
                 <h1 className="font-orbitron text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-doom-silver break-words">
-                  {event.name}
+                  {event.name === "ADVENGERS" ? (
+                    <>
+                      <span className="text-primary">AD</span>VENGERS
+                    </>
+                  ) : (
+                    event.name
+                  )}
                 </h1>
                 <p className="font-rajdhani text-sm sm:text-base md:text-lg text-primary mt-1">{event.tagline}</p>
               </div>

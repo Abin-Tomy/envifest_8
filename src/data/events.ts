@@ -216,7 +216,7 @@ export const events: EventData[] = [
   },
   {
     id: "ad-making",
-    name: "ADBYTE",
+    name: "ADVENGERS",
     icon: Video,
     category: "other",
     theme: "standard",
