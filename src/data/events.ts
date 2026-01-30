@@ -216,7 +216,7 @@ export const events: EventData[] = [
   },
   {
     id: "ad-making",
-    name: "AdByte",
+    name: "AdVENGERS",
     icon: Video,
     category: "other",
     theme: "standard",
@@ -401,6 +401,7 @@ export const events: EventData[] = [
     teamSize: "Individual",
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹50/participant",
+    registrationLink: "https://airtable.com/appVN0z3xadC3yZPl/pagHfS1qxJOfyYUbs/form",
     coordinators: [
       { name: "Ebanse Jose", phone: "+91 9446404229", role: "Student Coordinator" }
     ]
@@ -429,7 +430,7 @@ export const events: EventData[] = [
     teamSize: "Individual",
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹30/participant",
-    registrationLink: "https://airtable.com/appQmJg90WUHqJ3K2/pagx7t4uvJRe3uiVA/form",
+    registrationLink: "https://airtable.com/appVN0z3xadC3yZPl/pagHfS1qxJOfyYUbs/form",
     poster: "/EFOOTBALL.png",
     coordinators: [
       { name: "Fadil", phone: "+91 8129520528", role: "Student Coordinator" },
