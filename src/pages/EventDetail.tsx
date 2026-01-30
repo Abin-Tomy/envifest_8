@@ -253,20 +253,23 @@ const EventDetail = () => {
               {event.coordinators.map((coordinator, index) => (
                 <div
                   key={index}
-                  className="bg-doom-gunmetal/30 border border-doom-silver/10 p-3 sm:p-4 flex items-center gap-3 sm:gap-4"
+                  className="group relative overflow-hidden bg-doom-gunmetal/30 border border-doom-silver/10 p-3 sm:p-4 flex items-center gap-3 sm:gap-4 transition-all duration-300 hover:border-primary/50 hover:bg-doom-gunmetal/50 hover:shadow-[0_0_15px_rgba(var(--primary-rgb),0.1)]"
                 >
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-doom-gunmetal border border-doom-silver/20 flex items-center justify-center font-orbitron text-primary text-base sm:text-lg flex-shrink-0">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+
+                  <div className="relative z-10 w-10 h-10 sm:w-12 sm:h-12 bg-doom-gunmetal border border-doom-silver/20 flex items-center justify-center font-orbitron text-primary text-base sm:text-lg flex-shrink-0 group-hover:border-primary/50 group-hover:shadow-[0_0_10px_rgba(var(--primary-rgb),0.3)] transition-all duration-300">
                     {coordinator.name.charAt(0)}
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-orbitron text-xs sm:text-sm text-doom-silver truncate">{coordinator.name}</h3>
-                    <p className="font-mono text-[9px] sm:text-[10px] text-doom-silver/40 uppercase">{coordinator.role}</p>
+
+                  <div className="relative z-10 flex-1 min-w-0">
+                    <h3 className="font-orbitron text-xs sm:text-sm text-doom-silver truncate group-hover:text-primary transition-colors duration-300">{coordinator.name}</h3>
+                    <p className="font-mono text-[9px] sm:text-[10px] text-doom-silver/40 uppercase mb-1">{coordinator.role}</p>
                     <a
                       href={`tel:${coordinator.phone}`}
-                      className="flex items-center gap-1 text-primary/70 hover:text-primary transition-colors mt-1"
+                      className="inline-flex items-center gap-1.5 text-primary/70 hover:text-primary transition-colors px-2 py-1 -ml-2 rounded hover:bg-primary/10"
                     >
                       <Phone className="w-3 h-3 flex-shrink-0" />
-                      <span className="font-mono text-[10px] sm:text-xs">{coordinator.phone}</span>
+                      <span className="font-mono text-[10px] sm:text-xs tracking-wide">{coordinator.phone}</span>
                     </a>
                   </div>
                 </div>
