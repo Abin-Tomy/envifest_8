@@ -380,7 +380,7 @@ export const events: EventData[] = [
 
   {
     id: "reel-editing",
-    name: "Reel Editing Competition",
+    name: "Reel Rush",
     icon: Video,
     category: "other",
     theme: "standard",
@@ -430,7 +430,7 @@ export const events: EventData[] = [
     teamSize: "Individual",
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹30/participant",
-    registrationLink: "https://airtable.com/appVN0z3xadC3yZPl/pagHfS1qxJOfyYUbs/form",
+    registrationLink: "https://airtable.com/appQmJg90WUHqJ3K2/pagx7t4uvJRe3uiVA/form",
     poster: "/EFOOTBALL.png",
     coordinators: [
       { name: "Fadil", phone: "+91 8129520528", role: "Student Coordinator" },
