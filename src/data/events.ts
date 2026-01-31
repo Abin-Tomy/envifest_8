@@ -68,12 +68,12 @@ export const events: EventData[] = [
       "The judge's decision will be considered final"
     ],
     timing: "7th - 8th February 2026 | 9:00 AM - 9:00 AM",
-    venue: "APJ Hall",
+    venue: "Abdul Kalam Hall",
     teamSize: "1-4 Members",
     prize: "1st: ₹20,000 | 2nd: ₹10,000",
     registrationFee: "₹250/participant",
     registrationLink: "https://airtable.com/appwQh8I3EOu4GYXV/pagAI5h7ghFO4kp0i/form",
-    poster: "/hackathon-poster.jpeg",
+    poster: "/hackathon.webp",
     coordinators: [
       { name: "Nandakiran R", phone: "+91 7594824490", role: "Student Coordinator" },
       { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
@@ -103,7 +103,7 @@ export const events: EventData[] = [
     prize: "1st: ₹10,000",
     registrationFee: "₹250/participant",
     registrationLink: "https://airtable.com/appPf7sTJjJDeDIJ8/pagpLJqcX3X624BRr/form",
-    poster: "/star-of-envi.png",
+    poster: "/star-of-envi-poster.webp",
     coordinators: [
       { name: "Fausteena Joshy", phone: "+91 7907399049", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
@@ -141,7 +141,7 @@ export const events: EventData[] = [
     prize: "1st: ₹3,000 | 2nd: ₹2,000",
     registrationFee: "₹300/team",
     registrationLink: "https://airtable.com/apprqTh8yWjJlXxvb/pagbD0HI1WmwtZ8I3/form",
-    poster: "/ideathon.png",
+    poster: "/IDEATHON-poster.webp",
     coordinators: [
       { name: "Ayush VP", phone: "+91 9911366704", role: "Student Coordinator" },
       { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
@@ -170,12 +170,12 @@ export const events: EventData[] = [
       "Any violation of the rules may result in immediate disqualification"
     ],
     timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
-    venue: "Exam Hall",
+    venue: "Abdul Kalam Hall",
     teamSize: "2 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹20/team",
     registrationLink: "https://airtable.com/app46TuuqN1ySWWrN/pagqno28NDLoBfyft/form",
-    poster: "/QUIZ.png",
+    poster: "/QUIZbit-poster.webp",
     coordinators: [
       { name: "Asher Vargheese K", phone: "+91 9497265177", role: "Student Coordinator" },
       { name: "Ms. Anjana T K", phone: "+91 8248962887", role: "Staff Coordinator" }
@@ -208,7 +208,7 @@ export const events: EventData[] = [
     prize: "1st: ₹4,000 | 2nd: ₹2,000",
     registrationFee: "₹20/team",
     registrationLink: "https://airtable.com/appcM1QasQkCsgMkO/pagle4VXD1g1HoNKp/form",
-    poster: "/DEBATE.png",
+    poster: "/crossfire-poster.webp",
     coordinators: [
       { name: "Bhadra", phone: "+91 8921543780", role: "Student Coordinator" },
       { name: "Ms. Anjana T K", phone: "+91 8248962887", role: "Staff Coordinator" }
@@ -242,7 +242,7 @@ export const events: EventData[] = [
     prize: "1st: ₹3,000 + Internship | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹150/team",
     registrationLink: "https://airtable.com/appRCCsgg329Gzk2r/pagbeLJXK1Zyl6lmD/form",
-    poster: "/ADBYTE.png",
+    poster: "/advengers-poster.webp",
     coordinators: [
       { name: "Nehal Noby", phone: "+91 8547691686", role: "Student Coordinator" },
       { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
@@ -273,7 +273,7 @@ export const events: EventData[] = [
     prize: "1st: ₹3,000 | 2nd: ₹2,000",
     registrationFee: "₹100/participant",
     registrationLink: "https://airtable.com/appQFQdu9WO2Edn4w/pagbD0HI1WmwtZ8I3/form",
-    poster: "/vibecoding-poster.png",
+    poster: "/jarvis-poster.webp",
     coordinators: [
       { name: "Athul Raj", phone: "+91 8590983075", role: "Student Coordinator" },
       { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
@@ -305,7 +305,7 @@ export const events: EventData[] = [
     prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
     registrationFee: "₹150/team",
     registrationLink: "https://airtable.com/appfdi22NpkDWQ0uC/pagbD0HI1WmwtZ8I3/form",
-    poster: "/escape.png",
+    poster: "/latveria-protocol-poster.webp",
     coordinators: [
       { name: "Abin Tomy", phone: "+91 7907693769", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
@@ -338,7 +338,7 @@ export const events: EventData[] = [
     prize: "1st: ₹3,000 | 2nd: ₹2,000",
     registrationFee: "₹100/participant",
     registrationLink: "https://airtable.com/apphjUk2Fe4wL1v6X/pagfBFgMcO6usAhCo/form",
-    poster: "/ROBORACE.png",
+    poster: "/ROBORACE-poster.webp",
     coordinators: [
       { name: "Gautham", phone: "+91 9995817077", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
@@ -371,7 +371,7 @@ export const events: EventData[] = [
     prize: "1st: ₹6,000 | 2nd: ₹3,000",
     registrationFee: "₹300/team",
     registrationLink: "https://airtable.com/app4mJjvZgKAqcgo2/pag9bIqpIaFPlMVwO/form",
-    poster: "/burn the witch-.png",
+    poster: "/burn-the-witch-poster.webp",
     coordinators: [
       { name: "Adith Jai", phone: "+91 9207009201", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
@@ -404,7 +404,8 @@ export const events: EventData[] = [
     registrationLink: "https://airtable.com/appVN0z3xadC3yZPl/pagHfS1qxJOfyYUbs/form",
     coordinators: [
       { name: "Ebanse Jose", phone: "+91 9446404229", role: "Student Coordinator" }
-    ]
+    ],
+    poster: "/reelmaking-poster.webp"
   },
   {
     id: "e-football",
@@ -425,13 +426,13 @@ export const events: EventData[] = [
       "WhatsApp group will be created after registration process where further details will be provided",
       "After every match the player who won should send a screenshot to the group with the caption 'won vs @mention(opposite player)'"
     ],
-    timing: "January 31 - February 01, 2026 | Online",
+    timing: "February 03 - February 05, 2026 | Online",
     venue: "Online",
     teamSize: "Individual",
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
     registrationFee: "₹30/participant",
     registrationLink: "https://airtable.com/appQmJg90WUHqJ3K2/pagx7t4uvJRe3uiVA/form",
-    poster: "/EFOOTBALL.png",
+    poster: "/EFOOTBALL-poster.webp",
     coordinators: [
       { name: "Fadil", phone: "+91 8129520528", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }

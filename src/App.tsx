@@ -7,6 +7,7 @@ import { lazy, Suspense, useState, useEffect } from "react";
 import CustomCursor from "./components/CustomCursor";
 import DoomCharacter from "./components/DoomCharacter";
 import Preloader from "./components/Preloader";
+import useSmoothScroll from "./hooks/useSmoothScroll";
 
 // Lazy load page components for better performance
 const Index = lazy(() => import("./pages/Index"));
@@ -19,6 +20,9 @@ const queryClient = new QueryClient();
 
 const App = () => {
   const [showPreloader, setShowPreloader] = useState(true);
+
+  // Enable buttery smooth scrolling
+  useSmoothScroll();
 
   useEffect(() => {
     // Ensure preloader shows for at least 4 seconds on initial load
