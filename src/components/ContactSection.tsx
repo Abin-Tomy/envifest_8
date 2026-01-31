@@ -299,12 +299,12 @@ const ContactSection = () => {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125214.23058939862!2d75.68365573883054!3d11.26547502753809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65b8ea22b4ac3%3A0x5be6bfc17781275d!2sSt.%20Joseph&#39;s%20College%20(Autonomous)%2C%20Devagiri!5e0!3m2!1sen!2sin!4v1768579016475!5m2!1sen!2sin"
               width="100%"
-              height="400"
+              height="300"
               style={{ border: 0, display: 'block' }}
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-[400px] sm:h-[450px] md:h-[500px]"
+              className="w-full h-[280px] sm:h-[320px] md:h-[350px]"
               title="St. Joseph's College Devagiri Location"
             />
           </div>
