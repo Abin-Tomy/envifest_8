@@ -160,21 +160,19 @@ const HeroSection = () => {
         </motion.div>
 
         {/* ENVI HERO Image */}
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-4 relative inline-block lg:mt-40"
-        >
+        <div className="mb-4 relative inline-block lg:mt-40">
           <img
             src="/hero-image.png"
             alt="ENVI 8"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
             className="w-[320px] xs:w-[420px] sm:w-[520px] md:w-[640px] lg:w-[760px] xl:w-[860px] h-auto select-none"
             style={{
               filter: "drop-shadow(0 0 40px rgba(16, 185, 129, 0.15))",
             }}
           />
-        </motion.div>
+        </div>
 
         {/* Pre-title */}
         <motion.div

@@ -205,7 +205,13 @@ const AboutSection = () => {
                             loop
                             muted
                             playsInline
-                            preload="none"
+                            preload="metadata"
+                            onError={(e) => {
+                              // Fallback: hide video on error to prevent console spam
+                              const target = e.target as HTMLVideoElement;
+                              target.style.display = 'none';
+                              console.warn(`Failed to load video: ${item.src}`);
+                            }}
                             style={{ willChange: 'transform' }}
                           />
                         ) : (
