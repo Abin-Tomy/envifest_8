@@ -31,9 +31,13 @@ const EventDetail = () => {
   const rulesInView = useInView(rulesRef, { once: true, margin: "-100px" });
   const coordInView = useInView(coordRef, { once: true, margin: "-100px" });
 
-  // Scroll to top when component mounts
+  // Scroll to top immediately when component mounts
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Force immediate scroll to top
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    // Also reset document scroll
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   }, [eventId]);
 
   if (!event) {
@@ -105,7 +109,7 @@ const EventDetail = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={posterInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mb-8 w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto px-4 sm:px-0"
+            className="mb-8 w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto px-4 sm:px-0"
           >
             <div className={`relative bg-doom-gunmetal/30 border-2 border-doom-silver/20 overflow-hidden flex items-center justify-center ${event.poster ? 'bg-black' : ''}`} style={event.poster ? {} : { aspectRatio: '1080/1350' }}>
               {event.poster ? (

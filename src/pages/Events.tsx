@@ -9,9 +9,13 @@ const Events = () => {
   const mainEvents = getMainEvents();
   const onlineEvents = getOnlineEvents();
 
-  // Scroll to top when component mounts
+  // Scroll to top immediately when component mounts
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Force immediate scroll to top
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    // Also reset document scroll
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   }, []);
 
   const EventCard = ({ event, index }: { event: any; index: number }) => {
