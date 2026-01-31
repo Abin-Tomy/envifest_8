@@ -25,10 +25,10 @@ const App = () => {
   useSmoothScroll();
 
   useEffect(() => {
-    // Ensure preloader shows for at least 4 seconds on initial load
+    // Reduced preloader time to improve LCP (Largest Contentful Paint)
     const timer = setTimeout(() => {
       setShowPreloader(false);
-    }, 4000);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, []);
