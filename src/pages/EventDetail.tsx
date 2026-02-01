@@ -181,7 +181,14 @@ const EventDetail = () => {
             <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-2 sm:p-3">
               <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-doom-silver/50 mb-1 sm:mb-2" />
               <span className="font-mono text-[9px] sm:text-[10px] text-doom-silver/40 uppercase block">Timing</span>
-              <span className="font-rajdhani text-xs sm:text-sm text-doom-silver break-words">{event.timing}</span>
+              {event.id === 'reel-editing' ? (
+                <span className="font-rajdhani text-xs sm:text-sm text-doom-silver break-words">
+                  <div>{event.timing.split('|')[0].trim()}</div>
+                  <div className="text-red-500 font-bold mt-1">{event.timing.split('|')[1]?.trim()}</div>
+                </span>
+              ) : (
+                <span className="font-rajdhani text-xs sm:text-sm text-doom-silver break-words">{event.timing}</span>
+              )}
             </div>
             <div className="bg-doom-gunmetal/30 border border-doom-silver/10 p-2 sm:p-3">
               <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-doom-silver/50 mb-1 sm:mb-2" />

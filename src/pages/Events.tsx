@@ -107,7 +107,14 @@ const Events = () => {
                   <span className="break-words text-center">{event.registrationFee}</span>
                 </div>
                 <div className="font-mono text-[11px] sm:text-xs md:text-sm text-white/40 tracking-wider text-center break-words leading-tight">
-                  {event.timing.split('|')[0].trim()}
+                  {event.id === 'reel-editing' ? (
+                    <>
+                      <div>{event.timing.split('|')[0].trim()}</div>
+                      <div className="text-red-500 font-bold mt-1">{event.timing.split('|')[1]?.trim()}</div>
+                    </>
+                  ) : (
+                    event.timing.split('|')[0].trim()
+                  )}
                 </div>
               </div>
             </div>

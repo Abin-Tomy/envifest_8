@@ -394,9 +394,10 @@ export const events: EventData[] = [
       "Use of AI is encouraged",
       "Can use reference from previous Avengers Movies",
       "Raw footage will be provided once registration is completed",
-      "You will be added to a group for further instructions"
+      "You will be added to a group for further instructions",
+      "Deadline for submission: February 07, 2026"
     ],
-    timing: "Deadline: February 03, 2026 | 11:59 PM",
+    timing: "Registration closes: February 06, 2026 | Submission deadline: February 07, 2026",
     venue: "Online Submission",
     teamSize: "Individual",
     prize: "1st: ₹2,000 | 2nd: ₹1,000",
