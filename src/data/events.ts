@@ -322,7 +322,7 @@ export const events: EventData[] = [
     description: "Build and race your robot through challenging obstacle courses. Speed and precision will determine the champion.",
     rules: [
       "Participants must bring an already designed and built autonomous line follower robot strictly as per the given specifications",
-      "The robot must be Arduino-based, use IR sensors, and follow a black line made using black insulation tape",
+      "The robot may use microcontrollers such as Arduino or ESP32, along with IR sensors, to follow a black line created using black insulation tape",
       "No remote control or external power supply is allowed",
       "The robot must complete the given track accurately and in the least possible time",
       "The robot must be fully autonomous during the run",
