@@ -27,14 +27,14 @@ const Events = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: index * 0.1, duration: 0.7, ease: "easeOut" }}
-        className="group relative"
+        className="group relative h-full"
       >
         <Link to={`/events/${event.id}`} className="block h-full relative z-10">
           {/* 1. The Glowing Backlight (Ambient) */}
           <div className="absolute -inset-0.5 bg-gradient-to-b from-primary/20 to-transparent opacity-0 group-hover:opacity-40 transition-opacity duration-700 blur-md" />
 
           {/* 2. CARD CHASSIS */}
-          <div className="relative h-[300px] sm:h-[380px] md:h-[420px] bg-[#050505] border border-white/10 overflow-hidden transition-all duration-500 flex flex-col">
+          <div className="relative h-full min-h-[300px] sm:min-h-[380px] md:min-h-[420px] bg-[#050505] border border-white/10 overflow-hidden transition-all duration-500 flex flex-col">
             {/* Poster Background if available */}
             {event.poster && (
               <div
