@@ -397,7 +397,7 @@ export const events: EventData[] = [
       "Raw footage will be provided once registration is completed",
       "You will be added to a group for further instructions",
       "Deadline for submission: February 07, 2026",
-      "If the minimum requirement of 10 players is not met, this event will be cancelled and your registration fees will be returned"
+      "If the minimum requirement of 10 players is not met, this event will be cancelled and your registration fees will be returned",
     ],
     timing: "Registration closes: February 06, 2026 | Submission deadline: February 07, 2026",
     venue: "Online Submission",
