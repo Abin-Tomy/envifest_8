@@ -38,6 +38,7 @@ export interface EventData {
   registrationLink?: string;
   coordinators: EventCoordinator[];
   poster?: string;
+  isRegistrationClosed?: boolean;
 }
 
 export const events: EventData[] = [
@@ -322,7 +323,7 @@ export const events: EventData[] = [
     description: "Build and race your robot through challenging obstacle courses. Speed and precision will determine the champion.",
     rules: [
       "Participants must bring an already designed and built autonomous line follower robot strictly as per the given specifications",
-      "The robot may use microcontrollers such as Arduino or ESP32, along with IR sensors, to follow a black line created using black insulation tape",
+      "The robot must be Arduino-based, use IR sensors, and follow a black line made using black insulation tape",
       "No remote control or external power supply is allowed",
       "The robot must complete the given track accurately and in the least possible time",
       "The robot must be fully autonomous during the run",
@@ -395,8 +396,7 @@ export const events: EventData[] = [
       "Can use reference from previous Avengers Movies",
       "Raw footage will be provided once registration is completed",
       "You will be added to a group for further instructions",
-      "Deadline for submission: February 07, 2026",
-      "If the minimum requirement of 10 players is not met, this event will be cancelled and your registration fees will be returned."
+      "Deadline for submission: February 07, 2026"
     ],
     timing: "Registration closes: February 06, 2026 | Submission deadline: February 07, 2026",
     venue: "Online Submission",
@@ -435,6 +435,7 @@ export const events: EventData[] = [
     registrationFee: "₹30/participant",
     registrationLink: "https://airtable.com/appQmJg90WUHqJ3K2/pagx7t4uvJRe3uiVA/form",
     poster: "/EFOOTBALL-poster.webp",
+    isRegistrationClosed: true,
     coordinators: [
       { name: "Fadil", phone: "+91 8129520528", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }

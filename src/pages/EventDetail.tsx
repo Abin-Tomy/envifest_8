@@ -7,11 +7,14 @@ import { getEventById } from "@/data/events";
 import { ArrowLeft, Clock, MapPin, Users, Trophy, Phone, Image } from "lucide-react";
 import DoomBackground from "@/components/DoomBackground";
 
+import { useToast } from "@/components/ui/use-toast";
+
 const EventDetail = () => {
   const { eventId } = useParams();
   const navigate = useNavigate();
   const event = getEventById(eventId || "");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { toast } = useToast();
 
   // Refs for scroll animations
   const headerRef = useRef(null);
@@ -151,12 +154,26 @@ const EventDetail = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-center mb-8 sm:mb-12 px-4"
           >
-            {event.registrationLink ? (
+            {event.isRegistrationClosed ? (
+              <button
+                onClick={() => {
+                  toast({
+                    title: "Registration Closed",
+                    description: "Registration for this event is closed.",
+                    variant: "destructive",
+                  });
+                }}
+                className="w-full sm:w-auto inline-block px-8 sm:px-12 py-3 sm:py-4 font-orbitron text-xs sm:text-sm tracking-widest bg-red-900/20 text-red-400 border border-red-900/50 hover:bg-red-900/30 transition-colors cursor-not-allowed"
+              >
+                REGISTRATION CLOSED
+              </button>
+            ) : event.registrationLink ? (
               <a
                 href={event.registrationLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-block px-8 sm:px-12 py-3 sm:py-4 font-orbitron text-xs sm:text-sm tracking-widest bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                style={{ cursor: 'pointer' }}
               >
                 REGISTER NOW
               </a>
