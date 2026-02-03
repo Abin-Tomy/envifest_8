@@ -34,7 +34,7 @@ const Events = () => {
           <div className="absolute -inset-0.5 bg-gradient-to-b from-primary/20 to-transparent opacity-0 group-hover:opacity-40 transition-opacity duration-700 blur-md" />
 
           {/* 2. CARD CHASSIS */}
-          <div className="relative h-[300px] sm:h-[380px] md:h-[420px] bg-[#050505] border border-white/10 overflow-hidden transition-all duration-500 flex flex-col">
+          <div className="relative min-h-[300px] sm:min-h-[380px] md:min-h-[420px] h-full bg-[#050505] border border-white/10 overflow-hidden transition-all duration-500 flex flex-col">
             {/* Poster Background if available */}
             {event.poster && (
               <div
@@ -53,10 +53,10 @@ const Events = () => {
             <div className="h-10 sm:h-12 border-b border-white/5 flex justify-between items-center px-3 sm:px-4 bg-white/[0.02] relative z-10 backdrop-blur-sm">
               <div className="flex items-center gap-1.5 sm:gap-2">
                 <div className={`w-1.5 h-1.5 rounded-full transition-colors ${event.isRegistrationClosed
-                    ? 'bg-red-500 shadow-[0_0_5px_#ef4444]'
-                    : isFireTheme
-                      ? 'bg-primary group-hover:bg-[#FF6B35] group-hover:shadow-[0_0_5px_#FF6B35]'
-                      : 'bg-primary shadow-[0_0_5px_rgba(var(--primary-rgb),0.8)]'
+                  ? 'bg-red-500 shadow-[0_0_5px_#ef4444]'
+                  : isFireTheme
+                    ? 'bg-primary group-hover:bg-[#FF6B35] group-hover:shadow-[0_0_5px_#FF6B35]'
+                    : 'bg-primary shadow-[0_0_5px_rgba(var(--primary-rgb),0.8)]'
                   }`} />
                 <span className={`font-mono text-[8px] sm:text-[9px] tracking-widest uppercase ${event.isRegistrationClosed ? 'text-red-500/80' : 'text-white/60'
                   }`}>
