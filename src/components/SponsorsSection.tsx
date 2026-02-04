@@ -4,12 +4,12 @@ import { useRef } from "react";
 // Placeholder sponsor logos (these would be replaced with actual logos)
 const titleSponsor = {
   name: "TechCorp Industries",
-  logo: "TC",
+  poster: "/CORBIT.png",
   website: "https://example.com",
 };
 
 const eventSponsors = [
-  { name: "Stark Industries", logo: "SI", website: "https://example.com" },
+  { name: "Adverse", logo: "/Adverse_Logo.png", isImage: true, website: "https://example.com" },
   { name: "Oscorp", logo: "OC", website: "https://example.com" },
   { name: "Wayne Enterprises", logo: "WE", website: "https://example.com" },
   { name: "Umbrella Corp", logo: "UC", website: "https://example.com" },
@@ -68,13 +68,12 @@ const SponsorsSection = () => {
               <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary" />
               <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary" />
 
-              {/* Placeholder logo */}
-              <div className="font-poppins text-4xl sm:text-5xl md:text-6xl font-black text-doom-silver group-hover:text-primary transition-colors duration-300 text-glow">
-                {titleSponsor.logo}
-              </div>
-              <div className="font-rajdhani text-sm text-doom-silver/60 mt-2 tracking-widest uppercase">
-                {titleSponsor.name}
-              </div>
+              {/* Sponsor poster */}
+              <img
+                src={titleSponsor.poster}
+                alt={titleSponsor.name}
+                className="max-h-48 sm:max-h-56 md:max-h-64 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              />
 
               {/* Glow effect */}
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -108,12 +107,16 @@ const SponsorsSection = () => {
                 href={sponsor.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-shrink-0 mx-8 group cursor-hover"
+                className="flex-shrink-0 mx-4 sm:mx-6 md:mx-8 group cursor-hover"
               >
-                <div className="w-32 h-20 border border-doom-silver/20 bg-card/20 flex items-center justify-center transition-all duration-300 group-hover:border-primary/50 group-hover:bg-card/40 grayscale group-hover:grayscale-0">
-                  <span className="font-poppins text-2xl font-bold text-doom-silver/50 group-hover:text-primary transition-colors duration-300">
-                    {sponsor.logo}
-                  </span>
+                <div className="w-24 h-16 sm:w-32 sm:h-20 md:w-40 md:h-24 border border-doom-silver/20 bg-card/20 flex items-center justify-center transition-all duration-300 group-hover:border-primary/50 group-hover:bg-card/40 grayscale group-hover:grayscale-0">
+                  {sponsor.isImage ? (
+                    <img src={sponsor.logo} alt={sponsor.name} className="max-h-12 max-w-20 sm:max-h-16 sm:max-w-28 md:max-h-20 md:max-w-36 object-contain" />
+                  ) : (
+                    <span className="font-poppins text-xl sm:text-2xl md:text-3xl font-bold text-doom-silver/50 group-hover:text-primary transition-colors duration-300">
+                      {sponsor.logo}
+                    </span>
+                  )}
                 </div>
               </a>
             ))}
