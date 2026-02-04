@@ -75,6 +75,7 @@ export const events: EventData[] = [
     registrationFee: "₹250/participant",
     registrationLink: "https://airtable.com/appwQh8I3EOu4GYXV/pagAI5h7ghFO4kp0i/form",
     poster: "/hackathon.webp",
+    isRegistrationClosed: true,
     coordinators: [
       { name: "Nandakiran R", phone: "+91 7594824490", role: "Student Coordinator" },
       { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
