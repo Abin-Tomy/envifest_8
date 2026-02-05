@@ -43,42 +43,35 @@ export interface EventData {
 
 export const events: EventData[] = [
   {
-    id: "hackathon",
-    name: "Build for Kozhikode 2.0",
-    icon: Code,
-    category: "featured",
+    id: "escape-system",
+    name: "Latveria Protocol",
+    icon: KeyRound,
+    category: "other",
     theme: "circuit",
     eventType: "main",
-    tagline: "Code. Create. Conquer.",
-    description: "'Build for Kozhikode 2.0' challenges participants to identify and develop innovative solutions to real-world problems faced by the residents, enterprises, and communities in and around Kozhikode. The event aims to promote sustainability, enhance public services, and drive meaningful change, empowering local communities through technological innovation.",
+    tagline: "Escape the System",
+    description: "Escape the System is an intercollegiate, story-based digital escape challenge where teams must solve 15 locked questions sequentially, using logical, visual, and reasoning skills to break a simulated system lockdown within a limited time. Clues will be provided only for selected high-difficulty questions. The event emphasizes critical thinking, calm decision-making, and teamwork, and does not require prior technical knowledge.",
     rules: [
-      "Each team can have a maximum of 4 members",
-      "Students from different Universities/Colleges can form a team",
-      "Entry fee: Rs.250/- per participant",
-      "Each team member must have a valid identity card from their respective university/college",
-      "Reporting Time: 12:00 PM on 7th February 2026",
-      "Theme Announcement: 09:00 AM on 7th February 2026",
-      "Hackathon Start: 09:00 AM on 7th February 2026",
-      "Hackathon End: 09:00 AM on 8th February 2026",
-      "Presentation Time: 09:00 AM to 3:30 PM on 8th February 2026",
-      "Judging based on quality of idea, prototype completion, and presentation",
-      "Participants must bring any required hardware tools",
-      "Uninterrupted Wi-Fi network will be provided",
-      "Unethical behavior may result in disqualification",
-      "Student Coordinators reserve the right to make final decisions",
-      "The judge's decision will be considered final"
+      "Each team must consist of exactly 2 students",
+      "The total event duration is 3 hours",
+      "Teams must use only the allotted lab PC",
+      "Internet is not provided. Use of electronic devices inside the lab is strictly prohibited",
+      "No collaboration or answer sharing between teams is allowed",
+      "Any attempt to manipulate, bypass, or tamper with the system will result in immediate disqualification",
+      "Winners are decided based on the fastest completion time",
+      "In case of a tie, a tie-breaker round will be conducted",
+      "The decisions of the judges and organizing committee are final and binding"
     ],
-    timing: "7th - 8th February 2026 | 9:00 AM - 9:00 AM",
-    venue: "Abdul Kalam Hall",
-    teamSize: "1-4 Members",
-    prize: "1st: ₹20,000 | 2nd: ₹10,000",
-    registrationFee: "₹250/participant",
-    registrationLink: "https://airtable.com/appwQh8I3EOu4GYXV/pagAI5h7ghFO4kp0i/form",
-    poster: "/hackathon.webp",
-    isRegistrationClosed: true,
+    timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
+    venue: "Lab 2",
+    teamSize: "2 Members",
+    prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
+    registrationFee: "₹150/team",
+    registrationLink: "https://airtable.com/appfdi22NpkDWQ0uC/pagbD0HI1WmwtZ8I3/form",
+    poster: "/latveria-protocol-poster.webp",
     coordinators: [
-      { name: "Nandakiran R", phone: "+91 7594824490", role: "Student Coordinator" },
-      { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
+      { name: "Abin Tomy", phone: "+91 7907693769", role: "Student Coordinator" },
+      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   },
   {
@@ -224,7 +217,7 @@ export const events: EventData[] = [
     theme: "standard",
     eventType: "main",
     tagline: "Create. Captivate. Convert.",
-    description: "An AI-powered advertisement video making competition where participants create compelling advertisements using artificial intelligence tools. Showcase your creativity by generating visuals, voiceovers, music, and scripts with AI, then edit them into a polished final product.",
+    description: "An AI-powered advertisement video making competition where participants create compelling advertisements using provided AI tools. Showcase your creativity by generating visuals, voiceovers, music, and scripts with AI, then edit them into a polished final product.",
     rules: [
       "Open to UG and PG students of any year",
       "Participation is allowed in teams of 2 members only",
@@ -279,38 +272,6 @@ export const events: EventData[] = [
     coordinators: [
       { name: "Athul Raj", phone: "+91 8590983075", role: "Student Coordinator" },
       { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
-    ]
-  },
-  {
-    id: "escape-system",
-    name: "Latveria Protocol",
-    icon: KeyRound,
-    category: "other",
-    theme: "circuit",
-    eventType: "main",
-    tagline: "Escape the System",
-    description: "Escape the System is an intercollegiate, story-based digital escape challenge where teams must solve 15 locked questions sequentially, using logical, visual, and reasoning skills to break a simulated system lockdown within a limited time. Clues will be provided only for selected high-difficulty questions. The event emphasizes critical thinking, calm decision-making, and teamwork, and does not require prior technical knowledge.",
-    rules: [
-      "Each team must consist of exactly 2 students",
-      "The total event duration is 3 hours",
-      "Teams must use only the allotted lab PC",
-      "Internet is not provided. Use of electronic devices inside the lab is strictly prohibited",
-      "No collaboration or answer sharing between teams is allowed",
-      "Any attempt to manipulate, bypass, or tamper with the system will result in immediate disqualification",
-      "Winners are decided based on the fastest completion time",
-      "In case of a tie, a tie-breaker round will be conducted",
-      "The decisions of the judges and organizing committee are final and binding"
-    ],
-    timing: "February 09, 2026 | 9:00 AM - 2:30 PM",
-    venue: "Lab 2",
-    teamSize: "2 Members",
-    prize: "1st: ₹3,000 | 2nd: ₹2,000 | 3rd: ₹1,000",
-    registrationFee: "₹150/team",
-    registrationLink: "https://airtable.com/appfdi22NpkDWQ0uC/pagbD0HI1WmwtZ8I3/form",
-    poster: "/latveria-protocol-poster.webp",
-    coordinators: [
-      { name: "Abin Tomy", phone: "+91 7907693769", role: "Student Coordinator" },
-      { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   },
   {
@@ -379,7 +340,45 @@ export const events: EventData[] = [
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
     ]
   },
-
+  {
+    id: "hackathon",
+    name: "Build for Kozhikode 2.0",
+    icon: Code,
+    category: "featured",
+    theme: "circuit",
+    eventType: "main",
+    tagline: "Code. Create. Conquer.",
+    description: "'Build for Kozhikode 2.0' challenges participants to identify and develop innovative solutions to real-world problems faced by the residents, enterprises, and communities in and around Kozhikode. The event aims to promote sustainability, enhance public services, and drive meaningful change, empowering local communities through technological innovation.",
+    rules: [
+      "Each team can have a maximum of 4 members",
+      "Students from different Universities/Colleges can form a team",
+      "Entry fee: Rs.250/- per participant",
+      "Each team member must have a valid identity card from their respective university/college",
+      "Reporting Time: 12:00 PM on 7th February 2026",
+      "Theme Announcement: 09:00 AM on 7th February 2026",
+      "Hackathon Start: 09:00 AM on 7th February 2026",
+      "Hackathon End: 09:00 AM on 8th February 2026",
+      "Presentation Time: 09:00 AM to 3:30 PM on 8th February 2026",
+      "Judging based on quality of idea, prototype completion, and presentation",
+      "Participants must bring any required hardware tools",
+      "Uninterrupted Wi-Fi network will be provided",
+      "Unethical behavior may result in disqualification",
+      "Student Coordinators reserve the right to make final decisions",
+      "The judge's decision will be considered final"
+    ],
+    timing: "7th - 8th February 2026 | 9:00 AM - 9:00 AM",
+    venue: "Abdul Kalam Hall",
+    teamSize: "1-4 Members",
+    prize: "1st: ₹20,000 | 2nd: ₹10,000",
+    registrationFee: "₹250/participant",
+    registrationLink: "https://airtable.com/appwQh8I3EOu4GYXV/pagAI5h7ghFO4kp0i/form",
+    poster: "/hackathon.webp",
+    isRegistrationClosed: true,
+    coordinators: [
+      { name: "Nandakiran R", phone: "+91 7594824490", role: "Student Coordinator" },
+      { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
+    ]
+  },
   {
     id: "reel-editing",
     name: "Reel Rush",
