@@ -9,14 +9,14 @@ const titleSponsor = {
 };
 
 const eventSponsors = [
-  { name: "Adverse", logo: "/Adverse_Logo.png", isImage: true, website: "https://example.com" },
-  { name: "Oscorp", logo: "OC", website: "https://example.com" },
-  { name: "Wayne Enterprises", logo: "WE", website: "https://example.com" },
-  { name: "Umbrella Corp", logo: "UC", website: "https://example.com" },
-  { name: "Cyberdyne", logo: "CD", website: "https://example.com" },
-  { name: "Weyland-Yutani", logo: "WY", website: "https://example.com" },
-  { name: "Tyrell Corp", logo: "TC", website: "https://example.com" },
-  { name: "Massive Dynamic", logo: "MD", website: "https://example.com" },
+  { name: "Adverse", logo: "/Adverse_Logo.png", isImage: true },
+  { name: "LogiPrompt", logo: "/Logi_prompt.png", isImage: true },
+  { name: "Qtest", logo: "/Qtest.png", isImage: true },
+  { name: "Umbrella Corp", logo: "UC" },
+  { name: "Cyberdyne", logo: "CD" },
+  { name: "Weyland-Yutani", logo: "WY" },
+  { name: "Tyrell Corp", logo: "TC" },
+  { name: "Massive Dynamic", logo: "MD" },
 ];
 
 const SponsorsSection = () => {
@@ -55,11 +55,8 @@ const SponsorsSection = () => {
           </span>
 
           {/* Title sponsor logo */}
-          <a
-            href={titleSponsor.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block relative cursor-hover"
+          <div
+            className="inline-block relative"
           >
             <div className="px-8 sm:px-12 md:px-16 py-8 sm:py-10 md:py-12 border-2 border-primary/30 bg-card/30 backdrop-blur-sm relative group hover:border-primary/60 transition-all duration-500">
               {/* Corner accents */}
@@ -78,7 +75,7 @@ const SponsorsSection = () => {
               {/* Glow effect */}
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
-          </a>
+          </div>
         </motion.div>
 
         {/* Event Sponsors */}
@@ -102,12 +99,9 @@ const SponsorsSection = () => {
           {/* Marquee track */}
           <div className="flex animate-marquee" style={{ willChange: 'transform' }}>
             {[...eventSponsors, ...eventSponsors].map((sponsor, index) => (
-              <a
+              <div
                 key={`${sponsor.name}-${index}`}
-                href={sponsor.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 mx-4 sm:mx-6 md:mx-8 group cursor-hover"
+                className="flex-shrink-0 mx-4 sm:mx-6 md:mx-8 group"
               >
                 <div className="w-24 h-16 sm:w-32 sm:h-20 md:w-40 md:h-24 border border-doom-silver/20 bg-card/20 flex items-center justify-center transition-all duration-300 group-hover:border-primary/50 group-hover:bg-card/40 grayscale group-hover:grayscale-0">
                   {sponsor.isImage ? (
@@ -118,7 +112,7 @@ const SponsorsSection = () => {
                     </span>
                   )}
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </div>
