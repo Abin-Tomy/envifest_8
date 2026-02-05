@@ -409,7 +409,8 @@ export const events: EventData[] = [
     coordinators: [
       { name: "Ebanse Jose", phone: "+91 9446404229", role: "Student Coordinator" }
     ],
-    poster: "/reelmaking-poster.webp"
+    poster: "/reelmaking-poster.webp",
+    isRegistrationClosed: true
   },
   {
     id: "e-football",
