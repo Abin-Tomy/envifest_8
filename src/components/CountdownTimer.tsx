@@ -83,7 +83,7 @@ const CountdownTimer = ({ eventDate }: CountdownTimerProps) => {
             >
                 <div className="flex flex-col items-center justify-center min-h-[200px] relative">
                     <div
-                        className="absolute inset-0 flex items-center justify-center transition-opacity duration-[3000ms] ease-in-out"
+                        className="absolute inset-0 flex items-center justify-center transition-opacity duration-3000 ease-in-out"
                         style={{ opacity: showDate ? 1 : 0, pointerEvents: showDate ? 'auto' : 'none' }}
                     >
                         <div className="text-center">
@@ -98,7 +98,7 @@ const CountdownTimer = ({ eventDate }: CountdownTimerProps) => {
                     </div>
 
                     <div
-                        className="absolute inset-0 flex items-center justify-center transition-opacity duration-[3000ms] ease-in-out"
+                        className="absolute inset-0 flex items-center justify-center transition-opacity duration-3000 ease-in-out"
                         style={{ opacity: showDate ? 0 : 1, pointerEvents: showDate ? 'none' : 'auto' }}
                     >
                         <div className="w-full">
