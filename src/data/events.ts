@@ -124,7 +124,7 @@ export const events: EventData[] = [
       "Team size: 1 to 4 members. Cross-college teams are allowed",
       "All team members must be students",
       "Online registration is mandatory and includes idea submission",
-      "Registration fee: ₹300 per team (includes shortlisting opportunity and certificates)",
+      "Registration fee: ₹200 per team (includes shortlisting opportunity and certificates)",
       "Reporting Time: 9:00 AM on February 9, 2026",
       "Stage Pitching Starts: 10:00 AM",
       "All teams submit ideas during registration for offline evaluation",
@@ -141,7 +141,7 @@ export const events: EventData[] = [
     venue: "Jubilee Hall",
     teamSize: "1-4 Members",
     prize: "1st: ₹3,000 | 2nd: ₹2,000",
-    registrationFee: "₹300/team",
+    registrationFee: "₹200/team",
     registrationLink: "https://airtable.com/apprqTh8yWjJlXxvb/pagbD0HI1WmwtZ8I3/form",
     poster: "/IDEATHON-poster.webp",
     coordinators: [
