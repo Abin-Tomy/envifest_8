@@ -69,6 +69,7 @@ export const events: EventData[] = [
     registrationFee: "₹150/team",
     registrationLink: "https://airtable.com/appfdi22NpkDWQ0uC/pagbD0HI1WmwtZ8I3/form",
     poster: "/latveria-protocol-poster.webp",
+    isRegistrationClosed: true,
     coordinators: [
       { name: "Abin Tomy", phone: "+91 7907693769", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
@@ -99,6 +100,7 @@ export const events: EventData[] = [
     registrationFee: "₹250/participant",
     registrationLink: "https://airtable.com/appPf7sTJjJDeDIJ8/pagpLJqcX3X624BRr/form",
     poster: "/star-of-envi-poster.webp",
+    isRegistrationClosed: true,
     coordinators: [
       { name: "Fausteena Joshy", phone: "+91 7907399049", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
@@ -137,6 +139,7 @@ export const events: EventData[] = [
     registrationFee: "₹200/team",
     registrationLink: "https://airtable.com/apprqTh8yWjJlXxvb/pagbD0HI1WmwtZ8I3/form",
     poster: "/IDEATHON-poster.webp",
+    isRegistrationClosed: true,
     coordinators: [
       { name: "Ayush VP", phone: "+91 9911366704", role: "Student Coordinator" },
       { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
@@ -171,6 +174,7 @@ export const events: EventData[] = [
     registrationFee: "₹20/team",
     registrationLink: "https://airtable.com/app46TuuqN1ySWWrN/pagqno28NDLoBfyft/form",
     poster: "/QUIZbit-poster.webp",
+    isRegistrationClosed: true,
     coordinators: [
       { name: "Asher Vargheese K", phone: "+91 9497265177", role: "Student Coordinator" },
       { name: "Ms. Anjana T K", phone: "+91 8248962887", role: "Staff Coordinator" }
@@ -204,6 +208,7 @@ export const events: EventData[] = [
     registrationFee: "₹20/team",
     registrationLink: "https://airtable.com/appcM1QasQkCsgMkO/pagle4VXD1g1HoNKp/form",
     poster: "/crossfire-poster.webp",
+    isRegistrationClosed: true,
     coordinators: [
       { name: "Bhadra", phone: "+91 8921543780", role: "Student Coordinator" },
       { name: "Ms. Anjana T K", phone: "+91 8248962887", role: "Staff Coordinator" }
@@ -238,6 +243,7 @@ export const events: EventData[] = [
     registrationFee: "₹150/team",
     registrationLink: "https://airtable.com/appRCCsgg329Gzk2r/pagbeLJXK1Zyl6lmD/form",
     poster: "/advengers-poster.webp",
+    isRegistrationClosed: true,
     coordinators: [
       { name: "Nehal Noby", phone: "+91 8547691686", role: "Student Coordinator" },
       { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
@@ -269,6 +275,7 @@ export const events: EventData[] = [
     registrationFee: "₹100/team",
     registrationLink: "https://airtable.com/appQFQdu9WO2Edn4w/pagbD0HI1WmwtZ8I3/form",
     poster: "/jarvis-poster.webp",
+    isRegistrationClosed: true,
     coordinators: [
       { name: "Athul Raj", phone: "+91 8590983075", role: "Student Coordinator" },
       { name: "Mr. Kanuprasad M.K", phone: "+91 9995077258", role: "Staff Coordinator" }
@@ -302,6 +309,7 @@ export const events: EventData[] = [
     registrationFee: "₹100/participant",
     registrationLink: "https://airtable.com/apphjUk2Fe4wL1v6X/pagfBFgMcO6usAhCo/form",
     poster: "/ROBORACE-poster.webp",
+    isRegistrationClosed: true,
     coordinators: [
       { name: "Gautham", phone: "+91 9995817077", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
@@ -335,6 +343,7 @@ export const events: EventData[] = [
     registrationFee: "₹300/team",
     registrationLink: "https://airtable.com/app4mJjvZgKAqcgo2/pag9bIqpIaFPlMVwO/form",
     poster: "/burn-the-witch-poster.webp",
+    isRegistrationClosed: true,
     coordinators: [
       { name: "Adith Jai", phone: "+91 9207009201", role: "Student Coordinator" },
       { name: "Ms. Drishya Narayanan", phone: "+91 7034057003", role: "Staff Coordinator" }
